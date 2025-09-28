@@ -47,11 +47,12 @@ export default function Footer() {
             <li><a href="#">General Surgery</a></li>
             <li><a href="#">Gynecology & Obstetrics</a></li>
             <li><a href="#">Oncology</a></li>
+            <li><a href="#">Radiology</a></li>
           </ul>
         </div>
 
         {/* Services */}
-        <div>
+        {/* <div>
           <h3 className="font-semibold text-gray-800 mb-3 relative">
             Services
             <span className="absolute bottom-0 left-0 w-12 h-[2px] bg-red-500"></span>
@@ -63,8 +64,19 @@ export default function Footer() {
             <li><a href="#">OGH Health center, Ulwe</a></li>
             <li><a href="#">Company Licence</a></li>
           </ul>
+        </div> */}
+        <div>
+          <h3 className="font-semibold text-gray-800 mb-3 relative">
+            Other Links
+            <span className="absolute bottom-0 left-0 w-12 h-[2px] bg-red-500"></span>
+          </h3>
+          <ul className="mt-4 space-y-2 text-gray-600 text-sm">
+            <li><a href="#">Blogs </a></li>
+            <li><a href="#">Gallery </a></li>
+            <li><a href="#">Social Media</a></li>
+            <li><a href="#">Other Links</a></li>
+          </ul>
         </div>
-
         {/* Contact */}
         <div>
           <h3 className="font-semibold text-gray-800 mb-3 relative">
