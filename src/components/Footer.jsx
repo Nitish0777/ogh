@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <h2 className="text-2xl font-bold text-gray-800 flex items-center space-x-2">
             <span className="text-red-600">✚</span>
-            <span>Novena</span>
+            <span>OGH</span>
           </h2>
           <p className="mt-4 text-gray-600 text-sm leading-relaxed">
             Tempora dolorem voluptatum nam vero assumenda voluptate,
@@ -44,25 +44,23 @@ export default function Footer() {
             <span className="absolute bottom-0 left-0 w-12 h-[2px] bg-red-500"></span>
           </h3>
           <ul className="mt-4 space-y-2 text-gray-600 text-sm">
-            <li><a href="#">Surgery</a></li>
-            <li><a href="#">Women’s Health</a></li>
-            <li><a href="#">Radiology</a></li>
-            <li><a href="#">Cardiac</a></li>
-            <li><a href="#">Medicine</a></li>
+            <li><a href="#">General Surgery</a></li>
+            <li><a href="#">Gynecology & Obstetrics</a></li>
+            <li><a href="#">Oncology</a></li>
           </ul>
         </div>
 
-        {/* Support */}
+        {/* Services */}
         <div>
           <h3 className="font-semibold text-gray-800 mb-3 relative">
-            Support
+            Services
             <span className="absolute bottom-0 left-0 w-12 h-[2px] bg-red-500"></span>
           </h3>
           <ul className="mt-4 space-y-2 text-gray-600 text-sm">
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Company Support</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Pathology Center</a></li>
+            <li><a href="#">Pre-Employment Checkup</a></li>
+            <li><a href="#">Mobile Annual Checkup Bus</a></li>
+            <li><a href="#">OGH Health center, Ulwe</a></li>
             <li><a href="#">Company Licence</a></li>
           </ul>
         </div>
@@ -78,14 +76,14 @@ export default function Footer() {
               <Mail className="w-4 h-4 text-red-500" />
               <span>Support Available 24/7</span>
             </li>
-            <li className="font-semibold text-gray-900">Support@email.com</li>
+            <li className="font-semibold text-gray-900">drprakash@gagangirihospital.com</li>
             <li className="flex items-center space-x-2">
               <Clock className="w-4 h-4 text-red-500" />
               <span>Mon to Fri : 08:30 - 18:00</span>
             </li>
             <li className="flex items-center space-x-2 font-bold text-gray-900">
               <Phone className="w-4 h-4 text-red-500" />
-              <span>+23-456-6588</span>
+              <span>+91 7666 6711 11</span>
             </li>
           </ul>
         </div>
@@ -94,8 +92,8 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="max-w-7xl mx-auto px-6 mt-10 border-t border-gray-200 pt-6 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
         <p className="text-gray-500 text-sm">
-          © Copyright Reserved to <span className="text-red-500">Novena</span> by{" "}
-          <span className="font-medium">Themefisher</span>
+          © Copyright Reserved to <span className="text-red-500">OGH</span> by{" "}
+          <span className="font-medium">OGH</span>
         </p>
         <div className="flex items-center space-x-2">
           <input
@@ -107,7 +105,7 @@ export default function Footer() {
             SUBSCRIBE
           </button>
         </div>
-        <p className="text-gray-500 text-sm">Distributed by Themewagon</p>
+        <p className="text-gray-500 text-sm">Distributed by OGH</p>
       </div>
     </footer>
   );
