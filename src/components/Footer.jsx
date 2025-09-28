@@ -47,7 +47,6 @@ export default function Footer() {
             <li><a href="#">General Surgery</a></li>
             <li><a href="#">Gynecology & Obstetrics</a></li>
             <li><a href="#">Oncology</a></li>
-            <li><a href="#">Radiology</a></li>
           </ul>
         </div>
 
