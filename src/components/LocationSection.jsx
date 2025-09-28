@@ -1,18 +1,19 @@
 import React from 'react';
 import { MapPin, Phone } from 'lucide-react';
+import not from '../assets/not.png';
 
 const LocationsSection = () => {
   const locations = [
     {
-      image: "https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      title: "Neurosurgery",
-      description: "Advanced neurological treatments with experienced specialists and cutting-edge technology.",
+      image: not,
+      title: "Koparkhairne",
+      description: "Our primary hospital offering advanced diagnostics, surgeries, and specialized care for patients across Navi Mumbai.",
       buttonText: "VIEW DETAILS"
     },
     {
-      image: "https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop",
-      title: "Eye Care & Surgery",
-      description: "Comprehensive eye care services including advanced surgical procedures and treatments.",
+      image: not,
+      title: "Ulwe ",
+      description: "A dedicated center focused on pre-employment health checkups and pathology services for corporates and residents.",
       buttonText: "VIEW DETAILS"
     }
   ];
@@ -60,7 +61,7 @@ const LocationsSection = () => {
           <div className="relative">
             <div className="bg-slate-800 rounded-lg overflow-hidden">
               <img 
-                src="https://images.pexels.com/photos/5452268/pexels-photo-5452268.jpeg?auto=compress&cs=tinysrgb&w=500&h=600&fit=crop" 
+                src={not}
                 alt="Doctor consultation" 
                 className="w-full h-150 object-cover"
               />

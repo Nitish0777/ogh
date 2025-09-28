@@ -1,5 +1,7 @@
 import React from "react";
 import { Users, Award, MapPin, Clock } from "lucide-react";
+import not from '../assets/not.png';
+
 
 const HealthcareOverview = () => {
   const stats = [
@@ -20,7 +22,7 @@ const HealthcareOverview = () => {
                 <div className="bg-white rounded-lg shadow-lg p-8">
                   <div className="flex items-center mb-6">
                     <img
-                      src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+                      src={not}
                       alt="Medical team"
                       className="w-130 h-160 object-cover rounded-lg mr-6"
                     />
