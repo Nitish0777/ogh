@@ -143,21 +143,6 @@ const ServiceCards = () => {
             </div>
           ))}
         </div>
-
-        {/* Bottom CTA Section */}
-        <div className="text-center mt-16">
-          <p className="text-gray-600 text-lg mb-6">
-            Need immediate assistance? Our medical team is here to help you 24/7
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
-              View All Services
-            </button>
-            <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
-              Contact Us
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );

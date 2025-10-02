@@ -10,13 +10,13 @@ const Header = () => {
   };
 
   const navigationItems = [
-    { name: 'Home', href: '#', active: true },
-    { name: 'About', href: '#' },
-    { name: 'Services', href: '#' },
-    { name: 'Departments', href: '#' },
-    { name: 'Doctors', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Contact', href: '#' }
+    { name: 'Home', href: '/', active: true },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Departments', href: '/departments' },
+    { name: 'Doctors', href: '/doctors' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (

@@ -1,26 +1,24 @@
-import React from 'react';
-import Header from './components/Header';
-import CarouselBanner from './components/CarouselBanner';
-import ServiceCards from './components/ServiceCards';
-import HealthcareOverview from './components/HealthcareOverview';
-import LocationsSection from './components/LocationSection';
-import TestimonialsSection from './components/TestimonialsSection';
-import PartnersSection from './components/partnerSection';
-import Footer from './components/Footer';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <CarouselBanner />
-      <ServiceCards />
-      <HealthcareOverview />
-      <LocationsSection />
-      <TestimonialsSection />
-      {/* <PartnersSection /> */}
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
 export default App;
+ 

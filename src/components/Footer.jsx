@@ -222,8 +222,8 @@ export default function Footer() {
               </div>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <input
-                  type="email"
-                  placeholder="Enter your email address"
+                  type="tel"
+                  placeholder="Enter your Mobile number"
                   className="flex-1 px-6 py-4 rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
                 <button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">

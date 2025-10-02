@@ -5,7 +5,7 @@ import not from '../assets/not.png';
 const HealthcareOverview = () => {
   const stats = [
     { 
-      number: "58+", 
+      number: "3+", 
       label: "Expert Doctors",
       icon: <Users className="w-8 h-8" />,
       color: "from-blue-500 to-blue-600"
@@ -23,8 +23,8 @@ const HealthcareOverview = () => {
       color: "from-purple-500 to-purple-600"
     },
     { 
-      number: "20+", 
-      label: "Awards Won",
+      number: "1500+", 
+      label: "Surgeries Performed",
       icon: <Award className="w-8 h-8" />,
       color: "from-yellow-500 to-yellow-600"
     },
