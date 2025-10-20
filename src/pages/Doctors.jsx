@@ -1,4 +1,12 @@
 import React from 'react';
+// Import doctor images
+import doctor1 from '../assets/prakash.jpeg'; 
+import doctor2 from '../assets/rekha_kaushal.jpeg';
+import doctor3 from '../assets/sachin_kale.jpeg';
+import doctor4 from '../assets/amit_nagrik.jpeg';
+import doctor5 from '../assets/arvind.jpeg';
+import doctor6 from '../assets/Dr.Manpreet-Juneja.webp';
+import doctor7 from '../assets/vikas.jpeg';
 
 const Doctors = () => {
   const doctors = [
@@ -6,7 +14,7 @@ const Doctors = () => {
       id: 1,
       name: 'Dr. Prakash Shendge',
       specialization: 'General Surgery',
-      image: '/api/placeholder/300/300', // Placeholder image
+      image: doctor1,
       experience: '15+ Years',
       education: 'MBBS, MS (General Surgery)',
       description: 'Expert in minimally invasive surgical procedures with extensive experience in complex operations.',
@@ -16,7 +24,7 @@ const Doctors = () => {
       id: 2,
       name: 'Dr. Rekha Kaushal',
       specialization: 'Gynecology & Obstetrics',
-      image: '/api/placeholder/300/300', // Placeholder image
+      image: doctor2,
       experience: '12+ Years',
       education: 'MBBS, MD (Gynecology)',
       description: 'Specialized in womens health, pregnancy care, and advanced gynecological procedures.',
@@ -26,11 +34,51 @@ const Doctors = () => {
       id: 3,
       name: 'Dr. Shirish Shetty',
       specialization: 'Oncology',
-      image: '/api/placeholder/300/300', // Placeholder image
+      image: doctor3,
       experience: '18+ Years',
       education: 'MBBS, MD (Oncology), DM',
       description: 'Leading oncologist with expertise in cancer treatment and advanced therapeutic procedures.',
       availability: 'Tue - Sat: 8:00 AM - 4:00 PM'
+    },
+    {
+      id: 4,
+      name: 'Dr. [Doctor Name]',
+      specialization: '[Department]',
+      image: doctor4,
+      experience: '[X]+ Years',
+      education: 'MBBS, [Specialization]',
+      description: '[Add doctor description]',
+      availability: '[Add availability]'
+    },
+    {
+      id: 5,
+      name: 'Dr. [Doctor Name]',
+      specialization: '[Department]',
+      image: doctor5,
+      experience: '[X]+ Years',
+      education: 'MBBS, [Specialization]',
+      description: '[Add doctor description]',
+      availability: '[Add availability]'
+    },
+    {
+      id: 6,
+      name: 'Dr. [Doctor Name]',
+      specialization: '[Department]',
+      image: doctor6,
+      experience: '[X]+ Years',
+      education: 'MBBS, [Specialization]',
+      description: '[Add doctor description]',
+      availability: '[Add availability]'
+    },
+    {
+      id: 7,
+      name: 'Dr. [Doctor Name]',
+      specialization: '[Department]',
+      image: doctor7,
+      experience: '[X]+ Years',
+      education: 'MBBS, [Specialization]',
+      description: '[Add doctor description]',
+      availability: '[Add availability]'
     }
   ];
 
@@ -66,14 +114,12 @@ const Doctors = () => {
           {doctors.map((doctor) => (
             <div key={doctor.id} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
               {/* Doctor Image */}
-              <div className="relative h-64 bg-gradient-to-br from-blue-100 to-blue-200">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-blue-300 rounded-full flex items-center justify-center">
-                    <svg className="w-16 h-16 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                </div>
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={doctor.image} 
+                  alt={doctor.name}
+                  className="w-full h-full object-cover object-center"
+                />
               </div>
 
               {/* Doctor Info */}
@@ -112,14 +158,14 @@ const Doctors = () => {
                   {doctor.description}
                 </p>
 
-                <div className="mt-6 space-y-3">
+                {/* <div className="mt-6 space-y-3">
                   <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition duration-200">
                     Book Appointment
                   </button>
                   <button className="w-full border border-blue-600 text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-blue-50 transition duration-200">
                     View Profile
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
