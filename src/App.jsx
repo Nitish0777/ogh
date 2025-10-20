@@ -10,6 +10,10 @@ import Contact from "./pages/Contact";
 import BookAppointment from "./pages/BookAppointment";
 import Doctors from "./pages/Doctors";
 import DoctorDetails from "./pages/DoctorDetails";
+import HospitalKoparkhairne from "./pages/services/HospitalKoparkhairne";
+import HealthCheckup from "./pages/services/HealthCheckup";
+import LabYatharth from "./pages/services/LabYatharth";
+import UlweCentre from "./pages/services/UlweCentre";
 
 function App() {
   return (
@@ -21,6 +25,10 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/departments" element={<Departments />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/hospital-koparkhairne" element={<HospitalKoparkhairne />} />
+          <Route path="/services/health-checkup" element={<HealthCheckup />} />
+          <Route path="/services/lab-yatharth" element={<LabYatharth />} />
+          <Route path="/services/ulwe-centre" element={<UlweCentre />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/doctors" element={<Doctors />} />
           <Route path="/doctor/:id" element={<DoctorDetails />} />
