@@ -10,7 +10,6 @@ const Departments = () => {
       id: 1,
       title: "General & Laparoscopic Surgery",
       description: "From routine procedures to complex interventions, our surgical team performs a wide range of general, laparoscopic, and minimally invasive surgeries with precision and safety.",
-      icon: "🏥",
       keyProcedures: [
         "Hernia, appendix, and gallbladder surgeries",
         "Gastrointestinal and abdominal procedures", 
@@ -21,7 +20,6 @@ const Departments = () => {
       id: 2,
       title: "Gynaecology & Obstetrics",
       description: "Comprehensive care for women through every stage of life, from adolescence to motherhood and beyond, focusing on maternal health and reproductive wellness.",
-      icon: "👶",
       keyProcedures: [
         "Antenatal and postnatal care",
         "High-risk pregnancy management",
@@ -32,7 +30,6 @@ const Departments = () => {
       id: 3,
       title: "Paediatrics",
       description: "Holistic healthcare for infants, children, and adolescents with emphasis on preventive care, timely vaccinations, and accurate diagnosis.",
-      icon: "👶",
       keyProcedures: [
         "Newborn and neonatal care",
         "Immunizations and growth monitoring", 
@@ -43,7 +40,6 @@ const Departments = () => {
       id: 4,
       title: "General Medicine",
       description: "The foundation of our healthcare system, managing a wide spectrum of acute and chronic illnesses with precision and continuous care.",
-      icon: "🩺",
       keyProcedures: [
         "Lifestyle and metabolic disorders",
         "Infectious diseases",
@@ -54,7 +50,6 @@ const Departments = () => {
       id: 5,
       title: "Orthopaedics",
       description: "Dedicated to restoring mobility and improving quality of life through specialized surgical and non-surgical treatments.",
-      icon: "🦴",
       keyProcedures: [
         "Trauma and fracture management",
         "Joint replacement and arthroscopic surgery",
@@ -65,7 +60,6 @@ const Departments = () => {
       id: 6,
       title: "Urology",
       description: "Specialized care for urinary tract and male reproductive health using advanced diagnostic and surgical techniques.",
-      icon: "🫘",
       keyProcedures: [
         "Kidney stone and prostate treatment",
         "Urinary tract infection management",
@@ -76,7 +70,6 @@ const Departments = () => {
       id: 7,
       title: "Plastic & Reconstructive Surgery",
       description: "Beyond aesthetics, we restore form, function, and confidence through advanced reconstructive techniques.",
-      icon: "✨",
       keyProcedures: [
         "Post-trauma and burn reconstruction",
         "Aesthetic and corrective surgeries",
@@ -87,7 +80,6 @@ const Departments = () => {
       id: 8,
       title: "Nephrology",
       description: "Focused on prevention, diagnosis, and management of kidney diseases with comprehensive diagnostic support.",
-      icon: "🫘",
       keyProcedures: [
         "Chronic kidney disease management",
         "Electrolyte and hypertension control",
@@ -98,7 +90,6 @@ const Departments = () => {
       id: 9,
       title: "Psychiatry",
       description: "Compassionate counselling, therapy, and medical management to help overcome stress, anxiety, and emotional challenges.",
-      icon: "🧠",
       keyProcedures: [
         "Counselling and psychotherapy",
         "Stress and anxiety management",
@@ -109,7 +100,6 @@ const Departments = () => {
       id: 10,
       title: "Pathology",
       description: "Lab Yatharth supports every clinical department with accurate, timely diagnostic services for faster treatment decisions.",
-      icon: "🔬",
       keyProcedures: [
         "Haematology, biochemistry, and microbiology",
         "Histopathology and cytology",
@@ -120,7 +110,6 @@ const Departments = () => {
       id: 11,
       title: "Anaesthesiology",
       description: "Ensuring patient safety and comfort during surgical and diagnostic procedures with the highest standards of clinical vigilance.",
-      icon: "💉",
       keyProcedures: [
         "Pre-operative evaluation and anaesthesia planning",
         "Pain management and sedation support",
@@ -171,7 +160,6 @@ const Departments = () => {
               key={department.id}
               title={department.title}
               description={department.description}
-              icon={department.icon}
               keyProcedures={department.keyProcedures}
               onLearnMore={() => handleLearnMore(department.id)}
             />
