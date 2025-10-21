@@ -21,19 +21,19 @@ const Header = () => {
   return (
     <>
       {/* Enhanced Top bar */}
-      <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-2 px-4 hidden lg:block">
+      <div className="bg-gradient-to-r from-green-900 to-green-800 text-white py-2 px-4 hidden lg:block">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-6">
-            <div className="flex items-center space-x-2 hover:text-blue-200 transition-colors">
+            <div className="flex items-center space-x-2 hover:text-green-200 transition-colors">
               <MapPin className="w-4 h-4 flex-shrink-0" />
               <span className="truncate">Shubham CHS., Sector 18, Plot No. 77, Kopar Khairane, Navi Mumbai</span>
             </div>
-            <div className="flex items-center space-x-2 hover:text-blue-200 transition-colors">
+            <div className="flex items-center space-x-2 hover:text-green-200 transition-colors">
               <Mail className="w-4 h-4 flex-shrink-0" />
               <span>drprakash@gagangirihospital.com</span>
             </div>
           </div>
-          <div className="flex items-center space-x-2 hover:text-blue-200 transition-colors">
+          <div className="flex items-center space-x-2 hover:text-green-200 transition-colors">
             <Phone className="w-4 h-4" />
             <span className="font-medium">Call Now: +91 9833571031</span>
           </div>
@@ -44,18 +44,14 @@ const Header = () => {
       <header className="bg-white shadow-lg border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            {/* Enhanced Logo */}
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 rounded-lg overflow-hidden shadow-md ring-2 ring-blue-50">
+            {/* Enhanced Rectangular Logo */}
+            <div className="flex items-center">
+              <div className="h-12 w-auto max-w-48 rounded-lg overflow-hidden shadow-md ring-2 ring-green-50 bg-white">
                 <img 
                   src={logo} 
                   alt="Gagan Giri Hospital Logo" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="h-full w-full object-contain hover:scale-105 transition-transform duration-300"
                 />
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-gray-900">Gagan Giri Hospital</h1>
-                <p className="text-sm text-gray-600">Healthcare Excellence</p>
               </div>
             </div>
 
@@ -67,8 +63,8 @@ const Header = () => {
                   href={item.href}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     item.active
-                      ? 'bg-blue-600 text-white shadow-md'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                      ? 'bg-green-600 text-white shadow-md'
+                      : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
                   }`}
                   aria-label={`Navigate to ${item.name}`}
                 >
@@ -81,7 +77,7 @@ const Header = () => {
             <div className="flex items-center space-x-3 md:hidden">
               <a 
                 href="tel:+919833571031"
-                className="flex items-center space-x-1 text-blue-600 hover:text-blue-800 transition-colors"
+                className="flex items-center space-x-1 text-green-600 hover:text-green-800 transition-colors"
                 aria-label="Call hospital"
               >
                 <Phone className="w-4 h-4" />
@@ -89,7 +85,7 @@ const Header = () => {
               </a>
               <button
                 onClick={toggleMobileMenu}
-                className="p-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="p-2 rounded-lg text-gray-700 hover:text-green-600 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
                 aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={isMobileMenuOpen}
               >
@@ -113,8 +109,8 @@ const Header = () => {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                       item.active
-                        ? 'bg-blue-600 text-white'
-                        : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                        ? 'bg-green-600 text-white'
+                        : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
                     }`}
                     aria-label={`Navigate to ${item.name}`}
                   >

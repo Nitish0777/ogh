@@ -165,23 +165,7 @@ const Departments = () => {
         </div>
 
         <div className="relative container mx-auto px-4 text-center">
-          <div className="max-w-5xl mx-auto">
-            {/* Department Icons Row */}
-            {/* <div className="flex justify-center items-center gap-8 mb-8">
-              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                <span className="text-2xl">⚕️</span>
-              </div>
-              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                <span className="text-2xl">👩‍⚕️</span>
-              </div>
-              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                <span className="text-2xl">🧠</span>
-              </div>
-              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                <span className="text-2xl">❤️</span>
-              </div>
-            </div> */}
-            
+          <div className="max-w-5xl mx-auto">  
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Comprehensive Care
               <span className="block text-3xl md:text-4xl text-blue-200 mt-4 font-medium">
