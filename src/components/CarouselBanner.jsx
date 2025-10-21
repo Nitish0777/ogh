@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-import emergencyImage from '../assets/emergency.jpeg';
+import healthcare from '../assets/Healthcare.png';
+import pathalogy from '../assets/pathalogy.png';
+import drbanner from '../assets/doctorbanner.png';
+import emergency from '../assets/emergecy.png'; 
+import ulwebanner from '../assets/ulwebanner.png';
 
 const CarouselBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,28 +12,34 @@ const CarouselBanner = () => {
 
   const slides = [
     {
-      image: emergencyImage,
+      image: healthcare,
       title: 'Your Trusted Partner in Complete Healthcare',
       subtitle: 'At Om Gagangiri Hospital & Occupational Health, we combine expert care and advanced facilities to deliver reliable, affordable, and patient-focused healthcare.',
       cta: 'Book an Appointment'
     },
     {
-      image: emergencyImage,
+      image: pathalogy,
       title: 'Advanced Medical Technology',
       subtitle: 'State-of-the-art equipment and cutting-edge medical technology for precise diagnosis and treatment.',
       cta: 'Our Services'
     },
     {
-      image: emergencyImage,
+      image: drbanner,
       title: 'Expert Healthcare Professionals',
       subtitle: 'Our team of experienced doctors and specialists are dedicated to providing the highest quality care.',
       cta: 'Meet Our Doctors'
     },
     {
-      image: emergencyImage,
+      image: emergency,
       title: '24/7 Emergency Services',
       subtitle: 'Round-the-clock emergency care with rapid response times and comprehensive medical support.',
       cta: 'Emergency Contact'
+    },
+    {
+      image: ulwebanner,
+      title: 'Comprehensive Health Services in Ulwe',
+      subtitle: 'Delivering precision, care, and reliability, our Ulwe branch brings Omgagangiri Hospital and Occupational Services\' recognized medical standards to the community, ensuring accessible and expert healthcare every day.',
+      cta: 'Know More'
     }
   ];
 
@@ -101,6 +111,11 @@ const CarouselBanner = () => {
                     <button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                       {slide.cta}
                     </button>
+                    {currentSlide === 4 && (
+                      <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        Book an Appointment
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>
