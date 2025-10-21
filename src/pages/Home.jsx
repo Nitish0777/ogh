@@ -8,13 +8,13 @@ import PartnersSection from "../components/partnerSection";
 
 function Home() {
   return (
-    <>
+    <div className="bg-green-600">
       <CarouselBanner />
       <ServiceCards />
       <HealthcareOverview />
       <LocationsSection />
       <TestimonialsSection />
-    </>
+    </div>
   );
 }
 
