@@ -82,14 +82,14 @@ const CarouselBanner = () => {
               <div className="container mx-auto px-6 md:px-12 lg:px-16">
                 <div className="max-w-3xl text-white">
                   <div className="mb-6">
-                    <div className="inline-block px-4 py-2 bg-blue-600/90 rounded-full text-sm font-semibold mb-4">
+                    <div className="inline-block px-4 py-2 bg-green-600/90 rounded-full text-sm font-semibold mb-4">
                       Healthcare Excellence
                     </div>
                   </div>
                   
                   <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
                     {slide.title.split(' ').map((word, i) => (
-                      <span key={i} className={i < 2 ? 'text-blue-400' : ''}>{word} </span>
+                      <span key={i} className={i < 2 ? 'text-green-400' : ''}>{word} </span>
                     ))}
                   </h1>
                   
@@ -98,10 +98,9 @@ const CarouselBanner = () => {
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                    <button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                       {slide.cta}
                     </button>
-                
                   </div>
                 </div>
               </div>
@@ -135,13 +134,13 @@ const CarouselBanner = () => {
             onClick={() => goToSlide(index)}
             className={`relative overflow-hidden rounded-full transition-all duration-300 ${
               index === currentSlide 
-                ? 'w-12 h-3 bg-blue-500' 
+                ? 'w-12 h-3 bg-green-500' 
                 : 'w-3 h-3 bg-white/40 hover:bg-white/60'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           >
             {index === currentSlide && (
-              <div className="absolute inset-0 bg-blue-400 rounded-full animate-pulse" />
+              <div className="absolute inset-0 bg-green-400 rounded-full animate-pulse" />
             )}
           </button>
         ))}

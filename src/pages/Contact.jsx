@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-blue-600 text-white py-16">
+      <div className="bg-green-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
           <h2 className="text-2xl md:text-3xl font-semibold">Get in Touch</h2>
@@ -41,12 +41,12 @@ const Contact = () => {
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Call Us</h3>
                 <div className="text-3xl mb-2">📞</div>
-                <p className="text-blue-600 font-semibold">+91-XXXXXXXXXX</p>
+                <p className="text-green-600 font-semibold">+91-XXXXXXXXXX</p>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Email Us</h3>
                 <div className="text-3xl mb-2">✉️</div>
-                <p className="text-blue-600 font-semibold break-all">info@omgagangirihospital.com</p>
+                <p className="text-green-600 font-semibold break-all">info@omgagangirihospital.com</p>
               </div>
             </div>
 
@@ -55,14 +55,14 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Our Locations</h3>
               <div className="space-y-6">
                 <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h4 className="text-xl font-bold text-blue-600 mb-3">Koparkhairne (Main Hospital)</h4>
+                  <h4 className="text-xl font-bold text-green-600 mb-3">Koparkhairne (Main Hospital)</h4>
                   <p className="text-gray-600 mb-3">
                     Providing multi-specialty care with advanced diagnostics, surgery, and emergency services.
                   </p>
                   <p className="text-gray-800 font-semibold">Sector 18, Koparkhairne, Navi Mumbai</p>
                 </div>
                 <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h4 className="text-xl font-bold text-blue-600 mb-3">Ulwe (Health Centre)</h4>
+                  <h4 className="text-xl font-bold text-green-600 mb-3">Ulwe (Health Centre)</h4>
                   <p className="text-gray-600 mb-3">
                     Newly opened branch provides quality healthcare close to home, with services that include general health consultations, pre-employment check-ups, and a dedicated pathology unit.
                   </p>
@@ -91,7 +91,7 @@ const Contact = () => {
                   value={formData.fullName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -107,7 +107,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   placeholder="Enter your email address"
                 />
               </div>
@@ -123,7 +123,7 @@ const Contact = () => {
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   placeholder="Enter your phone number"
                 />
               </div>
@@ -138,7 +138,7 @@ const Contact = () => {
                   value={formData.queryTopic}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 >
                   <option value="">Select a topic</option>
                   <option value="appointment">Book Appointment</option>
@@ -161,14 +161,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-vertical"
                   placeholder="Enter your message"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300"
               >
                 Send Message
               </button>

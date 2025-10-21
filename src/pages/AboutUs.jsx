@@ -13,11 +13,11 @@ const AboutUs = () => {
 
   const contentBoxes = [
     {
-      icon: <CheckCircle className="w-12 h-12 text-blue-600" />,
+      icon: <CheckCircle className="w-12 h-12 text-green-600" />,
       title: "Comprehensive Health Checkups",
       description: "From routine diagnostics to specialized preventive screenings, we provide complete health checkup facilities under one roof, ensuring early detection and timely treatment.",
-      gradient: "from-blue-50 to-blue-100",
-      hoverGradient: "hover:from-blue-100 hover:to-blue-200"
+      gradient: "from-green-50 to-green-100",
+      hoverGradient: "hover:from-green-100 hover:to-green-200"
     },
     {
       icon: <Shield className="w-12 h-12 text-green-600" />,
@@ -27,18 +27,18 @@ const AboutUs = () => {
       hoverGradient: "hover:from-green-100 hover:to-green-200"
     },
     {
-      icon: <Microscope className="w-12 h-12 text-purple-600" />,
+      icon: <Microscope className="w-12 h-12 text-green-600" />,
       title: "Advanced Facilities & Technology",
       description: "Our hospitals are equipped with modern infrastructure including digital X-ray, pathology labs, audiometry, ECG, and PFT rooms, designed to deliver accurate results and seamless patient care.",
-      gradient: "from-purple-50 to-purple-100",
-      hoverGradient: "hover:from-purple-100 hover:to-purple-200"
+      gradient: "from-green-50 to-green-100",
+      hoverGradient: "hover:from-green-100 hover:to-green-200"
     },
     {
-      icon: <Stethoscope className="w-12 h-12 text-red-600" />,
+      icon: <Stethoscope className="w-12 h-12 text-green-600" />,
       title: "Experienced & Qualified Doctors",
       description: "Led by highly skilled specialists across General Surgery, Gynecology, and Oncology, our team ensures every patient receives expert guidance and treatment backed by years of experience.",
-      gradient: "from-red-50 to-red-100",
-      hoverGradient: "hover:from-red-100 hover:to-red-200"
+      gradient: "from-green-50 to-green-100",
+      hoverGradient: "hover:from-green-100 hover:to-green-200"
     }
   ];
 
@@ -51,7 +51,7 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-green-600 via-green-700 to-green-900 text-white py-24 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full blur-xl"></div>
@@ -61,21 +61,21 @@ const AboutUs = () => {
 
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h1 className="text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-green-100 bg-clip-text text-transparent">
               Expert Care for Healthy Living
             </h1>
-            <p className="text-xl md:text-2xl max-w-5xl mx-auto leading-relaxed mb-12 text-blue-100">
+            <p className="text-xl md:text-2xl max-w-5xl mx-auto leading-relaxed mb-12 text-green-100">
               We deliver high-quality, affordable, and ethical healthcare through our centres in 
               Koparkhairne and Ulwe, Navi Mumbai. Our services include general care, specialized 
               treatments, and occupational health solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center gap-2">
+              <button className="bg-white text-green-600 px-8 py-4 rounded-full font-semibold hover:bg-green-50 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 Book Appointment
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transform hover:scale-105 transition-all duration-300 flex items-center gap-2">
+              <button className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
                 Find Locations
               </button>
@@ -125,21 +125,21 @@ const AboutUs = () => {
                 </div>
                 
                 {/* Hover Effect Line */}
-                <div className="mt-6 h-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent group-hover:via-blue-400 transition-all duration-500"></div>
+                <div className="mt-6 h-1 bg-gradient-to-r from-transparent via-gray-300 to-transparent group-hover:via-green-400 transition-all duration-500"></div>
               </div>
             ))}
           </div>
 
           {/* Call to Action */}
           <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 shadow-xl">
+            <div className="bg-gradient-to-r from-green-600 to-green-800 rounded-2xl p-8 md:p-12 shadow-xl">
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Experience Quality Healthcare?
               </h3>
-              <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+              <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
                 Join thousands of satisfied patients who trust us with their health and wellness journey.
               </p>
-              <button className="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transform hover:scale-105 transition-all duration-300 shadow-lg">
+              <button className="bg-white text-green-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-green-50 transform hover:scale-105 transition-all duration-300 shadow-lg">
                 Schedule Your Visit Today
               </button>
             </div>

@@ -36,7 +36,7 @@ const PartnersSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
             Partners who support us
           </h2>
-          <div className="w-16 h-1 bg-red-600 mx-auto mb-6"></div>
+          <div className="w-16 h-1 bg-green-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Lets know myriads neque/facilibus dolor sapiente illum possimus sint voluptates incidunt 
             molestias nostrum laudantium. Maiores porro cumque quaerat.

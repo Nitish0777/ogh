@@ -4,16 +4,16 @@ import { Calendar, Clock, Phone, ArrowRight, CheckCircle } from 'lucide-react';
 const ServiceCards = () => {
   const services = [
     {
-      icon: <Calendar className="w-16 h-16 text-blue-600" />,
+      icon: <Calendar className="w-16 h-16 text-green-600" />,
       title: 'Book an Appointment Online',
       subtitle: '24/7 Service',
       description: 'Easily schedule your consultation anytime with our user-friendly online appointment system.',
       buttonText: 'MAKE APPOINTMENT',
-      buttonColor: 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800',
+      buttonColor: 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800',
       features: ['Online Booking', 'Instant Confirmation', 'Flexible Scheduling']
     },
     {
-      icon: <Clock className="w-16 h-16 text-indigo-600" />,
+      icon: <Clock className="w-16 h-16 text-green-600" />,
       title: 'Working Hours',
       subtitle: 'Timing Schedule',
       schedules: [
@@ -21,7 +21,7 @@ const ServiceCards = () => {
         { days: 'Saturday - Sunday', time: 'Available 24/7' },
         { days: 'Emergency Services', time: 'Round the Clock' }
       ],
-      backgroundColor: 'bg-gradient-to-br from-indigo-50 to-blue-50'
+      backgroundColor: 'bg-gradient-to-br from-green-50 to-green-50'
     },
     {
       icon: <Phone className="w-16 h-16 text-green-600" />,
@@ -41,12 +41,12 @@ const ServiceCards = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-blue-600">Services</span>
+            Our <span className="text-green-600">Services</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Experience comprehensive healthcare services designed for your convenience and peace of mind
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto mt-6 rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-green-600 to-green-700 mx-auto mt-6 rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -61,7 +61,7 @@ const ServiceCards = () => {
             >
               {/* Card Background Pattern */}
               <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-600 to-transparent rounded-full transform translate-x-16 -translate-y-16"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-600 to-transparent rounded-full transform translate-x-16 -translate-y-16"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-green-600 to-transparent rounded-full transform -translate-x-12 translate-y-12"></div>
               </div>
 
@@ -69,18 +69,18 @@ const ServiceCards = () => {
                 <div className="flex flex-col items-center text-center">
                   {/* Icon Container */}
                   <div className="mb-8 relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-green-100 rounded-full transform group-hover:scale-110 transition-transform duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-green-100 to-green-100 rounded-full transform group-hover:scale-110 transition-transform duration-300"></div>
                     <div className="relative bg-white rounded-full p-4 shadow-lg">
                       {service.icon}
                     </div>
                   </div>
                   
                   {/* Title and Subtitle */}
-                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-300">
                     {service.title}
                   </h3>
                   
-                  <div className="inline-block bg-gradient-to-r from-blue-600 to-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+                  <div className="inline-block bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
                     {service.subtitle}
                   </div>
 
@@ -110,7 +110,7 @@ const ServiceCards = () => {
                         <div key={idx} className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
                           <div className="flex justify-between items-center">
                             <span className="text-gray-700 font-medium">{schedule.days}</span>
-                            <span className="text-blue-600 font-bold text-sm bg-blue-50 px-3 py-1 rounded-full">
+                            <span className="text-green-600 font-bold text-sm bg-green-50 px-3 py-1 rounded-full">
                               {schedule.time}
                             </span>
                           </div>
@@ -139,7 +139,7 @@ const ServiceCards = () => {
               </div>
 
               {/* Hover Effect Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-green-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
           ))}
         </div>

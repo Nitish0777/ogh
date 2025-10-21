@@ -71,10 +71,10 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 via-white to-green-50 py-24 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-green-50 via-white to-green-50 py-24 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-600 to-transparent rounded-full transform -translate-x-48 -translate-y-48"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-green-600 to-transparent rounded-full transform -translate-x-48 -translate-y-48"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-green-600 to-transparent rounded-full transform translate-x-40 translate-y-40"></div>
       </div>
 
@@ -82,14 +82,14 @@ const TestimonialsSection = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-block mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-6 py-3 rounded-full text-sm font-semibold uppercase tracking-wide">
+            <span className="bg-gradient-to-r from-green-600 to-green-600 text-white px-6 py-3 rounded-full text-sm font-semibold uppercase tracking-wide">
               Patient Stories
             </span>
           </div>
           
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             We served over{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-600">
               1,00,000+
             </span>{' '}
             Patients
@@ -100,13 +100,13 @@ const TestimonialsSection = () => {
             life-changing experience with our healthcare services.
           </p>
           
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-green-600 mx-auto mt-8 rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-green-600 to-green-600 mx-auto mt-8 rounded-full"></div>
           
           {/* Stats */}
           <div className="flex justify-center items-center space-x-12 mt-12">
             <div className="text-center">
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full mb-2 mx-auto">
-                <Users className="w-6 h-6 text-blue-600" />
+              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-100 to-green-200 rounded-full mb-2 mx-auto">
+                <Users className="w-6 h-6 text-green-600" />
               </div>
               <div className="text-2xl font-bold text-gray-900">1L+</div>
               <div className="text-sm text-gray-600">Happy Patients</div>
@@ -133,13 +133,13 @@ const TestimonialsSection = () => {
           <div className="bg-white rounded-3xl shadow-2xl p-12 relative overflow-hidden">
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-5">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-600 to-transparent rounded-full"></div>
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-green-600 to-transparent rounded-full"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-green-600 to-transparent rounded-full"></div>
             </div>
 
             {/* Quote icon */}
             <div className="absolute top-8 right-8">
-              <Quote className="w-16 h-16 text-blue-200" />
+              <Quote className="w-16 h-16 text-green-200" />
             </div>
 
             <div className="relative z-10">
@@ -174,7 +174,7 @@ const TestimonialsSection = () => {
                   <h4 className="text-xl font-bold text-gray-900">
                     {testimonials[currentTestimonial].name}
                   </h4>
-                  <p className="text-blue-600 font-medium">
+                  <p className="text-green-600 font-medium">
                     Patient from {testimonials[currentTestimonial].location}
                   </p>
                 </div>
@@ -185,13 +185,13 @@ const TestimonialsSection = () => {
           {/* Navigation arrows */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-blue-50 text-blue-600 p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110 z-20"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-green-50 text-green-600 p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110 z-20"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-blue-50 text-blue-600 p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110 z-20"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-green-50 text-green-600 p-4 rounded-full shadow-xl transition-all duration-300 hover:scale-110 z-20"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -206,7 +206,7 @@ const TestimonialsSection = () => {
                 key={index}
                 onClick={() => goToTestimonial(index)}
                 className={`cursor-pointer bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ${
-                  index === (currentTestimonial + 1) % testimonials.length ? 'ring-2 ring-blue-200' : ''
+                  index === (currentTestimonial + 1) % testimonials.length ? 'ring-2 ring-green-200' : ''
                 }`}
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -239,7 +239,7 @@ const TestimonialsSection = () => {
               onClick={() => goToTestimonial(index)}
               className={`transition-all duration-300 ${
                 index === currentTestimonial
-                  ? 'w-12 h-3 bg-gradient-to-r from-blue-600 to-green-600 rounded-full'
+                  ? 'w-12 h-3 bg-gradient-to-r from-green-600 to-green-600 rounded-full'
                   : 'w-3 h-3 bg-gray-300 hover:bg-gray-400 rounded-full'
               }`}
             />

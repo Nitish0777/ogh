@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import DepartmentCard from '../components/DepartmentCard';
 
@@ -125,13 +124,13 @@ const Departments = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Enhanced Hero Section */}
-      <div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-purple-700 text-white py-24 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-green-600 via-green-700 to-emerald-700 text-white py-24 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-32 h-32 bg-white opacity-10 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-24 h-24 bg-blue-300 opacity-20 rounded-full animate-bounce"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-300 opacity-15 rounded-full animate-ping"></div>
-          <div className="absolute top-32 right-1/4 w-20 h-20 bg-cyan-300 opacity-10 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 bg-green-300 opacity-20 rounded-full animate-bounce"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-emerald-300 opacity-15 rounded-full animate-ping"></div>
+          <div className="absolute top-32 right-1/4 w-20 h-20 bg-lime-300 opacity-10 rounded-full animate-pulse"></div>
         </div>
         
         {/* Medical Cross Pattern */}
@@ -168,15 +167,15 @@ const Departments = () => {
           <div className="max-w-5xl mx-auto">  
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Comprehensive Care
-              <span className="block text-3xl md:text-4xl text-blue-200 mt-4 font-medium">
+              <span className="block text-3xl md:text-4xl text-green-200 mt-4 font-medium">
                 Across Specialties
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90 mb-10">
               We bring together <span className="text-yellow-300 font-semibold">expertise</span>, 
-              <span className="text-green-300 font-semibold"> technology</span>, and 
-              <span className="text-cyan-300 font-semibold"> compassion</span> to deliver specialized treatments. 
+              <span className="text-lime-300 font-semibold"> technology</span>, and 
+              <span className="text-emerald-300 font-semibold"> compassion</span> to deliver specialized treatments. 
               Every patient receives care tailored to their health needs.
             </p>
 
@@ -184,24 +183,24 @@ const Departments = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">4+</div>
-                <div className="text-blue-200 text-sm">service</div>
+                <div className="text-green-200 text-sm">service</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">24/7</div>
-                <div className="text-blue-200 text-sm">Expert Care</div>
+                <div className="text-green-200 text-sm">Expert Care</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">8+</div>
-                <div className="text-blue-200 text-sm">Specialists</div>
+                <div className="text-green-200 text-sm">Specialists</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">1000+</div>
-                <div className="text-blue-200 text-sm">Operations</div>
+                <div className="text-green-200 text-sm">Operations</div>
               </div>
             </div>
 
             {/* CTA Button */}
-            <button className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg">
+            <button className="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg">
               Scroll Down
             </button>
           </div>
@@ -212,7 +211,7 @@ const Departments = () => {
       <div className="container mx-auto px-4 max-w-6xl py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Departments</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-green-600 mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
@@ -237,7 +236,7 @@ const Departments = () => {
               Our experienced staff is here to guide you to the appropriate specialist for your specific needs. 
               Contact us for personalized assistance.
             </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+            <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
               Contact Us Today
             </button>
           </div>

@@ -17,7 +17,7 @@ const DepartmentCard = ({ title, description, keyProcedures, onLearnMore }) => {
           <ul className="text-sm text-gray-600 space-y-1">
             {keyProcedures.map((procedure, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 {procedure}
               </li>
             ))}
@@ -27,7 +27,7 @@ const DepartmentCard = ({ title, description, keyProcedures, onLearnMore }) => {
         <div className="mt-auto">
           <button
             onClick={onLearnMore}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors duration-200"
+            className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors duration-200"
           >
             Learn More
           </button>

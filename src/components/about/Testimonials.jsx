@@ -28,14 +28,14 @@ const Testimonials = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">What They Say About Us</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+          <div className="w-24 h-1 bg-green-600 mx-auto"></div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center mb-4">
-                <Quote className="w-6 h-6 text-blue-600 mr-3" />
+                <Quote className="w-6 h-6 text-green-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-800">{testimonial.title}</h3>
               </div>
               

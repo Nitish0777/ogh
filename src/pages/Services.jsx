@@ -17,7 +17,7 @@ const Services = () => {
       ],
       route: "/services/hospital-koparkhairne",
       icon: "🏥",
-      color: "from-blue-500 to-blue-600"
+      color: "from-green-500 to-green-600"
     },
     {
       id: 2,
@@ -45,7 +45,7 @@ const Services = () => {
       ],
       route: "/services/lab-yatharth",
       icon: "🔬",
-      color: "from-purple-500 to-purple-600"
+      color: "from-green-500 to-green-600"
     },
     {
       id: 4,
@@ -59,7 +59,7 @@ const Services = () => {
       ],
       route: "/services/ulwe-centre",
       icon: "🏢",
-      color: "from-teal-500 to-teal-600"
+      color: "from-green-500 to-green-600"
     }
   ];
 
@@ -68,15 +68,15 @@ const Services = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-50">
       {/* Enhanced Hero Section */}
-      <div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-purple-700 text-white py-24 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-green-600 via-green-700 to-green-700 text-white py-24 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-32 h-32 bg-white opacity-10 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-24 h-24 bg-blue-300 opacity-20 rounded-full animate-bounce"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-300 opacity-15 rounded-full animate-ping"></div>
-          <div className="absolute top-32 right-1/4 w-20 h-20 bg-cyan-300 opacity-10 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 bg-green-300 opacity-20 rounded-full animate-bounce"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-green-300 opacity-15 rounded-full animate-ping"></div>
+          <div className="absolute top-32 right-1/4 w-20 h-20 bg-green-300 opacity-10 rounded-full animate-pulse"></div>
         </div>
         
         {/* Medical Cross Pattern */}
@@ -129,7 +129,7 @@ const Services = () => {
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Our Services
-              <span className="block text-3xl md:text-4xl text-blue-200 mt-4 font-medium">
+              <span className="block text-3xl md:text-4xl text-green-200 mt-4 font-medium">
                 Excellence in Healthcare
               </span>
             </h1>
@@ -145,24 +145,24 @@ const Services = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">4</div>
-                <div className="text-blue-200 text-sm">Service Divisions</div>
+                <div className="text-green-200 text-sm">Service Divisions</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">24/7</div>
-                <div className="text-blue-200 text-sm">Emergency Care</div>
+                <div className="text-green-200 text-sm">Emergency Care</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">500+</div>
-                <div className="text-blue-200 text-sm">Expert Staff</div>
+                <div className="text-green-200 text-sm">Expert Staff</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold mb-2">10K+</div>
-                <div className="text-blue-200 text-sm">Patients Served</div>
+                <div className="text-green-200 text-sm">Patients Served</div>
               </div>
             </div>
 
             {/* CTA Button */}
-            <button className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg">
+            <button className="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg">
               Explore All Services
             </button>
           </div>
@@ -187,7 +187,7 @@ const Services = () => {
                 <div className="relative z-10">
                   <div className="text-4xl mb-3">{service.icon}</div>
                   <h3 className="text-xl font-bold mb-2 leading-tight">{service.title}</h3>
-                  <p className="text-blue-100 font-medium">{service.subtitle}</p>
+                  <p className="text-green-100 font-medium">{service.subtitle}</p>
                 </div>
               </div>
 
@@ -197,14 +197,14 @@ const Services = () => {
                 
                 <div className="mb-8">
                   <h5 className="font-bold text-gray-800 mb-4 flex items-center">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     Key Highlights
                   </h5>
                   <ul className="space-y-3">
                     {service.highlights.map((highlight, index) => (
                       <li key={index} className="flex items-start group">
-                        <div className="flex-shrink-0 w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
-                          <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <div className="flex-shrink-0 w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3 mt-0.5">
+                          <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
                         </div>
@@ -230,16 +230,16 @@ const Services = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 py-20">
+      <div className="bg-gradient-to-r from-green-600 to-green-700 py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Experience World-Class Healthcare?
             </h2>
-            <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+            <p className="text-xl text-green-100 mb-10 leading-relaxed">
               We are pleased to offer you the chance to access trusted, affordable, and comprehensive healthcare under one roof.
             </p>
-            <button className="bg-white text-blue-600 hover:bg-gray-50 font-bold py-4 px-10 rounded-xl transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <button className="bg-white text-green-600 hover:bg-gray-50 font-bold py-4 px-10 rounded-xl transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Make an Appointment
             </button>
           </div>

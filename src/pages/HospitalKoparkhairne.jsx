@@ -7,12 +7,12 @@ const HospitalKoparkhairne = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-teal-600 text-white py-24 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-green-600 via-green-700 to-green-600 text-white py-24 overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-10 w-32 h-32 bg-white opacity-10 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-24 h-24 bg-blue-300 opacity-20 rounded-full animate-bounce"></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-teal-300 opacity-15 rounded-full animate-ping"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 bg-green-300 opacity-20 rounded-full animate-bounce"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-green-300 opacity-15 rounded-full animate-ping"></div>
         </div>
         
         {/* Medical Cross Pattern */}
@@ -41,13 +41,13 @@ const HospitalKoparkhairne = () => {
             {/* Main Heading */}
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               OmGagangiri Hospital
-              <span className="block text-3xl md:text-5xl text-blue-200 mt-2">
+              <span className="block text-3xl md:text-5xl text-green-200 mt-2">
                 Koparkhairne
               </span>
             </h1>
             
             {/* Subtitle */}
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 font-medium">
+            <p className="text-xl md:text-2xl mb-8 text-green-100 font-medium">
               Comprehensive Multi-Specialty Care Under One Roof
             </p>
             
@@ -59,10 +59,10 @@ const HospitalKoparkhairne = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <button className="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Book Appointment
               </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-4 px-8 rounded-xl transition-all duration-300">
+              <button className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 Emergency Services
               </button>
             </div>
@@ -75,7 +75,7 @@ const HospitalKoparkhairne = () => {
         <div className="text-center mb-12">
           <button 
             onClick={() => navigate('/services')}
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+            className="inline-flex items-center text-green-600 hover:text-green-800 font-medium"
           >
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L4.414 9H17a1 1 0 110 2H4.414l5.293 5.293a1 1 0 010 1.414z" clipRule="evenodd" />

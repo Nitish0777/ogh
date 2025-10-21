@@ -1,22 +1,31 @@
 import { useState } from 'react';
 import { Phone, MapPin, Mail, Menu, X } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 import logo from '../assets/logo.jpg';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const navigationItems = [
-    { name: 'Home', href: '/', active: true },
+    { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Departments', href: '/departments' },
     { name: 'Doctors', href: '/doctors' },
     { name: 'Contact', href: '/contact' }
   ];
+
+  const isActive = (href) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(href);
+  };
 
   return (
     <>
@@ -66,7 +75,7 @@ const Header = () => {
                   key={item.name}
                   href={item.href}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    item.active
+                    isActive(item.href)
                       ? 'bg-green-600 text-white shadow-md'
                       : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
                   }`}
@@ -112,7 +121,7 @@ const Header = () => {
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                      item.active
+                      isActive(item.href)
                         ? 'bg-green-600 text-white'
                         : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
                     }`}

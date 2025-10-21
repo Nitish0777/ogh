@@ -8,7 +8,7 @@ const HealthcareOverview = () => {
       number: "3+", 
       label: "Expert Doctors",
       icon: <Users className="w-8 h-8" />,
-      color: "from-blue-500 to-blue-600"
+      color: "from-green-500 to-green-600"
     },
     { 
       number: "700+", 
@@ -20,13 +20,13 @@ const HealthcareOverview = () => {
       number: "40+", 
       label: "Years Experience",
       icon: <Clock className="w-8 h-8" />,
-      color: "from-purple-500 to-purple-600"
+      color: "from-green-500 to-green-600"
     },
     { 
       number: "1500+", 
       label: "Surgeries Performed",
       icon: <Award className="w-8 h-8" />,
-      color: "from-yellow-500 to-yellow-600"
+      color: "from-green-500 to-green-600"
     },
   ];
 
@@ -49,7 +49,7 @@ const HealthcareOverview = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 via-white to-blue-50 py-20">
+    <div className="bg-gradient-to-br from-green-50 via-white to-green-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Content Section */}
@@ -59,7 +59,7 @@ const HealthcareOverview = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="inline-block">
-                <span className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide">
+                <span className="bg-gradient-to-r from-green-600 to-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wide">
                   Healthcare Excellence
                 </span>
               </div>
@@ -67,7 +67,7 @@ const HealthcareOverview = () => {
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 Comprehensive Healthcare
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-600">
                   All In One Place
                 </span>
               </h2>
@@ -83,7 +83,7 @@ const HealthcareOverview = () => {
             <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="flex-shrink-0 p-2 bg-gradient-to-r from-blue-100 to-green-100 rounded-lg text-blue-600">
+                  <div className="flex-shrink-0 p-2 bg-gradient-to-r from-green-100 to-green-100 rounded-lg text-green-600">
                     {feature.icon}
                   </div>
                   <div>
@@ -96,10 +96,10 @@ const HealthcareOverview = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                 Explore Our Services
               </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+              <button className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
                 Book Consultation
               </button>
             </div>
@@ -109,8 +109,8 @@ const HealthcareOverview = () => {
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               {/* Background decorative elements */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-green-600/10"></div>
-              <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-blue-600/20 to-transparent rounded-full"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-green-600/10 to-green-600/10"></div>
+              <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-green-600/20 to-transparent rounded-full"></div>
               <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-tr from-green-600/20 to-transparent rounded-full"></div>
               
               <img
@@ -133,16 +133,16 @@ const HealthcareOverview = () => {
         {/* Statistics Section */}
         <div className="relative">
           {/* Background decoration */}
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 rounded-3xl"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-green-600/10 rounded-3xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-green-900 to-gray-900 rounded-3xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-green-600/10 to-green-600/10 rounded-3xl"></div>
           
-          <div className="relative bg-gradient-to-r from-gray-900 to-blue-900 rounded-3xl p-12 shadow-2xl">
+          <div className="relative bg-gradient-to-r from-gray-900 to-green-900 rounded-3xl p-12 shadow-2xl">
             {/* Section header */}
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-white mb-4">
                 Our Healthcare Impact
               </h3>
-              <p className="text-blue-100 text-lg max-w-2xl mx-auto">
+              <p className="text-green-100 text-lg max-w-2xl mx-auto">
                 Trusted by thousands of patients and recognized for our commitment to excellence in healthcare delivery
               </p>
             </div>
@@ -165,7 +165,7 @@ const HealthcareOverview = () => {
                     </div>
                     
                     {/* Label */}
-                    <div className="text-blue-100 font-medium text-lg">
+                    <div className="text-green-100 font-medium text-lg">
                       {stat.label}
                     </div>
                   </div>
@@ -175,7 +175,7 @@ const HealthcareOverview = () => {
 
             {/* Bottom text */}
             <div className="text-center mt-12">
-              <p className="text-blue-100 text-lg">
+              <p className="text-green-100 text-lg">
                 Join thousands of satisfied patients who trust us with their healthcare needs
               </p>
             </div>

@@ -190,7 +190,7 @@ const DepartmentDetail = () => {
           <h1 className="text-2xl font-bold text-gray-800 mb-4">Department Not Found</h1>
           <button
             onClick={() => navigate('/departments')}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg"
+            className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg"
           >
             Back to Departments
           </button>
@@ -202,17 +202,17 @@ const DepartmentDetail = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <div className="bg-gradient-to-r from-green-600 to-green-800 text-white py-16">
         <div className="container mx-auto px-4 max-w-6xl">
           <button
             onClick={() => navigate('/departments')}
-            className="mb-6 text-blue-200 hover:text-white flex items-center"
+            className="mb-6 text-green-200 hover:text-white flex items-center"
           >
             ← Back to Departments
           </button>
           <h1 className="text-4xl font-bold mb-4">{department.title}</h1>
-          <h2 className="text-2xl text-blue-100 mb-4">{department.subtitle}</h2>
-          <p className="text-lg text-blue-100 max-w-4xl leading-relaxed">
+          <h2 className="text-2xl text-green-100 mb-4">{department.subtitle}</h2>
+          <p className="text-lg text-green-100 max-w-4xl leading-relaxed">
             {department.description}
           </p>
         </div>
@@ -225,14 +225,14 @@ const DepartmentDetail = () => {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Core Expertise</h3>
-              <ul className="space-y-3">
+              <div className="space-y-3">
                 {department.expertise.map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <span className="text-blue-600 mr-3 mt-1">•</span>
+                    <span className="text-green-600 mr-3 mt-1">•</span>
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
-              </ul>
+              </div>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-8">
@@ -268,12 +268,12 @@ const DepartmentDetail = () => {
               </div>
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-6">
+            <div className="bg-green-50 rounded-lg p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">Book an Appointment</h3>
               <p className="text-gray-600 mb-4 text-sm">
                 Ready to schedule your consultation? Contact us today.
               </p>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg w-full font-semibold transition-colors duration-200">
+              <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg w-full font-semibold transition-colors duration-200">
                 Book Appointment
               </button>
             </div>

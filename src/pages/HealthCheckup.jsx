@@ -7,7 +7,7 @@ const HealthCheckup = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-green-500 via-emerald-600 to-teal-600 text-white py-24 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-green-600 via-green-700 to-green-600 text-white py-24 overflow-hidden">
         {/* Animated Health Icons */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-16 left-20 animate-float">
@@ -49,7 +49,7 @@ const HealthCheckup = () => {
             
             {/* Main Heading */}
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              
+              OGH Health Checkup Services
               <span className="block text-3xl md:text-5xl text-green-200 mt-2">
                  Preventive, Corporate & Onsite Health Programs
               </span>
@@ -57,7 +57,7 @@ const HealthCheckup = () => {
             
             {/* Subtitle */}
             <p className="text-xl md:text-2xl mb-8 text-green-100 font-medium">
-              OGH Health Checkup Services
+              Comprehensive Health Screenings
             </p>
             
             {/* Description */}
