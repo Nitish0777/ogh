@@ -26,6 +26,10 @@ export default function Footer() {
                 <div className="absolute -bottom-2 left-0 w-16 h-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full"></div>
               </h3>
 
+              <p className="text-green-100 text-sm leading-relaxed mb-8">
+                Your trusted partner in comprehensive healthcare, providing exceptional medical services with cutting-edge technology and compassionate care.
+              </p>
+
               {/* Trust Indicators */}
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="text-center p-3 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">

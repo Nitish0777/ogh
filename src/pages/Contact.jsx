@@ -62,7 +62,7 @@ const Contact = () => {
                   <p className="text-gray-800 font-semibold">Sector 18, Koparkhairne, Navi Mumbai</p>
                 </div>
                 <div className="bg-white rounded-lg shadow-lg p-6">
-                  <h4 className="text-xl font-bold text-green-600 mb-3">Ulwe (Health Centre)</h4>
+                  <h4 className="text-xl font-bold text-green-600 mb-3">Ulwe (Health Services Centre)</h4>
                   <p className="text-gray-600 mb-3">
                     Newly opened branch provides quality healthcare close to home, with services that include general health consultations, pre-employment check-ups, and a dedicated pathology unit.
                   </p>
