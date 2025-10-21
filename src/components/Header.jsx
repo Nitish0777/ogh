@@ -53,6 +53,10 @@ const Header = () => {
                   className="h-full w-full object-contain hover:scale-105 transition-transform duration-300"
                 />
               </div>
+              <div>
+                <h1 className="ml-3 text-2xl font-bold text-green-800">OmGaganGiri Hospital</h1>
+                <p className="ml-3 text-sm text-gray-500">& Occupation Services</p>
+              </div>
             </div>
 
             {/* Enhanced Desktop Navigation */}
