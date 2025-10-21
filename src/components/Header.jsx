@@ -54,8 +54,8 @@ const Header = () => {
                 />
               </div>
               <div>
-                <h1 className="ml-3 text-2xl font-bold text-green-800">OmGaganGiri Hospital</h1>
-                <p className="ml-3 text-sm text-gray-500">& Occupation Services</p>
+                <h1 className="ml-3 text-1xl font-bold text-green-800">OmGaganGiri Hospital</h1>
+                <p className="ml-3 text-sm text-gray-500 font-bold">& Occupation Services</p>
               </div>
             </div>
 

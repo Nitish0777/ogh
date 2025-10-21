@@ -11,7 +11,7 @@ const CarouselBanner = () => {
       image: emergencyImage,
       title: 'Your Trusted Partner in Complete Healthcare',
       subtitle: 'At Om Gagangiri Hospital & Occupational Health, we combine expert care and advanced facilities to deliver reliable, affordable, and patient-focused healthcare.',
-      cta: 'Book Appointment'
+      cta: 'Book an Appointment'
     },
     {
       image: emergencyImage,
@@ -101,9 +101,7 @@ const CarouselBanner = () => {
                     <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                       {slide.cta}
                     </button>
-                    <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold py-4 px-8 rounded-lg transition-all duration-300">
-                      Learn More
-                    </button>
+                
                   </div>
                 </div>
               </div>
@@ -115,18 +113,18 @@ const CarouselBanner = () => {
       {/* Modern Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-4 rounded-full transition-all duration-300 z-20 border border-white/20"
+        className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-4 rounded-full transition-all duration-300 z-20 border border-white/20"
         aria-label="Previous slide"
       >
-        <ChevronLeft size={28} />
+        <ChevronLeft size={24} />
       </button>
       
       <button
         onClick={nextSlide}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-4 rounded-full transition-all duration-300 z-20 border border-white/20"
+        className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-4 rounded-full transition-all duration-300 z-20 border border-white/20"
         aria-label="Next slide"
       >
-        <ChevronRight size={28} />
+        <ChevronRight size={24} />
       </button>
 
       {/* Progress Indicators */}
@@ -150,27 +148,6 @@ const CarouselBanner = () => {
       </div>
 
       {/* Slide Counter & Controls */}
-      <div className="absolute bottom-8 right-8 flex items-center space-x-4 z-20">
-        <span className="text-white/80 text-sm font-medium">
-          {String(currentSlide + 1).padStart(2, '0')} / {String(slides.length).padStart(2, '0')}
-        </span>
-        
-        <button
-          onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-          className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full transition-all duration-300 border border-white/20"
-          aria-label={isAutoPlaying ? 'Pause autoplay' : 'Resume autoplay'}
-        >
-          {isAutoPlaying ? <Pause size={20} /> : <Play size={20} />}
-        </button>
-      </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute top-8 left-8 z-20">
-        <div className="flex items-center space-x-3">
-          <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-          <span className="text-white/60 text-sm font-medium">LIVE</span>
-        </div>
-      </div>
     </div>
   );
 };
