@@ -123,26 +123,103 @@ const Departments = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Comprehensive Care Across Specialties
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* Enhanced Hero Section */}
+      <div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-purple-700 text-white py-24 overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-white opacity-10 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 bg-blue-300 opacity-20 rounded-full animate-bounce"></div>
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-300 opacity-15 rounded-full animate-ping"></div>
+          <div className="absolute top-32 right-1/4 w-20 h-20 bg-cyan-300 opacity-10 rounded-full animate-pulse"></div>
+        </div>
+        
+        {/* Medical Cross Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="grid grid-cols-8 gap-8 h-full">
+            {[...Array(32)].map((_, i) => (
+              <div key={i} className="flex items-center justify-center">
+                <div className="w-8 h-8 relative">
+                  <div className="absolute inset-0 bg-white transform rotate-45"></div>
+                  <div className="absolute top-1/2 left-0 w-full h-1 bg-white transform -translate-y-1/2"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Floating Department Icons */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-16 left-20 animate-float">
+            <span className="text-6xl">🏥</span>
+          </div>
+          <div className="absolute top-32 right-16 animate-float-delayed">
+            <span className="text-5xl">👩‍⚕️</span>
+          </div>
+          <div className="absolute bottom-32 left-16 animate-bounce-slow">
+            <span className="text-4xl">🔬</span>
+          </div>
+          <div className="absolute bottom-20 right-32 animate-pulse-slow">
+            <span className="text-5xl">🩺</span>
+          </div>
+        </div>
+
+        <div className="relative container mx-auto px-4 text-center">
+          <div className="max-w-5xl mx-auto">
+            {/* Department Icons Row */}
+            {/* <div className="flex justify-center items-center gap-8 mb-8">
+              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <span className="text-2xl">⚕️</span>
+              </div>
+              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <span className="text-2xl">👩‍⚕️</span>
+              </div>
+              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <span className="text-2xl">🧠</span>
+              </div>
+              <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                <span className="text-2xl">❤️</span>
+              </div>
+            </div> */}
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+              Comprehensive Care
+              <span className="block text-3xl md:text-4xl text-blue-200 mt-4 font-medium">
+                Across Specialties
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed mb-6">
-              We bring together expertise, technology, and compassion to deliver specialized treatments. 
+            
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90 mb-10">
+              We bring together <span className="text-yellow-300 font-semibold">expertise</span>, 
+              <span className="text-green-300 font-semibold"> technology</span>, and 
+              <span className="text-cyan-300 font-semibold"> compassion</span> to deliver specialized treatments. 
               Every patient receives care tailored to their health needs.
             </p>
-            <p className="text-lg text-blue-100 max-w-5xl mx-auto leading-relaxed">
-              At OmGagangiri Hospital and Occupational Services, our multi-specialty departments combine clinical excellence with personalized care. 
-              Each division is led by experienced consultants supported by advanced infrastructure, ensuring that every patient benefits from 
-              accurate diagnosis, precise treatment, and compassionate follow-up.
-            </p>
-            <p className="text-lg text-blue-100 mt-4 font-medium">
-              Explore our key specialties below:
-            </p>
+
+            {/* Stats Row */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+              <div className="text-center">
+                <div className="text-3xl font-bold mb-2">4+</div>
+                <div className="text-blue-200 text-sm">service</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold mb-2">24/7</div>
+                <div className="text-blue-200 text-sm">Expert Care</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold mb-2">8+</div>
+                <div className="text-blue-200 text-sm">Specialists</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold mb-2">1000+</div>
+                <div className="text-blue-200 text-sm">Operations</div>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <button className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg">
+              Scroll Down
+            </button>
           </div>
         </div>
       </div>
@@ -154,7 +231,7 @@ const Departments = () => {
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {departments.map(department => (
             <DepartmentCard
               key={department.id}
@@ -182,6 +259,29 @@ const Departments = () => {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        @keyframes float-delayed {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+        }
+        @keyframes bounce-slow {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse-slow {
+          0%, 100% { opacity: 0.2; }
+          50% { opacity: 0.4; }
+        }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .animate-float-delayed { animation: float-delayed 3s ease-in-out infinite 1s; }
+        .animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
+        .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+      `}</style>
     </div>
   );
 };

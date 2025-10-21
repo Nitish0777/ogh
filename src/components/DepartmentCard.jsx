@@ -1,21 +1,20 @@
 import React from 'react';
 
-const DepartmentCard = ({ title, description, icon, keyProcedures, onLearnMore }) => {
+const DepartmentCard = ({ title, description, keyProcedures, onLearnMore }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-      <div className="text-center mb-4">
-        <div className="text-4xl mb-3">{icon}</div>
-        <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
-      </div>
-      
-      <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-        {description}
-      </p>
-
-      {keyProcedures && (
-        <div className="mb-4">
-          <h4 className="font-semibold text-gray-800 mb-2 text-sm">Key Services:</h4>
-          <ul className="text-xs text-gray-600 space-y-1">
+    <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
+      <div className="p-6 flex flex-col h-full">
+        <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2 text-center">
+          {title}
+        </h3>
+        
+        <p className="text-gray-600 mb-4 leading-relaxed flex-shrink-0">
+          {description}
+        </p>
+        
+        <div className="mb-6 flex-grow">
+          <h4 className="font-semibold text-gray-700 mb-2">Key Procedures:</h4>
+          <ul className="text-sm text-gray-600 space-y-1">
             {keyProcedures.map((procedure, index) => (
               <li key={index} className="flex items-start">
                 <span className="text-blue-600 mr-2">•</span>
@@ -24,18 +23,19 @@ const DepartmentCard = ({ title, description, icon, keyProcedures, onLearnMore }
             ))}
           </ul>
         </div>
-      )}
-
-      <div className="text-center">
-        <button
-          onClick={onLearnMore}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 w-full"
-        >
-          → Learn More
-        </button>
+        
+        <div className="mt-auto">
+          <button
+            onClick={onLearnMore}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors duration-200"
+          >
+            Learn More
+          </button>
+        </div>
       </div>
     </div>
   );
 };
+
 
 export default DepartmentCard;
