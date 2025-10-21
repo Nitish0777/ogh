@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Departments from "./pages/Departments";
+import DepartmentDetail from "./pages/DepartmentDetail";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import BookAppointment from "./pages/BookAppointment";
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/departments" element={<Departments />} />
+          <Route path="/departments/:id" element={<DepartmentDetail />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/hospital-koparkhairne" element={<HospitalKoparkhairne />} />
           <Route path="/services/health-checkup" element={<HealthCheckup />} />
