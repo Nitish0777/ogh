@@ -14,7 +14,7 @@ const CarouselBanner = () => {
     {
       image: healthcare,
       title: 'Your Trusted Partner in Complete Healthcare',
-      subtitle: 'At Om Gagangiri Hospital & Occupational Health, we combine expert care and advanced facilities to deliver reliable, affordable, and patient-focused healthcare.',
+      subtitle: 'At Om Gagangiri Hospital & Occupational Health Services, we combine expert care and advanced facilities to deliver reliable, affordable, and patient-focused healthcare.',
       cta: 'Book an Appointment'
     },
     {

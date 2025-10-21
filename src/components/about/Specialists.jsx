@@ -1,5 +1,7 @@
 import React from 'react';
-import { User } from 'lucide-react';
+import prakash from '../../assets/prakash.jpeg'
+import rekha from '../../assets/rekha_kaushal.jpeg'
+import shirish from '../../assets/shri.avif'
 
 const Specialists = () => {
   const specialists = [
@@ -7,19 +9,19 @@ const Specialists = () => {
       name: "Dr. Prakash Shendge",
       specialty: "General Surgeon",
       description: "Expert in general and laparoscopic surgeries with years of trusted experience in patient care.",
-      image: "/images/dr-prakash.jpg"
+      image: prakash
     },
     {
       name: "Dr. Rekha Kaushal",
       specialty: "Gynecology & Obstetrics",
       description: "Specialist in women's health, pregnancy care, childbirth, and gynecological procedures.",
-      image: "/images/dr-rekha.jpg"
+      image: rekha
     },
     {
-      name: "Dr. J. N. Kaushal",
+      name: "Dr. Shirish Shetty",
       specialty: "Oncology",
       description: "Highly experienced oncologist specializing in cancer care, including surgery, chemotherapy, and treatment planning.",
-      image: "/images/dr-jn-kaushal.jpg"
+      image: shirish
     }
   ];
 
@@ -34,10 +36,12 @@ const Specialists = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {specialists.map((doctor, index) => (
             <div key={index} className="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="h-64 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
-                  <User className="w-16 h-16 text-gray-600" />
-                </div>
+              <div className="h-64 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
+                <img 
+                  src={doctor.image} 
+                  alt={doctor.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-semibold text-gray-800 mb-2">{doctor.name}</h3>

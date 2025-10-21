@@ -41,7 +41,7 @@ const Contact = () => {
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Call Us</h3>
                 <div className="text-3xl mb-2">📞</div>
-                <p className="text-green-600 font-semibold">+91-XXXXXXXXXX</p>
+                <p className="text-green-600 font-semibold">+91 9833571031</p>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Email Us</h3>

@@ -1,12 +1,13 @@
-import React from 'react';
 import { MapPin, Phone, Clock, Stethoscope, Users, Car, Ambulance, Shield } from 'lucide-react';
-import not from '../assets/not.png';
+import hospital from '../assets/hospital.jpg';
+import ogh from '../assets/ogh.jpg';
+import Book from '../assets/Book.jpg';
 
 const LocationsSection = () => {
   const locations = [
     {
-      image: not,
-      title: "Koparkhairne Medical Center",
+      image: hospital,
+      title: "Om Gagangiri Hospital & Occupational Services",
       address: "Plot No. 123, Sector 10, Koparkhairne, Navi Mumbai - 400709",
       phone: "+91 7666 6711 11",
       description: "Our flagship hospital featuring state-of-the-art facilities with 200+ beds, advanced ICU, emergency services, and specialized departments including cardiology, neurology, and orthopedics.",
@@ -20,13 +21,13 @@ const LocationsSection = () => {
       ]
     },
     {
-      image: not,
-      title: "Ulwe Health Center",
+      image: ogh,
+      title: "OGH Health Services, Ulwe",
       address: "Sector 20, Ulwe, Navi Mumbai - 410206",
       phone: "+91 9876 5432 10",
       description: "A modern healthcare facility specializing in preventive care, health checkups, pathology services, and outpatient consultations for the growing Ulwe community.",
       buttonText: "VIEW DETAILS",
-      services: ["Health Checkups", "Pathology", "OPD", "Vaccination"],
+      services: ["Health Checkups", "Pathology", "OPD"],
       hours: "Mon-Sat: 8AM-8PM",
       features: [
         { icon: <Users className="w-4 h-4" />, text: "Corporate Packages" },
@@ -145,7 +146,7 @@ const LocationsSection = () => {
             {/* Left side - Doctor image with contact */}
             <div className="relative bg-gradient-to-br from-slate-800 to-slate-900">
               <img 
-                src={not}
+                src={Book}
                 alt="Doctor consultation" 
                 className="w-full h-full object-cover opacity-20"
               />

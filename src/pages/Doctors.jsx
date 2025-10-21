@@ -7,15 +7,19 @@ import doctor4 from '../assets/amit_nagrik.jpeg';
 import doctor5 from '../assets/arvind.jpeg';
 import doctor6 from '../assets/Dr.Manpreet-Juneja.webp';
 import doctor7 from '../assets/vikas.jpeg';
+import shrish from '../assets/shri.avif';
+import doctor8 from '../assets/sachin_kale.jpeg';
+import doctor9 from '../assets/shonib aggrawal.jpeg';
+import doctor10 from '../assets/amit_bhoir.jpeg';
 
 const Doctors = () => {
   const doctors = [
     {
       id: 1,
       name: 'Dr. Prakash Shendge',
-      specialization: 'General Surgery',
+      specialization: 'General & Laparoscopic Surgeon',
       image: doctor1,
-      experience: '15+ Years',
+      experience: '12+ Years',
       education: 'MBBS, MS (General Surgery)',
       description: 'Expert in minimally invasive surgical procedures with extensive experience in complex operations.',
       availability: 'Mon - Fri: 9:00 AM - 5:00 PM'
@@ -23,9 +27,9 @@ const Doctors = () => {
     {
       id: 2,
       name: 'Dr. Rekha Kaushal',
-      specialization: 'Gynecology & Obstetrics',
+      specialization: 'Gynaecologists',
       image: doctor2,
-      experience: '12+ Years',
+      experience: '14+ Years',
       education: 'MBBS, MD (Gynecology)',
       description: 'Specialized in womens health, pregnancy care, and advanced gynecological procedures.',
       availability: 'Mon - Sat: 10:00 AM - 6:00 PM'
@@ -34,52 +38,82 @@ const Doctors = () => {
       id: 3,
       name: 'Dr. Shirish Shetty',
       specialization: 'Oncology',
-      image: doctor3,
-      experience: '18+ Years',
+      image: shrish,
+      experience: '15+ Years',
       education: 'MBBS, MD (Oncology), DM',
       description: 'Leading oncologist with expertise in cancer treatment and advanced therapeutic procedures.',
       availability: 'Tue - Sat: 8:00 AM - 4:00 PM'
     },
     {
       id: 4,
-      name: 'Dr. [Doctor Name]',
-      specialization: '[Department]',
+      name: 'Dr. Amit Nagrik',
+      specialization: 'Nephrologist',
       image: doctor4,
-      experience: '[X]+ Years',
-      education: 'MBBS, [Specialization]',
-      description: '[Add doctor description]',
-      availability: '[Add availability]'
+      experience: '11+ Years',
+      education: 'MBBS, MD (Nephrology)',
+      description: 'Specialist in kidney diseases, dialysis, and kidney transplant procedures.',
+      availability: 'Mon - Fri: 10:00 AM - 4:00 PM'
     },
     {
       id: 5,
-      name: 'Dr. [Doctor Name]',
-      specialization: '[Department]',
+      name: 'Dr. Arvind Vatkar',
+      specialization: 'Spine Surgeon',
       image: doctor5,
-      experience: '[X]+ Years',
-      education: 'MBBS, [Specialization]',
-      description: '[Add doctor description]',
-      availability: '[Add availability]'
+      experience: '13+ Years',
+      education: 'MBBS, MS (Orthopedics), MCh (Spine)',
+      description: 'Expert in spine surgery and advanced spinal treatments for complex spine disorders.',
+      availability: 'Tue - Sat: 9:00 AM - 3:00 PM'
     },
     {
       id: 6,
-      name: 'Dr. [Doctor Name]',
-      specialization: '[Department]',
+      name: 'Dr. Manpreet Juneja',
+      specialization: 'Plastic Surgeon',
       image: doctor6,
-      experience: '[X]+ Years',
-      education: 'MBBS, [Specialization]',
-      description: '[Add doctor description]',
-      availability: '[Add availability]'
+      experience: '10+ Years',
+      education: 'MBBS, MS (Plastic Surgery)',
+      description: 'Specialized in reconstructive and cosmetic surgery with advanced aesthetic procedures.',
+      availability: 'Wed - Sun: 11:00 AM - 5:00 PM'
     },
     {
       id: 7,
-      name: 'Dr. [Doctor Name]',
-      specialization: '[Department]',
+      name: 'Dr. Vikas Deshmukh',
+      specialization: 'General Medicine',
       image: doctor7,
-      experience: '[X]+ Years',
-      education: 'MBBS, [Specialization]',
-      description: '[Add doctor description]',
-      availability: '[Add availability]'
-    }
+      experience: '12+ Years',
+      education: 'MBBS, MD (Internal Medicine)',
+      description: 'General physician with expertise in internal medicine and preventive healthcare.',
+      availability: 'Mon - Sat: 8:00 AM - 6:00 PM'
+    },
+    {
+      id: 8,
+      name: 'Dr. Sachin Kale',
+      specialization: 'Orthopaedics',
+      image: doctor8,
+      experience: '14+ Years',
+      education: 'MBBS, MS (Orthopaedics)',
+      description: 'Orthopedic surgeon specializing in joint replacement and sports medicine.',
+      availability: 'Mon - Fri: 9:00 AM - 5:00 PM'
+    },
+    {
+      id: 9,
+      name: 'Dr. Shonit Agarwal',
+      specialization: 'Pathologist',
+      image: doctor9,
+      experience: '11+ Years',
+      education: 'MBBS, MD (Pathology)',
+      description: 'Expert pathologist specializing in diagnostic pathology and laboratory medicine.',
+      availability: 'Mon - Sat: 7:00 AM - 3:00 PM'
+    },
+    {
+      id: 10,
+      name: 'Dr. Amit Bhoir',
+      specialization: 'Urologist',
+      image: doctor10,
+      experience: '13+ Years',
+      education: 'MBBS, MS (Urology)',
+      description: 'Specialist in urological disorders, kidney stones, and minimally invasive urological procedures.',
+      availability: 'Mon - Fri: 10:00 AM - 4:00 PM'
+    },
   ];
 
   return (

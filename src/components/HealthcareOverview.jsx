@@ -1,6 +1,6 @@
 import React from "react";
 import { Users, Award, MapPin, Clock, Heart, Shield, Star, TrendingUp } from "lucide-react";
-import not from '../assets/not.png';
+import not from '../assets/checkups.png';
 
 const HealthcareOverview = () => {
   const stats = [
