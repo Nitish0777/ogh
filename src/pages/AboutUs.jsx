@@ -82,10 +82,10 @@ const AboutUs = () => {
 
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h1 className="text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-white to-green-100 bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-7xl font-bold text-white">
               Expert Care for Healthy Living
             </h1>
-            <p className="text-xl md:text-2xl max-w-5xl mx-auto leading-relaxed mb-12 text-green-100">
+            <p className="text-xl md:text-2xl max-w-5xl mx-auto leading-relaxed mb-12 text-green-100 mt-9">
               We deliver high-quality, affordable, and ethical healthcare through our centres in 
               Koparkhairne and Ulwe, Navi Mumbai. Our services include general care, specialized 
               treatments, and occupational health solutions.

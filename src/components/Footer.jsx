@@ -110,12 +110,6 @@ export default function Footer() {
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => handleNavigation('/departments/cardiology')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
-                    <div className="w-2 h-2 bg-teal-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
-                    <span>Cardiology</span>
-                  </button>
-                </li>
-                <li>
                   <button onClick={() => handleNavigation('/emergency')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
                     <div className="w-2 h-2 bg-red-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
                     <span>Emergency Medicine</span>

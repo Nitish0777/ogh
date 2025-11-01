@@ -58,10 +58,10 @@ const ServiceCards = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          {/* <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Our <span className="text-green-600">Services</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          </h2> */}
+          <p className="text-3xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Experience comprehensive healthcare services designed for your convenience and peace of mind
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-green-600 to-green-700 mx-auto mt-6 rounded-full"></div>
