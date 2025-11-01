@@ -217,7 +217,7 @@ const Contact = () => {
                   <p className="text-gray-600 mb-3">
                     Newly opened branch provides quality healthcare close to home, with services that include general health consultations, pre-employment check-ups, and a dedicated pathology unit.
                   </p>
-                  <p className="text-gray-800 font-semibold mb-4">Sector 19, Ulwe, Navi Mumbai</p>
+                  <p className="text-gray-800 font-semibold mb-4">Sector 23, Ulwe, Navi Mumbai</p>
                   <button 
                     onClick={() => handleGetDirections(locations[1])}
                     className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300"
