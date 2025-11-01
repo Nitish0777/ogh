@@ -60,7 +60,7 @@ export default function Footer() {
                 </div>
                 <div className="text-center p-3 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
                   <Shield className="w-6 h-6 text-green-400 mx-auto mb-2" />
-                  <div className="text-sm font-semibold text-white">20+ Years Experience</div>
+                  <div className="text-sm font-semibold text-white">20+ Years Exp</div>
                 </div>
               </div>
 
