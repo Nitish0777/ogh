@@ -1,8 +1,27 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation, Navigate } from "react-router-dom";
+// Import Dr. Prakash's image
+import doctor1 from '../assets/prakash.jpeg';
 
 const DoctorDetails = () => {
   const { id } = useParams();
+  const location = useLocation();
+  
+  // Only allow access to Dr. Prakash Shendge (id: 1)
+  if (id !== '1') {
+    return <Navigate to="/doctors" replace />;
+  }
+
+  // Get doctor data from location state or use default data for Dr. Prakash
+  const doctor = location.state?.doctor || {
+    id: 1,
+    name: 'Dr. Prakash Shendge',
+    specialization: 'General & Laparoscopic Surgeon',
+    image: doctor1,
+    experience: '26+ Years',
+    education: 'MBBS, MS (General Surgery)',
+    availability: 'Mon - Fri: 11:00 AM - 1:00 PM & 7 PM to 9 PM'
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
@@ -11,11 +30,16 @@ const DoctorDetails = () => {
         <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
           <div className="md:flex">
             <div className="md:w-1/3 bg-blue-600 p-8 text-white text-center">
-              <div className="w-32 h-32 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
-                <span className="text-4xl text-blue-600 font-bold">DS</span>
+              <div className="w-32 h-32 bg-white rounded-full mx-auto mb-4 overflow-hidden">
+                <img 
+                  src={doctor.image} 
+                  alt={doctor.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <h1 className="text-2xl font-bold mb-2">Dr. Prakash Shendge</h1>
-              <p className="text-blue-100">Laparoscopic & General Surgeon</p>
+              <h1 className="text-2xl font-bold mb-2">{doctor.name}</h1>
+              <p className="text-blue-100">{doctor.specialization}</p>
+              <p className="text-blue-200 text-sm mt-2">{doctor.experience} Experience</p>
             </div>
             <div className="md:w-2/3 p-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Introducing Myself</h2>
@@ -127,16 +151,8 @@ const DoctorDetails = () => {
             </h3>
             <div className="space-y-2">
               <div className="flex justify-between">
-                <span className="text-gray-700 font-medium">Monday – Friday:</span>
-                <span className="text-gray-600">9:00 AM – 5:00 PM</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-700 font-medium">Saturday:</span>
-                <span className="text-gray-600">9:00 AM – 4:00 PM</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-700 font-medium">Sunday:</span>
-                <span className="text-red-600">Closed</span>
+                <span className="text-gray-700 font-medium">Availability:</span>
+                <span className="text-gray-600">{doctor.availability}</span>
               </div>
             </div>
             <button className="w-full mt-6 bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300 font-medium">

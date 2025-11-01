@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 // Import doctor images
 import doctor1 from '../assets/prakash.jpeg'; 
 import doctor2 from '../assets/rekha_kaushal.jpeg';
@@ -13,16 +14,18 @@ import doctor9 from '../assets/shonib aggrawal.jpeg';
 import doctor10 from '../assets/amit_bhoir.jpeg';
 
 const Doctors = () => {
+  const navigate = useNavigate();
+  
   const doctors = [
     {
       id: 1,
       name: 'Dr. Prakash Shendge',
       specialization: 'General & Laparoscopic Surgeon',
       image: doctor1,
-      experience: '12+ Years',
+      experience: '26+ Years',
       education: 'MBBS, MS (General Surgery)',
       description: 'Expert in minimally invasive surgical procedures with extensive experience in complex operations.',
-      availability: 'Mon - Fri: 9:00 AM - 5:00 PM'
+      availability: 'Mon - Fri: 11:00 AM - 1:00 PM & 7 PM to 9 PM'
     },
     {
       id: 2,
@@ -116,6 +119,12 @@ const Doctors = () => {
     },
   ];
 
+  const handleDoctorClick = (doctor) => {
+    if (doctor.id === 1) {
+      navigate(`/doctor/${doctor.id}`, { state: { doctor } });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-white">
       {/* Hero Section */}
@@ -146,7 +155,13 @@ const Doctors = () => {
         {/* Doctors Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {doctors.map((doctor) => (
-            <div key={doctor.id} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <div 
+              key={doctor.id} 
+              className={`bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 ${
+                doctor.id === 1 ? 'cursor-pointer' : 'cursor-default'
+              }`}
+              onClick={() => handleDoctorClick(doctor)}
+            >
               {/* Doctor Image */}
               <div className="relative h-64 overflow-hidden">
                 <img 
