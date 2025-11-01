@@ -46,7 +46,7 @@ const CarouselBanner = () => {
       title: 'Comprehensive Health Services in Ulwe',
       subtitle: 'Delivering precision, care, and reliability, our Ulwe branch brings Omgagangiri Hospital and & Occupational Health Services\' recognized medical standards to the community, ensuring accessible and expert healthcare every day.',
       cta: 'Know More',
-      link: '/ulwe-branch'
+      link: '/services/ulwe-centre'
     }
   ];
 
