@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { MapPin, Phone, Clock, Navigation, X, ExternalLink } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,32 @@ const Contact = () => {
     phoneNumber: "",
     message: ""
   });
+
+  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [showDirectionsModal, setShowDirectionsModal] = useState(false);
+
+  const locations = [
+    {
+      title: "Om Gagangiri Hospital & Occupational Health Services",
+      address: "Plot No. 123, Sector 10, Koparkhairne, Navi Mumbai - 400709",
+      phone: "+91 7666 6711 11",
+      coordinates: { lat: 19.1009, lng: 73.0080 },
+      googleMapsUrl: "https://maps.app.goo.gl/29UgHtm617PTsD5j7",
+      description: "Providing multi-specialty care with advanced diagnostics, surgery, and emergency services.",
+      services: ["24/7 - 365 days Emergency", "ICU", "Surgery", "Diagnostics"],
+      hours: "24/7 - 365 days Available"
+    },
+    {
+      title: "OGH Health Services, Ulwe",
+      address: "Sector 20, Ulwe, Navi Mumbai - 410206",
+      phone: "+91 9876 5432 10",
+      coordinates: { lat: 19.0330, lng: 73.0297 },
+      googleMapsUrl: "https://maps.app.goo.gl/GhMdTNn5HtwQ2Yia8",
+      description: "Newly opened branch provides quality healthcare close to home, with services that include general health consultations, pre-employment check-ups, and a dedicated pathology unit.",
+      services: ["Health Checkups", "Pathology", "OPD"],
+      hours: "Mon-Sat: 8AM-8PM"
+    }
+  ];
 
   const handleChange = (e) => {
     setFormData({
@@ -20,6 +47,123 @@ const Contact = () => {
     e.preventDefault();
     // Handle form submission logic here
     console.log("Form submitted:", formData);
+  };
+
+  const handleGetDirections = (location) => {
+    setSelectedLocation(location);
+    setShowDirectionsModal(true);
+  };
+
+  const openInGoogleMaps = (location) => {
+    window.open(location.googleMapsUrl, '_blank');
+  };
+
+  const openDirectionsToLocation = (location) => {
+    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.coordinates.lat},${location.coordinates.lng}`;
+    window.open(directionsUrl, '_blank');
+  };
+
+  const DirectionsModal = () => {
+    if (!showDirectionsModal || !selectedLocation) return null;
+
+    return (
+      <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+          {/* Modal Header */}
+          <div className="bg-green-600 text-white p-6 flex justify-between items-center">
+            <div>
+              <h3 className="text-xl font-bold">Get Directions</h3>
+              <p className="text-green-100 mt-1">{selectedLocation.title}</p>
+            </div>
+            <button 
+              onClick={() => setShowDirectionsModal(false)}
+              className="p-2 hover:bg-green-700 rounded-lg transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Modal Content */}
+          <div className="p-6">
+            {/* Address and Contact Info */}
+            <div className="mb-6">
+              <div className="flex items-start mb-3">
+                <MapPin className="w-5 h-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                <p className="text-gray-700">{selectedLocation.address}</p>
+              </div>
+              <div className="flex items-center mb-4">
+                <Phone className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
+                <a href={`tel:${selectedLocation.phone}`} className="text-green-600 font-semibold hover:underline">
+                  {selectedLocation.phone}
+                </a>
+              </div>
+            </div>
+
+            {/* Map Embed */}
+            <div className="mb-6">
+              <div className="bg-gray-100 rounded-lg overflow-hidden">
+                <iframe
+                  src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8974!2d${selectedLocation.coordinates.lng}!3d${selectedLocation.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA2JzAzLjMiTiA3M8KwMDEnNTIuOCJF!5e0!3m2!1sen!2sin!4v1629870000000!5m2!1sen!2sin`}
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`Map of ${selectedLocation.title}`}
+                ></iframe>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <button
+                onClick={() => openDirectionsToLocation(selectedLocation)}
+                className="flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+              >
+                <Navigation className="w-5 h-5 mr-2" />
+                Get Directions
+              </button>
+              
+              <button
+                onClick={() => openInGoogleMaps(selectedLocation)}
+                className="flex items-center justify-center border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+              >
+                <ExternalLink className="w-5 h-5 mr-2" />
+                Open in Maps
+              </button>
+              
+              <button
+                onClick={() => navigator.share && navigator.share({
+                  title: selectedLocation.title,
+                  text: selectedLocation.address,
+                  url: selectedLocation.googleMapsUrl
+                })}
+                className="flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Share Location
+              </button>
+            </div>
+
+            {/* Additional Info */}
+            <div className="mt-6 p-4 bg-green-50 rounded-lg">
+              <h4 className="font-semibold text-green-800 mb-2">Operating Hours</h4>
+              <p className="text-green-700">{selectedLocation.hours}</p>
+              
+              <h4 className="font-semibold text-green-800 mb-2 mt-4">Available Services</h4>
+              <div className="flex flex-wrap gap-2">
+                {selectedLocation.services.map((service, idx) => (
+                  <span key={idx} className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                    {service}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -59,14 +203,28 @@ const Contact = () => {
                   <p className="text-gray-600 mb-3">
                     Providing multi-specialty care with advanced diagnostics, surgery, and emergency services.
                   </p>
-                  <p className="text-gray-800 font-semibold">Sector 18, Koparkhairne, Navi Mumbai</p>
+                  <p className="text-gray-800 font-semibold mb-4">Sector 18, Koparkhairne, Navi Mumbai</p>
+                  <button 
+                    onClick={() => handleGetDirections(locations[0])}
+                    className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300"
+                  >
+                    <MapPin className="w-4 h-4 mr-2" />
+                    View Location
+                  </button>
                 </div>
                 <div className="bg-white rounded-lg shadow-lg p-6">
                   <h4 className="text-xl font-bold text-green-600 mb-3">Ulwe (Health Services Centre)</h4>
                   <p className="text-gray-600 mb-3">
                     Newly opened branch provides quality healthcare close to home, with services that include general health consultations, pre-employment check-ups, and a dedicated pathology unit.
                   </p>
-                  <p className="text-gray-800 font-semibold">Sector 19, Ulwe, Navi Mumbai</p>
+                  <p className="text-gray-800 font-semibold mb-4">Sector 19, Ulwe, Navi Mumbai</p>
+                  <button 
+                    onClick={() => handleGetDirections(locations[1])}
+                    className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300"
+                  >
+                    <MapPin className="w-4 h-4 mr-2" />
+                    View Location
+                  </button>
                 </div>
               </div>
             </div>
@@ -176,6 +334,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      {/* Directions Modal */}
+      <DirectionsModal />
     </div>
   );
 };
