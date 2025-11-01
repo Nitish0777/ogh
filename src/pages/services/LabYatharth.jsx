@@ -72,7 +72,7 @@ const LabYatharth = () => {
               <span className="font-semibold">Daily:</span> 9:00 AM to 9:00 PM
             </p>
             <p className="text-sm text-gray-500 mt-2">
-              Emergency sample processing available 24/7 for admitted patients
+              Emergency sample processing available 24/7 - 365 days for admitted patients
             </p>
           </div>
 

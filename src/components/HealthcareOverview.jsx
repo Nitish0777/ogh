@@ -123,7 +123,7 @@ const HealthcareOverview = () => {
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-medium text-gray-900">24/7 Emergency Services Available</span>
+                  <span className="text-sm font-medium text-gray-900">24/7 - 365 days Emergency Services Available</span>
                 </div>
               </div>
             </div>

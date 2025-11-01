@@ -77,7 +77,7 @@ const HealthCheckup = () => {
                 <div className="text-green-200 text-sm">Health Checkups</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold">24/7</div>
+                <div className="text-3xl font-bold">24/7 - 365 days</div>
                 <div className="text-green-200 text-sm">Support</div>
               </div>
             </div>

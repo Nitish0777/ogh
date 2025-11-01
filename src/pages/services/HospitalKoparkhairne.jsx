@@ -18,7 +18,7 @@ const HospitalKoparkhairne = () => {
           <div className="max-w-4xl">
             <div className="text-5xl mb-4">🏥</div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              OmGagangiri Hospital and Occupational Services – Koparkhairne
+              OmGagangiri Hospital and & Occupational Health Services – Koparkhairne
             </h1>
             <p className="text-xl text-blue-100">
               Comprehensive Multi-Specialty Care Under One Roof

@@ -22,7 +22,7 @@ export default function Footer() {
             {/* Logo & About */}
             <div className="lg:col-span-1">
               <h3 className="text-2xl font-bold mb-6 relative">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">OmGagangiri Hospital & Occupational Services</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">OmGagangiri Hospital & & Occupational Health Services</span>
                 <div className="absolute -bottom-2 left-0 w-16 h-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full"></div>
               </h3>
 
@@ -160,7 +160,7 @@ export default function Footer() {
                       <Mail className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm text-green-100 mb-1">Email Support 24/7</p>
+                      <p className="text-sm text-green-100 mb-1">Email Support 24/7 - 365 days</p>
                       <p className="text-sm text-white">drprakash@gagangirihospital.com</p>
                     </div>
                   </div>
@@ -185,7 +185,7 @@ export default function Footer() {
                     </div>
                     <div>
                       <p className="text-sm text-green-100 mb-1">Working Hours</p>
-                      <p className="font-semibold text-white">24/7 Emergency Services</p>
+                      <p className="font-semibold text-white">24/7 - 365 days - 365 days Emergency Services</p>
                       <p className="text-sm text-green-100">Mon-Fri: 08:30 - 18:00</p>
                     </div>
                   </div>
@@ -198,7 +198,7 @@ export default function Footer() {
                     </div>
                     <div>
                       <p className="text-sm text-green-100 mb-1">Location</p>
-                      <p className="font-semibold text-white">OmGagangiri Hospital & Occupational Services</p>
+                      <p className="font-semibold text-white">OmGagangiri Hospital & & Occupational Health Services</p>
                       <p className="text-sm text-green-100">Koparkhairane, Navi Mumbai</p>
                       <p className="text-sm text-green-100">OGH Health Services, Ulwe, Navi Mumbai</p>
                     </div>

@@ -7,13 +7,13 @@ const LocationsSection = () => {
   const locations = [
     {
       image: hospital,
-      title: "Om Gagangiri Hospital & Occupational Services",
+      title: "Om Gagangiri Hospital & & Occupational Health Services",
       address: "Plot No. 123, Sector 10, Koparkhairne, Navi Mumbai - 400709",
       phone: "+91 7666 6711 11",
       description: "Our flagship hospital featuring state-of-the-art facilities with 200+ beds, advanced ICU, emergency services, and specialized departments including cardiology, neurology, and orthopedics.",
       buttonText: "VIEW DETAILS",
-      services: ["24/7 Emergency", "ICU", "Surgery", "Diagnostics"],
-      hours: "24/7 Available",
+      services: ["24/7 - 365 days Emergency", "ICU", "Surgery", "Diagnostics"],
+      hours: "24/7 - 365 days Available",
       features: [
         { icon: <Ambulance className="w-4 h-4" />, text: "Emergency Services" },
         { icon: <Car className="w-4 h-4" />, text: "Free Parking" },
@@ -153,7 +153,7 @@ const LocationsSection = () => {
               <div className="absolute inset-0 flex flex-col justify-center items-center p-8 text-center">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <h3 className="text-3xl font-bold text-white mb-4">
-                    24/7 Emergency Care
+                    24/7 - 365 days Emergency Care
                   </h3>
                   <p className="text-green-100 mb-8 text-lg">
                     Our medical team is always ready to provide immediate care when you need it most.
@@ -308,7 +308,7 @@ const LocationsSection = () => {
                 <Ambulance className="w-8 h-8 text-red-600 mx-auto" />
               </div>
               <h4 className="font-semibold text-slate-800">Emergency</h4>
-              <p className="text-sm text-gray-600">24/7 Available</p>
+              <p className="text-sm text-gray-600">24/7 - 365 days Available</p>
             </div>
             
             <div className="text-center group cursor-pointer">

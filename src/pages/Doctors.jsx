@@ -230,7 +230,7 @@ const Doctors = () => {
       {/* Emergency Contact */}
       <div className="bg-red-600 text-white py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-xl font-bold mb-2">Emergency Services Available 24/7</h3>
+          <h3 className="text-xl font-bold mb-2">Emergency Services Available 24/7 - 365 days</h3>
           <p className="text-red-100 mb-4">For medical emergencies, call us immediately</p>
           <div className="flex justify-center items-center">
             <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">

@@ -6,7 +6,7 @@ const ServiceCards = () => {
     {
       icon: <Calendar className="w-16 h-16 text-green-600" />,
       title: 'Book an Appointment Online',
-      subtitle: '24/7 Service',
+      subtitle: '24/7 - 365 days Service',
       description: 'Easily schedule your consultation anytime with our user-friendly online appointment system.',
       buttonText: 'MAKE APPOINTMENT',
       buttonColor: 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800',
@@ -17,8 +17,8 @@ const ServiceCards = () => {
       title: 'Working Hours',
       subtitle: 'Timing Schedule',
       schedules: [
-        { days: 'Monday - Friday', time: 'Available 24/7' },
-        { days: 'Saturday - Sunday', time: 'Available 24/7' },
+        { days: 'Monday - Friday', time: 'Available 24/7 - 365 days' },
+        { days: 'Saturday - Sunday', time: 'Available 24/7 - 365 days' },
         { days: 'Emergency Services', time: 'Round the Clock' }
       ],
       backgroundColor: 'bg-gradient-to-br from-green-50 to-green-50'
@@ -29,7 +29,7 @@ const ServiceCards = () => {
       subtitle: 'Call: 098335 71031',
       description: 'For urgent medical assistance, we offer round-the-clock emergency support with rapid response.',
       highlight: true,
-      features: ['24/7 Availability', 'Rapid Response', 'Expert Medical Staff'],
+      features: ['24/7 - 365 days Availability', 'Rapid Response', 'Expert Medical Staff'],
       buttonText: 'CALL NOW',
       buttonColor: 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800'
     }

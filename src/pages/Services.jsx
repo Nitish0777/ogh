@@ -7,7 +7,7 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      title: "OmGagangiri Hospital and Occupational Services – Koparkhairne",
+      title: "OmGagangiri Hospital and & Occupational Health Services – Koparkhairne",
       subtitle: "Comprehensive Multi-Specialty Care Under One Roof",
       description: "Our flagship hospital in Koparkhairne offers advanced medical care across multiple specialties — from General Surgery and Orthopedics to Gynecology, Pediatrics, and Internal Medicine. Backed by a team of expert consultants and modern infrastructure, we ensure each patient receives precise diagnosis, effective treatment, and personalized attention.",
       highlights: [
@@ -135,7 +135,7 @@ const Services = () => {
             </h1>
             
             <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90 mb-10">
-              At OmGagangiri Hospital and Occupational Services, healthcare goes beyond treatment — 
+              At OmGagangiri Hospital and & Occupational Health Services, healthcare goes beyond treatment — 
               it's about <span className="text-yellow-300 font-semibold">trust</span>, 
               <span className="text-green-300 font-semibold"> continuity</span>, and 
               <span className="text-cyan-300 font-semibold"> expertise</span> across every stage of life.
@@ -148,7 +148,7 @@ const Services = () => {
                 <div className="text-green-200 text-sm">Service Divisions</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-2">24/7</div>
+                <div className="text-3xl font-bold mb-2">24/7 - 365 days</div>
                 <div className="text-green-200 text-sm">Emergency Care</div>
               </div>
               <div className="text-center">

@@ -186,7 +186,7 @@ const Departments = () => {
                 <div className="text-green-200 text-sm">service</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold mb-2">24/7</div>
+                <div className="text-3xl font-bold mb-2">24/7 - 365 days</div>
                 <div className="text-green-200 text-sm">Expert Care</div>
               </div>
               <div className="text-center">

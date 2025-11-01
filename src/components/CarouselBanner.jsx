@@ -31,14 +31,14 @@ const CarouselBanner = () => {
     },
     {
       image: emergency,
-      title: '24/7 Emergency Services',
+      title: '24/7 - 365 days Emergency Services',
       subtitle: 'Round-the-clock emergency care with rapid response times and comprehensive medical support.',
       cta: 'Emergency Contact'
     },
     {
       image: ulwebanner,
       title: 'Comprehensive Health Services in Ulwe',
-      subtitle: 'Delivering precision, care, and reliability, our Ulwe branch brings Omgagangiri Hospital and Occupational Services\' recognized medical standards to the community, ensuring accessible and expert healthcare every day.',
+      subtitle: 'Delivering precision, care, and reliability, our Ulwe branch brings Omgagangiri Hospital and & Occupational Health Services\' recognized medical standards to the community, ensuring accessible and expert healthcare every day.',
       cta: 'Know More'
     }
   ];
