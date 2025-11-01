@@ -19,7 +19,7 @@ const HealthcareOverview = () => {
 
   const stats = [
     { 
-      number: "3+", 
+      number: "8+", 
       label: "Expert Doctors",
       icon: <Users className="w-8 h-8" />,
       color: "from-green-500 to-green-600"
@@ -31,7 +31,7 @@ const HealthcareOverview = () => {
       color: "from-green-500 to-green-600"
     },
     { 
-      number: "40+", 
+      number: "20+", 
       label: "Years Experience",
       icon: <Clock className="w-8 h-8" />,
       color: "from-green-500 to-green-600"

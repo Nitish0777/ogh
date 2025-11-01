@@ -12,7 +12,7 @@ const LocationsSection = () => {
     {
       image: hospital,
       title: "Om Gagangiri Hospital & & Occupational Health Services",
-      address: "Plot No. 123, Sector 10, Koparkhairne, Navi Mumbai - 400709",
+      address: "Plot no. 77, Shubham CHS Ltd, near Bharat bank, Sector 18, KoparKhairane, Navi Mumbai, Maharashtra 400709",
       phone: "+91 7666 6711 11",
       coordinates: { lat: 19.1009, lng: 73.0080 },
       googleMapsUrl: "https://maps.app.goo.gl/29UgHtm617PTsD5j7",

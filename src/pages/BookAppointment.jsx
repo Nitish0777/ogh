@@ -22,15 +22,157 @@ const BookAppointment = () => {
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const departments = [
-    { id: 'cardiology', name: 'Cardiology', icon: '❤️' },
-    { id: 'dermatology', name: 'Dermatology', icon: '🧴' },
-    { id: 'endocrinology', name: 'Endocrinology', icon: '🩺' },
-    { id: 'gastroenterology', name: 'Gastroenterology', icon: '🫁' },
-    { id: 'neurology', name: 'Neurology', icon: '🧠' },
-    { id: 'orthopedics', name: 'Orthopedics', icon: '🦴' },
-    { id: 'pediatrics', name: 'Pediatrics', icon: '👶' },
-    { id: 'psychiatry', name: 'Psychiatry', icon: '🧘' },
-    { id: 'emergency', name: 'Emergency Medicine', icon: '🚨' }
+    { id: 'endocrinology', name: 'Endocrinology' },
+    { id: 'gastroenterology', name: 'Gastroenterology' },
+    { id: 'neurology', name: 'Neurology' },
+    { id: 'orthopedics', name: 'Orthopedics' },
+    { id: 'pediatrics', name: 'Pediatrics' },
+    { id: 'psychiatry', name: 'Psychiatry' },
+    { id: 'emergency', name: 'Emergency Medicine' },
+    { id: 'surgery', name: 'Surgery' },
+    { id: 'gynecology', name: 'Gynecology' },
+    { id: 'oncology', name: 'Oncology' },
+    { id: 'nephrology', name: 'Nephrology' },
+    { id: 'spine', name: 'Spine Surgery' },
+    { id: 'plastic', name: 'Plastic Surgery' },
+    { id: 'general', name: 'General Medicine' },
+    { id: 'pathology', name: 'Pathology' },
+    { id: 'urology', name: 'Urology' },
+    { id: 'critical', name: 'Critical Care' },
+    { id: 'anesthesia', name: 'Anesthesia' },
+    { id: 'ent', name: 'ENT' },
+    { id: 'ophthalmology', name: 'Ophthalmology' }
+  ];
+
+  const doctors = [
+    {
+      id: 1,
+      name: 'Dr. Prakash Shendge',
+      specialization: 'General & Laparoscopic Surgeon',
+      department: 'surgery',
+      experience: '26+ Years',
+      availability: 'Mon - Fri: 11:00 AM - 1:00 PM & 7 PM to 9 PM'
+    },
+    {
+      id: 2,
+      name: 'Dr. Rekha Kaushal',
+      specialization: 'Gynaecologists',
+      department: 'gynecology',
+      experience: '14+ Years',
+      availability: 'Mon - Sat: 10:00 AM - 6:00 PM'
+    },
+    {
+      id: 3,
+      name: 'Dr. Shirish Shetty',
+      specialization: 'Oncology',
+      department: 'oncology',
+      experience: '15+ Years',
+      availability: 'Tue - Sat: 8:00 AM - 4:00 PM'
+    },
+    {
+      id: 4,
+      name: 'Dr. Amit Nagrik',
+      specialization: 'Nephrologist',
+      department: 'nephrology',
+      experience: '11+ Years',
+      availability: 'Mon - Fri: 10:00 AM - 4:00 PM'
+    },
+    {
+      id: 5,
+      name: 'Dr. Arvind Vatkar',
+      specialization: 'Spine Surgeon',
+      department: 'spine',
+      experience: '13+ Years',
+      availability: 'Tue - Sat: 9:00 AM - 3:00 PM'
+    },
+    {
+      id: 6,
+      name: 'Dr. Manpreet Juneja',
+      specialization: 'Plastic Surgeon',
+      department: 'plastic',
+      experience: '10+ Years',
+      availability: 'Wed - Sun: 11:00 AM - 5:00 PM'
+    },
+    {
+      id: 7,
+      name: 'Dr. Vikas Deshmukh',
+      specialization: 'General Medicine',
+      department: 'general',
+      experience: '12+ Years',
+      availability: 'Mon - Sat: 8:00 AM - 6:00 PM'
+    },
+    {
+      id: 8,
+      name: 'Dr. Sachin Kale',
+      specialization: 'Orthopaedics',
+      department: 'orthopedics',
+      experience: '14+ Years',
+      availability: 'Mon - Fri: 9:00 AM - 5:00 PM'
+    },
+    {
+      id: 9,
+      name: 'Dr. Shonit Agarwal',
+      specialization: 'Pathologist',
+      department: 'pathology',
+      experience: '11+ Years',
+      availability: 'Mon - Sat: 7:00 AM - 3:00 PM'
+    },
+    {
+      id: 10,
+      name: 'Dr. Amit Bhoir',
+      specialization: 'Urologist',
+      department: 'urology',
+      experience: '13+ Years',
+      availability: 'Mon - Fri: 10:00 AM - 4:00 PM'
+    },
+    {
+      id: 11,
+      name: 'Dr. Mustafa',
+      specialization: 'Pediatrician',
+      department: 'pediatrics',
+      experience: '8+ Years',
+      availability: 'Mon - Sat: 9:00 AM - 5:00 PM'
+    },
+    {
+      id: 12,
+      name: 'Dr. Rohit Moharir',
+      specialization: 'Critical Care Intensivist',
+      department: 'critical',
+      experience: '12+ Years',
+      availability: 'Available 24/7 for emergencies'
+    },
+    {
+      id: 13,
+      name: 'Dr. Vikas Deshmukh',
+      specialization: 'Psychiatrist',
+      department: 'psychiatry',
+      experience: '10+ Years',
+      availability: 'Mon - Fri: 2:00 PM - 7:00 PM'
+    },
+    {
+      id: 14,
+      name: 'Dr. Rajendra Khade',
+      specialization: 'Anesthetist',
+      department: 'anesthesia',
+      experience: '15+ Years',
+      availability: 'Available during surgical procedures'
+    },
+    {
+      id: 15,
+      name: 'Dr. Sachin Nemane',
+      specialization: 'ENT Specialist',
+      department: 'ent',
+      experience: '9+ Years',
+      availability: 'Tue - Sat: 10:00 AM - 4:00 PM'
+    },
+    {
+      id: 16,
+      name: 'Dr. Rajpal Usnale',
+      specialization: 'Ophthalmologist',
+      department: 'ophthalmology',
+      experience: '11+ Years',
+      availability: 'Mon - Fri: 9:00 AM - 3:00 PM'
+    }
   ];
 
   const timeSlots = [
@@ -60,7 +202,9 @@ const BookAppointment = () => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
+      // Clear doctor selection when department changes
+      ...(name === 'department' && { doctor: '' })
     }));
     
     // Clear error when user starts typing
@@ -112,6 +256,18 @@ const BookAppointment = () => {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     return tomorrow.toISOString().split('T')[0];
+  };
+
+  // Get available doctors for selected department
+  const getAvailableDoctors = () => {
+    if (!formData.department) return [];
+    return doctors.filter(doctor => doctor.department === formData.department);
+  };
+
+  // Get departments that have doctors available
+  const getAvailableDepartments = () => {
+    const departmentsWithDoctors = new Set(doctors.map(doctor => doctor.department));
+    return departments.filter(dept => departmentsWithDoctors.has(dept.id));
   };
 
   return (
@@ -325,9 +481,9 @@ const BookAppointment = () => {
                     }`}
                   >
                     <option value="">Select Department</option>
-                    {departments.map((dept) => (
+                    {getAvailableDepartments().map((dept) => (
                       <option key={dept.id} value={dept.id}>
-                        {dept.icon} {dept.name}
+                        {dept.name}
                       </option>
                     ))}
                   </select>
@@ -338,14 +494,27 @@ const BookAppointment = () => {
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
                     Preferred Doctor
                   </label>
-                  <input
-                    type="text"
+                  <select
                     name="doctor"
                     value={formData.doctor}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
-                    placeholder="Dr. Smith (optional)"
-                  />
+                    disabled={!formData.department}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  >
+                    <option value="">
+                      {!formData.department ? 'Select Department First' : 'Select Doctor (Optional)'}
+                    </option>
+                    {getAvailableDoctors().map((doctor) => (
+                      <option key={doctor.id} value={doctor.name}>
+                        {doctor.name} - {doctor.specialization} ({doctor.experience})
+                      </option>
+                    ))}
+                  </select>
+                  {formData.department && getAvailableDoctors().length === 0 && (
+                    <p className="text-amber-600 text-sm mt-1">
+                      No doctors available for this department currently
+                    </p>
+                  )}
                 </div>
 
                 <div>

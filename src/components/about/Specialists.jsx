@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import prakash from '../../assets/prakash.jpeg'
 import rekha from '../../assets/rekha_kaushal.jpeg'
 import shirish from '../../assets/shri.avif'
 
 const Specialists = () => {
+  const navigate = useNavigate();
+
   const specialists = [
     {
       name: "Dr. Prakash Shendge",
@@ -50,6 +53,15 @@ const Specialists = () => {
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <button
+            onClick={() => navigate('/doctors')}
+            className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg"
+          >
+            View All Doctors
+          </button>
         </div>
       </div>
     </section>

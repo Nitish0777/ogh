@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { User } from 'lucide-react';
 // Import doctor images
 import doctor1 from '../assets/prakash.jpeg'; 
 import doctor2 from '../assets/rekha_kaushal.jpeg';
@@ -117,6 +118,66 @@ const Doctors = () => {
       description: 'Specialist in urological disorders, kidney stones, and minimally invasive urological procedures.',
       availability: 'Mon - Fri: 10:00 AM - 4:00 PM'
     },
+    {
+      id: 11,
+      name: 'Dr. Mustafa',
+      specialization: 'Pediatrician',
+      image: null,
+      experience: '8+ Years',
+      education: 'MBBS, MD (Pediatrics)',
+      description: 'Expert in child healthcare, vaccinations, and pediatric treatments for infants and children.',
+      availability: 'Mon - Sat: 9:00 AM - 5:00 PM'
+    },
+    {
+      id: 12,
+      name: 'Dr. Rohit Moharir',
+      specialization: 'Critical Care Intensivist',
+      image: null,
+      experience: '12+ Years',
+      education: 'MBBS, MD (Anesthesia), FNB (Critical Care)',
+      description: 'Specialist in intensive care medicine and critical patient management in ICU settings.',
+      availability: 'Available 24/7 for emergencies'
+    },
+    {
+      id: 13,
+      name: 'Dr. Vikas Deshmukh',
+      specialization: 'Psychiatrist',
+      image: null,
+      experience: '10+ Years',
+      education: 'MBBS, MD (Psychiatry)',
+      description: 'Mental health specialist focusing on anxiety, depression, and behavioral disorders.',
+      availability: 'Mon - Fri: 2:00 PM - 7:00 PM'
+    },
+    {
+      id: 14,
+      name: 'Dr. Rajendra Khade',
+      specialization: 'Anesthetist',
+      image: null,
+      experience: '15+ Years',
+      education: 'MBBS, MD (Anesthesiology)',
+      description: 'Expert in anesthesia administration for surgeries and pain management procedures.',
+      availability: 'Available during surgical procedures'
+    },
+    {
+      id: 15,
+      name: 'Dr. Sachin Nemane',
+      specialization: 'ENT Specialist',
+      image: null,
+      experience: '9+ Years',
+      education: 'MBBS, MS (ENT)',
+      description: 'Specialist in ear, nose, and throat disorders with expertise in ENT surgeries.',
+      availability: 'Tue - Sat: 10:00 AM - 4:00 PM'
+    },
+    {
+      id: 16,
+      name: 'Dr. Rajpal Usnale',
+      specialization: 'Ophthalmologist',
+      image: null,
+      experience: '11+ Years',
+      education: 'MBBS, MS (Ophthalmology)',
+      description: 'Eye specialist focusing on vision problems, eye surgeries, and comprehensive eye care.',
+      availability: 'Mon - Fri: 9:00 AM - 3:00 PM'
+    },
   ];
 
   const handleDoctorClick = (doctor) => {
@@ -163,12 +224,16 @@ const Doctors = () => {
               onClick={() => handleDoctorClick(doctor)}
             >
               {/* Doctor Image */}
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={doctor.image} 
-                  alt={doctor.name}
-                  className="w-full h-full object-cover object-center"
-                />
+              <div className="relative h-64 overflow-hidden bg-gray-100 flex items-center justify-center">
+                {doctor.image ? (
+                  <img 
+                    src={doctor.image} 
+                    alt={doctor.name}
+                    className="w-full h-full object-cover object-center"
+                  />
+                ) : (
+                  <User className="text-gray-400 w-20 h-20" />
+                )}
               </div>
 
               {/* Doctor Info */}
