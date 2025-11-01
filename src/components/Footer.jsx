@@ -52,15 +52,15 @@ export default function Footer() {
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="text-center p-3 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
                   <Heart className="w-6 h-6 text-red-400 mx-auto mb-2" />
-                  <div className="text-sm font-semibold text-white">1L+ Patients</div>
+                  <div className="text-sm font-semibold text-white">700+ Patients</div>
                 </div>
                 <div className="text-center p-3 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
                   <Award className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
-                  <div className="text-sm font-semibold text-white">20+ Awards</div>
+                  <div className="text-sm font-semibold text-white">1500+ Surgeries</div>
                 </div>
                 <div className="text-center p-3 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
                   <Shield className="w-6 h-6 text-green-400 mx-auto mb-2" />
-                  <div className="text-sm font-semibold text-white">40+ Years</div>
+                  <div className="text-sm font-semibold text-white">20+ Years Experience</div>
                 </div>
               </div>
 
@@ -138,15 +138,9 @@ export default function Footer() {
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => handleNavigation('/blog')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
-                    <div className="w-2 h-2 bg-lime-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
-                    <span>Blog</span>
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => handleNavigation('/gallery')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
+                  <button onClick={() => handleNavigation('/doctors')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
                     <div className="w-2 h-2 bg-teal-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
-                    <span>Gallery</span>
+                    <span>Doctors</span>
                   </button>
                 </li>
                 <li>
@@ -165,21 +159,21 @@ export default function Footer() {
                 <div className="absolute -bottom-2 left-0 w-16 h-1 bg-gradient-to-r from-green-400 to-lime-400 rounded-full"></div>
               </h3>
               
-              <div className="space-y-6">
+              <div className="space-y-6 w-[130%] -ml-[15%]">
                 <div className="group">
-                  <div className="flex items-start space-x-1 p-4 mx-auto bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-start space-x-4 p-5 w-full bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300 overflow-hidden">
                     <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Mail className="w-5 h-5 text-white" />
                     </div>
-                    <div>
-                      <p className="text-sm text-green-100 mb-1">Email Support 24/7 - 365 days</p>
-                      <p className="text-sm text-white">drprakash@gagangirihospital.com</p>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm text-green-100 mb-1">Email</p>
+                      <p className="text-sm text-white break-words">drprakash@gagangirihospital.com</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="group">
-                  <div className="flex items-start space-x-4 p-4 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-start space-x-4 p-5 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Phone className="w-5 h-5 text-white" />
                     </div>
@@ -191,28 +185,30 @@ export default function Footer() {
                 </div>
 
                 <div className="group">
-                  <div className="flex items-start space-x-4 p-4 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-start space-x-4 p-5 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <Clock className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <p className="text-sm text-green-100 mb-1">Working Hours</p>
-                      <p className="font-semibold text-white">24/7 - 365 days - 365 days Emergency Services</p>
+                      <p className="font-semibold text-white">24/7 - 365 days Emergency Services</p>
                       <p className="text-sm text-green-100">Mon-Fri: 08:30 - 18:00</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="group">
-                  <div className="flex items-start space-x-4 p-4 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-start space-x-4 p-5 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <MapPin className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <p className="text-sm text-green-100 mb-1">Location</p>
-                      <p className="font-semibold text-white">OmGagangiri Hospital & & Occupational Health Services</p>
-                      <p className="text-sm text-green-100">Koparkhairane, Navi Mumbai</p>
-                      <p className="text-sm text-green-100">OGH Health Services, Ulwe, Navi Mumbai</p>
+                      <p className="font-semibold text-white">OmGagangiri Hospital & Occupational Health Services</p>
+                      {/* <hr className="my-2 border-green-100" /> */}
+                      <p className="text-sm text-green-100 mt-2">Koparkhairane, Navi Mumbai</p>
+                      <hr className="my-2 border-green-100" />
+                      <p className="text-sm text-green-100"><span className="font-semibold text-white">OGH Health Services</span><br/> Ulwe, Navi Mumbai</p>
                     </div>
                   </div>
                 </div>
@@ -221,31 +217,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Newsletter Section */}
-        {/* <div className="bg-gradient-to-r from-blue-900/50 to-green-900/50 backdrop-blur-sm border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-6 py-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-3xl font-bold text-white mb-4">
-                  Stay Updated with Health Tips
-                </h3>
-                <p className="text-gray-300 text-lg leading-relaxed">
-                  Subscribe to our newsletter for the latest health insights, medical updates, and exclusive healthcare tips from our expert team.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <input
-                  type="tel"
-                  placeholder="Enter your Mobile number"
-                  className="flex-1 px-6 py-4 rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                  Subscribe Now
-                </button>
-              </div>
-            </div>
-          </div>
-        </div> */}
+    
 
         {/* Bottom Bar */}
         <div className="bg-gray-900/80 backdrop-blur-sm border-t border-white/10">
