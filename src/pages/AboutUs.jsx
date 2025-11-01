@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CheckCircle, UserCheck, Microscope, Shield, Stethoscope, ArrowDown, Phone, MapPin } from 'lucide-react';
 import Specialists from '../components/about/Specialists';
 import Testimonials from '../components/about/Testimonials';
@@ -6,6 +7,7 @@ import Accreditations from '../components/about/Accreditations';
 
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsVisible(true);
@@ -48,6 +50,25 @@ const AboutUs = () => {
     });
   };
 
+  const handleBookAppointment = () => {
+    navigate('/book-appointment');
+  };
+
+  const handleFindLocations = () => {
+    navigate('/contact');
+  };
+
+  const handleScheduleVisit = () => {
+    navigate('/book-appointment');
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -71,12 +92,18 @@ const AboutUs = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <button className="bg-white text-green-600 px-8 py-4 rounded-full font-semibold hover:bg-green-50 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center gap-2">
-                <Phone className="w-5 h-5" />
+              <button 
+                onClick={handleBookAppointment}
+                className="w-full sm:w-auto bg-white text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-green-50 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center gap-2 text-sm sm:text-base"
+              >
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                 Book Appointment
               </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 flex items-center gap-2">
-                <MapPin className="w-5 h-5" />
+              <button 
+                onClick={handleFindLocations}
+                className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base"
+              >
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
                 Find Locations
               </button>
             </div>
@@ -132,14 +159,17 @@ const AboutUs = () => {
 
           {/* Call to Action */}
           <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-green-600 to-green-800 rounded-2xl p-8 md:p-12 shadow-xl">
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <div className="bg-gradient-to-r from-green-600 to-green-800 rounded-2xl p-6 sm:p-8 md:p-12 shadow-xl">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Experience Quality Healthcare?
               </h3>
-              <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
+              <p className="text-green-100 text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
                 Join thousands of satisfied patients who trust us with their health and wellness journey.
               </p>
-              <button className="bg-white text-green-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-green-50 transform hover:scale-105 transition-all duration-300 shadow-lg">
+              <button 
+                onClick={handleScheduleVisit}
+                className="w-full sm:w-auto bg-white text-green-600 px-6 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-green-50 transform hover:scale-105 transition-all duration-300 shadow-lg"
+              >
                 Schedule Your Visit Today
               </button>
             </div>
@@ -148,13 +178,19 @@ const AboutUs = () => {
       </section>
 
       {/* Accreditations */}
-      <Accreditations />
+      <div id="accreditations">
+        <Accreditations />
+      </div>
 
       {/* Specialists */}
-      <Specialists />
+      <div id="specialists">
+        <Specialists />
+      </div>
 
       {/* Testimonials */}
-      <Testimonials />
+      <div id="testimonials">
+        <Testimonials />
+      </div>
     </div>
   );
 };

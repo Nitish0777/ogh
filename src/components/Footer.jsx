@@ -1,6 +1,24 @@
 import { Mail, Phone, Clock, MapPin, Facebook, Twitter, Instagram, Linkedin, Heart, Award, Shield } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
+  const navigate = useNavigate();
+
+  const handleNavigation = (link) => {
+    if (link.startsWith('#')) {
+      const element = document.getElementById(link.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (link.startsWith('tel:') || link.startsWith('mailto:')) {
+      window.location.href = link;
+    } else if (link.startsWith('http')) {
+      window.open(link, '_blank');
+    } else {
+      navigate(link);
+    }
+  };
+
   return (
     <footer className="relative overflow-hidden">
       {/* Dark green background similar to HealthcareOverview */}
@@ -74,34 +92,34 @@ export default function Footer() {
               </h3>
               <ul className="space-y-4 text-green-100">
                 <li>
-                  <a href="#" className="group flex items-center space-x-3 hover:text-white transition-colors duration-300">
+                  <button onClick={() => handleNavigation('/departments/surgery')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
                     <div className="w-2 h-2 bg-green-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
                     <span>General Surgery</span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="group flex items-center space-x-3 hover:text-white transition-colors duration-300">
+                  <button onClick={() => handleNavigation('/departments/gynecology')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
                     <span>Gynecology & Obstetrics</span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="group flex items-center space-x-3 hover:text-white transition-colors duration-300">
+                  <button onClick={() => handleNavigation('/departments/oncology')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
                     <div className="w-2 h-2 bg-lime-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
                     <span>Oncology</span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="group flex items-center space-x-3 hover:text-white transition-colors duration-300">
+                  <button onClick={() => handleNavigation('/departments/cardiology')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
                     <div className="w-2 h-2 bg-teal-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
                     <span>Cardiology</span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="group flex items-center space-x-3 hover:text-white transition-colors duration-300">
+                  <button onClick={() => handleNavigation('/emergency')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
                     <div className="w-2 h-2 bg-red-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
                     <span>Emergency Medicine</span>
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -114,34 +132,34 @@ export default function Footer() {
               </h3>
               <ul className="space-y-4 text-green-100">
                 <li>
-                  <a href="#" className="group flex items-center space-x-3 hover:text-white transition-colors duration-300">
+                  <button onClick={() => handleNavigation('/about')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
                     <div className="w-2 h-2 bg-green-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
                     <span>About Us</span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="group flex items-center space-x-3 hover:text-white transition-colors duration-300">
+                  <button onClick={() => handleNavigation('/services')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
                     <span>Services</span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="group flex items-center space-x-3 hover:text-white transition-colors duration-300">
+                  <button onClick={() => handleNavigation('/blog')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
                     <div className="w-2 h-2 bg-lime-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
                     <span>Blog</span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="group flex items-center space-x-3 hover:text-white transition-colors duration-300">
+                  <button onClick={() => handleNavigation('/gallery')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
                     <div className="w-2 h-2 bg-teal-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
                     <span>Gallery</span>
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a href="#" className="group flex items-center space-x-3 hover:text-white transition-colors duration-300">
+                  <button onClick={() => handleNavigation('/contact')} className="group flex items-center space-x-3 hover:text-white transition-colors duration-300 text-left w-full">
                     <div className="w-2 h-2 bg-red-400 rounded-full group-hover:scale-150 transition-transform duration-300"></div>
                     <span>Contact</span>
-                  </a>
+                  </button>
                 </li>
               </ul>
             </div>

@@ -1,8 +1,22 @@
 import React from "react";
 import { Users, Award, MapPin, Clock, Heart, Shield, Star, TrendingUp } from "lucide-react";
 import not from '../assets/checkups.png';
+import { useNavigate } from "react-router-dom";
 
 const HealthcareOverview = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (link) => {
+    if (link.startsWith('#')) {
+      const element = document.getElementById(link.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate(link);
+    }
+  };
+
   const stats = [
     { 
       number: "3+", 
@@ -96,10 +110,16 @@ const HealthcareOverview = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+              <button 
+                onClick={() => handleNavigation('/services')}
+                className="w-full sm:w-auto bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+              >
                 Explore Our Services
               </button>
-              <button className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+              <button 
+                onClick={() => handleNavigation('/book-appointment')}
+                className="w-full sm:w-auto border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+              >
                 Book Consultation
               </button>
             </div>

@@ -67,6 +67,17 @@ const Services = () => {
     navigate(route);
   };
 
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services-grid');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleMakeAppointment = () => {
+    navigate('/book-appointment');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-50">
       {/* Enhanced Hero Section */}
@@ -162,7 +173,10 @@ const Services = () => {
             </div>
 
             {/* CTA Button */}
-            <button className="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg">
+            <button 
+              onClick={scrollToServices}
+              className="bg-white text-green-600 hover:bg-gray-100 font-bold py-3 px-6 md:py-4 md:px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-base md:text-lg w-full sm:w-auto"
+            >
               Explore All Services
             </button>
           </div>
@@ -170,7 +184,7 @@ const Services = () => {
       </div>
 
       {/* Services Grid */}
-      <div className="container mx-auto px-4 py-20">
+      <div id="services-grid" className="container mx-auto px-4 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div 
@@ -233,13 +247,16 @@ const Services = () => {
       <div className="bg-gradient-to-r from-green-600 to-green-700 py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Experience World-Class Healthcare?
             </h2>
-            <p className="text-xl text-green-100 mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-green-100 mb-10 leading-relaxed">
               We are pleased to offer you the chance to access trusted, affordable, and comprehensive healthcare under one roof.
             </p>
-            <button className="bg-white text-green-600 hover:bg-gray-50 font-bold py-4 px-10 rounded-xl transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <button 
+              onClick={handleMakeAppointment}
+              className="bg-white text-green-600 hover:bg-gray-50 font-bold py-3 px-6 md:py-4 md:px-10 rounded-xl transition-all duration-300 text-base md:text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 w-full sm:w-auto"
+            >
               Make an Appointment
             </button>
           </div>

@@ -1,7 +1,23 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, Clock, Phone, ArrowRight, CheckCircle } from 'lucide-react';
 
 const ServiceCards = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (link) => {
+    if (link.startsWith('#')) {
+      const element = document.getElementById(link.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (link.startsWith('tel:')) {
+      window.location.href = link;
+    } else {
+      navigate(link);
+    }
+  };
+
   const services = [
     {
       icon: <Calendar className="w-16 h-16 text-green-600" />,
@@ -10,7 +26,8 @@ const ServiceCards = () => {
       description: 'Easily schedule your consultation anytime with our user-friendly online appointment system.',
       buttonText: 'MAKE APPOINTMENT',
       buttonColor: 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800',
-      features: ['Online Booking', 'Instant Confirmation', 'Flexible Scheduling']
+      features: ['Online Booking', 'Instant Confirmation', 'Flexible Scheduling'],
+      link: '/book-appointment'
     },
     {
       icon: <Clock className="w-16 h-16 text-green-600" />,
@@ -31,7 +48,8 @@ const ServiceCards = () => {
       highlight: true,
       features: ['24/7 - 365 days Availability', 'Rapid Response', 'Expert Medical Staff'],
       buttonText: 'CALL NOW',
-      buttonColor: 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800'
+      buttonColor: 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800',
+      link: 'tel:+917666671111'
     }
   ];
 
@@ -121,7 +139,10 @@ const ServiceCards = () => {
 
                   {/* Action Button */}
                   {service.buttonText && (
-                    <button className={`group/btn ${service.buttonColor} text-white px-8 py-4 rounded-full font-bold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2`}>
+                    <button 
+                      onClick={() => handleNavigation(service.link)}
+                      className={`group/btn w-full sm:w-auto ${service.buttonColor} text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2`}
+                    >
                       <span>{service.buttonText}</span>
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                     </button>

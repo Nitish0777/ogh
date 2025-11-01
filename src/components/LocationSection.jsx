@@ -1,17 +1,22 @@
-import { MapPin, Phone, Clock, Stethoscope, Users, Car, Ambulance, Shield } from 'lucide-react';
+import { MapPin, Phone, Clock, Stethoscope, Users, Car, Ambulance, Shield, Navigation, X, ExternalLink } from 'lucide-react';
+import { useState } from 'react';
 import hospital from '../assets/hospital.jpg';
 import ogh from '../assets/ogh.jpg';
 import Book from '../assets/Book.jpg';
 
 const LocationsSection = () => {
+  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [showDirectionsModal, setShowDirectionsModal] = useState(false);
+
   const locations = [
     {
       image: hospital,
       title: "Om Gagangiri Hospital & & Occupational Health Services",
       address: "Plot No. 123, Sector 10, Koparkhairne, Navi Mumbai - 400709",
       phone: "+91 7666 6711 11",
+      coordinates: { lat: 19.1009, lng: 73.0080 },
+      googleMapsUrl: "https://maps.google.com/?q=19.1009,73.0080",
       description: "Our flagship hospital featuring state-of-the-art facilities with 200+ beds, advanced ICU, emergency services, and specialized departments including cardiology, neurology, and orthopedics.",
-      buttonText: "VIEW DETAILS",
       services: ["24/7 - 365 days Emergency", "ICU", "Surgery", "Diagnostics"],
       hours: "24/7 - 365 days Available",
       features: [
@@ -25,8 +30,9 @@ const LocationsSection = () => {
       title: "OGH Health Services, Ulwe",
       address: "Sector 20, Ulwe, Navi Mumbai - 410206",
       phone: "+91 9876 5432 10",
+      coordinates: { lat: 19.0330, lng: 73.0297 },
+      googleMapsUrl: "https://maps.google.com/?q=19.0330,73.0297",
       description: "A modern healthcare facility specializing in preventive care, health checkups, pathology services, and outpatient consultations for the growing Ulwe community.",
-      buttonText: "VIEW DETAILS",
       services: ["Health Checkups", "Pathology", "OPD"],
       hours: "Mon-Sat: 8AM-8PM",
       features: [
@@ -36,6 +42,123 @@ const LocationsSection = () => {
       ]
     }
   ];
+
+  const handleGetDirections = (location) => {
+    setSelectedLocation(location);
+    setShowDirectionsModal(true);
+  };
+
+  const openInGoogleMaps = (location) => {
+    window.open(location.googleMapsUrl, '_blank');
+  };
+
+  const openDirectionsToLocation = (location) => {
+    const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.coordinates.lat},${location.coordinates.lng}`;
+    window.open(directionsUrl, '_blank');
+  };
+
+  const DirectionsModal = () => {
+    if (!showDirectionsModal || !selectedLocation) return null;
+
+    return (
+      <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+          {/* Modal Header */}
+          <div className="bg-green-600 text-white p-6 flex justify-between items-center">
+            <div>
+              <h3 className="text-xl font-bold">Get Directions</h3>
+              <p className="text-green-100 mt-1">{selectedLocation.title}</p>
+            </div>
+            <button 
+              onClick={() => setShowDirectionsModal(false)}
+              className="p-2 hover:bg-green-700 rounded-lg transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Modal Content */}
+          <div className="p-6">
+            {/* Address and Contact Info */}
+            <div className="mb-6">
+              <div className="flex items-start mb-3">
+                <MapPin className="w-5 h-5 text-green-600 mt-1 mr-3 flex-shrink-0" />
+                <p className="text-gray-700">{selectedLocation.address}</p>
+              </div>
+              <div className="flex items-center mb-4">
+                <Phone className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
+                <a href={`tel:${selectedLocation.phone}`} className="text-green-600 font-semibold hover:underline">
+                  {selectedLocation.phone}
+                </a>
+              </div>
+            </div>
+
+            {/* Map Embed */}
+            <div className="mb-6">
+              <div className="bg-gray-100 rounded-lg overflow-hidden">
+                <iframe
+                  src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8974!2d${selectedLocation.coordinates.lng}!3d${selectedLocation.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA2JzAzLjMiTiA3M8KwMDEnNTIuOCJF!5e0!3m2!1sen!2sin!4v1629870000000!5m2!1sen!2sin`}
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`Map of ${selectedLocation.title}`}
+                ></iframe>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <button
+                onClick={() => openDirectionsToLocation(selectedLocation)}
+                className="flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+              >
+                <Navigation className="w-5 h-5 mr-2" />
+                Get Directions
+              </button>
+              
+              <button
+                onClick={() => openInGoogleMaps(selectedLocation)}
+                className="flex items-center justify-center border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+              >
+                <ExternalLink className="w-5 h-5 mr-2" />
+                Open in Maps
+              </button>
+              
+              <button
+                onClick={() => navigator.share && navigator.share({
+                  title: selectedLocation.title,
+                  text: selectedLocation.address,
+                  url: selectedLocation.googleMapsUrl
+                })}
+                className="flex items-center justify-center bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Share Location
+              </button>
+            </div>
+
+            {/* Additional Info */}
+            <div className="mt-6 p-4 bg-green-50 rounded-lg">
+              <h4 className="font-semibold text-green-800 mb-2">Operating Hours</h4>
+              <p className="text-green-700">{selectedLocation.hours}</p>
+              
+              <h4 className="font-semibold text-green-800 mb-2 mt-4">Available Services</h4>
+              <div className="flex flex-wrap gap-2">
+                {selectedLocation.services.map((service, idx) => (
+                  <span key={idx} className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm">
+                    {service}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className="bg-gradient-to-br from-green-50 to-green-50 py-20">
@@ -128,10 +251,11 @@ const LocationsSection = () => {
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <button className="flex-1 bg-green-600 hover:bg-green-700 text-white px-4 sm:px-6 py-3 rounded-lg font-semibold text-xs sm:text-sm transition-all duration-200 hover:shadow-lg">
-                    {location.buttonText}
-                  </button>
-                  <button className="flex-1 border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-4 sm:px-6 py-3 rounded-lg font-semibold text-xs sm:text-sm transition-all duration-200">
+                  <button 
+                    onClick={() => handleGetDirections(location)}
+                    className="w-full border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-4 sm:px-6 py-3 rounded-lg font-semibold text-xs sm:text-sm transition-all duration-200 flex items-center justify-center"
+                  >
+                    <Navigation className="w-4 h-4 mr-2" />
                     GET DIRECTIONS
                   </button>
                 </div>
@@ -302,7 +426,7 @@ const LocationsSection = () => {
             Quick Access to <span className="text-green-600">Hospital Services</span>
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center group cursor-pointer">
               <div className="bg-red-50 group-hover:bg-red-100 rounded-xl p-4 mb-3 transition-colors">
                 <Ambulance className="w-8 h-8 text-red-600 mx-auto" />
@@ -326,9 +450,20 @@ const LocationsSection = () => {
               <h4 className="font-semibold text-slate-800">Checkups</h4>
               <p className="text-sm text-gray-600">Book Online</p>
             </div>
+
+            <div className="text-center group cursor-pointer">
+              <div className="bg-blue-50 group-hover:bg-blue-100 rounded-xl p-4 mb-3 transition-colors">
+                <MapPin className="w-8 h-8 text-blue-600 mx-auto" />
+              </div>
+              <h4 className="font-semibold text-slate-800">Locations</h4>
+              <p className="text-sm text-gray-600">Find Nearest</p>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Directions Modal */}
+      <DirectionsModal />
     </div>
   );
 };

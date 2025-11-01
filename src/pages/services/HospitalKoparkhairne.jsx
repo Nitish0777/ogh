@@ -7,24 +7,65 @@ const HospitalKoparkhairne = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4">
+      <div className="relative bg-gradient-to-br from-green-500 via-green-600 to-green-700 text-white py-20 min-h-[70vh] flex items-center">
+        <div className="container mx-auto px-6">
+          {/* Back Button */}
           <button 
             onClick={() => navigate('/services')}
-            className="mb-6 text-blue-200 hover:text-white flex items-center transition-colors duration-200"
+            className="absolute top-8 left-8 text-white/80 hover:text-white flex items-center transition-colors duration-200 bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm"
           >
-            ← Back to Services
+            ← Services
           </button>
-          <div className="max-w-4xl">
-            <div className="text-5xl mb-4">🏥</div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              OmGagangiri Hospital and & Occupational Health Services – Koparkhairne
+          
+          <div className="text-center max-w-6xl mx-auto">
+            {/* Icon and Badge */}
+            <div className="flex justify-center items-center mb-8">
+              <div className="bg-white/20 p-6 rounded-full backdrop-blur-sm">
+                <span className="text-5xl">🏥</span>
+              </div>
+            </div>
+            
+            {/* Main Heading */}
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+              OmGagangiri Hospital
             </h1>
-            <p className="text-xl text-blue-100">
-              Comprehensive Multi-Specialty Care Under One Roof
+            
+            <div className="text-lg md:text-xl lg:text-2xl text-green-100 mb-4 font-medium">
+              Occupational Health Services • Koparkhairne
+            </div>
+            
+            <p className="text-lg md:text-xl text-green-50 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Advanced Multi-Specialty Healthcare with Compassionate Care
             </p>
+            
+            {/* Stats Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                <div className="text-green-100 text-sm font-medium">Emergency Care</div>
+              </div>
+              
+              <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div className="text-3xl font-bold text-white mb-2">50+</div>
+                <div className="text-green-100 text-sm font-medium">Expert Doctors</div>
+              </div>
+              
+              <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div className="text-3xl font-bold text-white mb-2">10+</div>
+                <div className="text-green-100 text-sm font-medium">Specialties</div>
+              </div>
+              
+              <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div className="text-3xl font-bold text-white mb-2">15+</div>
+                <div className="text-green-100 text-sm font-medium">Years Experience</div>
+              </div>
+            </div>
           </div>
         </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-24 -translate-x-24"></div>
       </div>
 
       {/* Content Section */}
@@ -69,7 +110,7 @@ const HospitalKoparkhairne = () => {
           <div className="mt-12 text-center">
             <button 
               onClick={() => navigate('/book-appointment')}
-              className="bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold py-4 px-8 rounded-xl hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-8 rounded-xl hover:shadow-lg transition-all duration-300"
             >
               Book Appointment
             </button>

@@ -29,7 +29,7 @@ const DoctorDetails = () => {
         {/* Doctor Header */}
         <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
           <div className="md:flex">
-            <div className="md:w-1/3 bg-blue-600 p-8 text-white text-center">
+            <div className="md:w-1/3 bg-green-600 p-8 text-white text-center">
               <div className="w-32 h-32 bg-white rounded-full mx-auto mb-4 overflow-hidden">
                 <img 
                   src={doctor.image} 
@@ -38,8 +38,8 @@ const DoctorDetails = () => {
                 />
               </div>
               <h1 className="text-2xl font-bold mb-2">{doctor.name}</h1>
-              <p className="text-blue-100">{doctor.specialization}</p>
-              <p className="text-blue-200 text-sm mt-2">{doctor.experience} Experience</p>
+              <p className="text-green-100">{doctor.specialization}</p>
+              <p className="text-green-200 text-sm mt-2">{doctor.experience} Experience</p>
             </div>
             <div className="md:w-2/3 p-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Introducing Myself</h2>
@@ -63,24 +63,24 @@ const DoctorDetails = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Educational Qualifications */}
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">
+            <h3 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-green-600 pb-2">
               My Educational Qualifications
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">MBBS – Mumbai University</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">MS – General Surgery – L.T.M.C. Sion, Mumbai University</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">FCPS – General Surgery – College of Physicians & Surgeons, Mumbai</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">DNB – General Surgery – National Board of Examinations, New Delhi</span>
               </li>
             </ul>
@@ -88,28 +88,28 @@ const DoctorDetails = () => {
 
           {/* Skills */}
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">
+            <h3 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-green-600 pb-2">
               My Skills
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">Advanced laparoscopic surgery</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">Trauma & emergency surgical care</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">Complex general surgeries</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">Post-operative recovery & patient care</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">Surgical counseling & preventive health</span>
               </li>
             </ul>
@@ -117,28 +117,28 @@ const DoctorDetails = () => {
 
           {/* Expertise Areas */}
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">
+            <h3 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-green-600 pb-2">
               Expertise Areas
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">Minimally invasive laparoscopic procedures</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">Hernia, appendix & gallbladder surgeries</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">Trauma and critical care surgery</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">Gastrointestinal & abdominal surgeries</span>
               </li>
               <li className="flex items-start">
-                <span className="text-blue-600 mr-2">•</span>
+                <span className="text-green-600 mr-2">•</span>
                 <span className="text-gray-700">Preventive and corporate surgical health checkups</span>
               </li>
             </ul>
@@ -146,7 +146,7 @@ const DoctorDetails = () => {
 
           {/* Make Appointment */}
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-blue-600 pb-2">
+            <h3 className="text-xl font-bold text-gray-800 mb-4 border-b-2 border-green-600 pb-2">
               Make Appointment
             </h3>
             <div className="space-y-2">
@@ -155,7 +155,7 @@ const DoctorDetails = () => {
                 <span className="text-gray-600">{doctor.availability}</span>
               </div>
             </div>
-            <button className="w-full mt-6 bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300 font-medium">
+            <button className="w-full mt-6 bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700 transition duration-300 font-medium">
               Book Appointment Now
             </button>
           </div>
