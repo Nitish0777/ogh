@@ -3,10 +3,27 @@ import { useState } from 'react';
 import hospital from '../assets/hospital.jpg';
 import ogh from '../assets/ogh.jpg';
 import Book from '../assets/Book.jpg';
+import { doctors, allDepartments } from '../data/doctorsData';
 
 const LocationsSection = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [showDirectionsModal, setShowDirectionsModal] = useState(false);
+  const [selectedDepartment, setSelectedDepartment] = useState('');
+
+  // Filter departments to only show those with available doctors
+  const availableDepartments = allDepartments.filter(dept => 
+    doctors.some(doctor => doctor.department === dept.value && doctor.available)
+  );
+
+  // Filter doctors based on selected department and availability
+  const getAvailableDoctors = () => {
+    if (!selectedDepartment) {
+      return doctors.filter(doctor => doctor.available);
+    }
+    return doctors.filter(doctor => 
+      doctor.department === selectedDepartment && doctor.available
+    );
+  };
 
   const locations = [
     {
@@ -365,24 +382,29 @@ const LocationsSection = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-xs sm:text-sm font-semibold text-slate-700">Department *</label>
-                    <select className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-200 text-sm sm:text-base" required>
+                    <select 
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-200 text-sm sm:text-base" 
+                      required
+                      value={selectedDepartment}
+                      onChange={(e) => setSelectedDepartment(e.target.value)}
+                    >
                       <option value="">Select Department</option>
-                      <option value="cardiology">Cardiology</option>
-                      <option value="neurology">Neurology</option>
-                      <option value="orthopedics">Orthopedics</option>
-                      <option value="pediatrics">Pediatrics</option>
-                      <option value="emergency">Emergency Care</option>
-                      <option value="general">General Medicine</option>
+                      {availableDepartments.map(dept => (
+                        <option key={dept.value} value={dept.value}>
+                          {dept.label}
+                        </option>
+                      ))}
                     </select>
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs sm:text-sm font-semibold text-slate-700">Preferred Doctor</label>
                     <select className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-200 text-sm sm:text-base">
                       <option value="">Any Available Doctor</option>
-                      <option value="dr-smith">Dr. Smith Johnson</option>
-                      <option value="dr-sarah">Dr. Sarah Wilson</option>
-                      <option value="dr-michael">Dr. Michael Brown</option>
-                      <option value="dr-emily">Dr. Emily Davis</option>
+                      {getAvailableDoctors().map(doctor => (
+                        <option key={doctor.id} value={doctor.id}>
+                          {doctor.name}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
