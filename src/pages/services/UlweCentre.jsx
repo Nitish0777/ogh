@@ -21,7 +21,7 @@ const UlweCentre = () => {
             {/* Icon and Badge */}
             <div className="flex justify-center items-center mb-8">
               <div className="bg-white/20 p-6 rounded-full backdrop-blur-sm">
-                <span className="text-5xl">🏢</span>
+                <span className="text-5xl"></span>
               </div>
             </div>
             
