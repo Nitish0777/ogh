@@ -90,7 +90,7 @@ const CarouselBanner = () => {
   };
 
   return (
-    <div className="relative w-full h-[90vh] overflow-hidden bg-gray-900">
+    <div className="relative w-full h-[90vh] overflow-hidden">
       {/* Slides Container */}
       <div 
         className="flex transition-transform duration-700 ease-in-out h-full"
@@ -104,39 +104,36 @@ const CarouselBanner = () => {
               style={{ backgroundImage: `url(${slide.image})` }}
             />
             
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
-            
             {/* Content */}
             <div className="relative z-10 h-full flex items-center">
               <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-16">
-                <div className="max-w-3xl text-white">
+                <div className="max-w-3xl">
                   <div className="mb-4 sm:mb-6">
-                    <div className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-green-600/90 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+                    <div className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-green-600/90 backdrop-blur-sm rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4 text-white shadow-lg">
                       Healthcare Excellence
                     </div>
                   </div>
                   
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight text-white drop-shadow-2xl">
                     {slide.title.split(' ').map((word, i) => (
-                      <span key={i} className={i < 2 ? 'text-green-400' : ''}>{word} </span>
+                      <span key={i} className={i < 2 ? 'text-green-400 drop-shadow-2xl' : 'drop-shadow-2xl'}>{word} </span>
                     ))}
                   </h1>
                   
-                  <p className="text-sm sm:text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-6 sm:mb-8 text-gray-200">
+                  <p className="text-sm sm:text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-6 sm:mb-8 text-white drop-shadow-xl bg-black/30 backdrop-blur-sm rounded-lg p-4">
                     {slide.subtitle}
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <button 
                       onClick={() => handleNavigation(slide.link)}
-                      className="w-full sm:w-1/2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                      className="w-full sm:w-1/2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 shadow-xl backdrop-blur-sm"
                     >
                       {slide.cta}
                     </button>
                     <button 
                       onClick={() => handleNavigation('/book-appointment')}
-                      className="w-full sm:w-1/2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                      className="w-full sm:w-1/2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-xl backdrop-blur-sm"
                     >
                       Book an Appointment
                     </button>
