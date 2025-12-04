@@ -179,7 +179,7 @@ const Contact = () => {
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Call Us</h3>
                 <div className="text-3xl mb-2">📞</div>
-                <p className="text-green-600 font-semibold">+91 7666 6711 11</p>
+                <p className="text-green-600 font-semibold">+91 9833 5710 31 / +91 7666 6711 11</p>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Email Us</h3>
