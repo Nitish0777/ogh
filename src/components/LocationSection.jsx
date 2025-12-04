@@ -310,7 +310,7 @@ const LocationsSection = () => {
                     <div className="flex items-center justify-center text-white">
                       <Clock className="w-8 h-8 mr-4" />
                       <div className="text-left">
-                        <div className="text-2xl font-bold">+91 9876 5432 10</div>
+                        <div className="text-2xl font-bold">+91 9833 5710 31</div>
                         <div className="text-green-100">Regular Appointments</div>
                       </div>
                     </div>

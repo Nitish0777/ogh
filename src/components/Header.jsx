@@ -57,39 +57,32 @@ const Header = () => {
               <span className="font-medium mr-3">Quick Services:</span>
               <nav className="flex items-center space-x-2">
                 <a
-                  href="/services#emergency"
-                  className="px-2 py-1 rounded hover:text-emerald-200 hover:bg-emerald-900/20 transition-colors text-white"
-                  aria-label="Emergency services"
-                >
-                  Emergency
-                </a>
-                <a
-                  href="/services#outpatient"
+                  href="/services/hospital-koparkhairne"
                   className="px-2 py-1 rounded hover:text-emerald-200 hover:bg-emerald-900/20 transition-colors text-white"
                   aria-label="Outpatient services"
                 >
-                  Outpatient
+                  OGH Hospital Koparkhairne
                 </a>
                 <a
-                  href="/services#laboratory"
+                  href="/services/ulwe-centre"
                   className="px-2 py-1 rounded hover:text-emerald-200 hover:bg-emerald-900/20 transition-colors text-white"
                   aria-label="Laboratory services"
                 >
-                  Laboratory
+                  OGH Ulwe Centre
                 </a>
                 <a
-                  href="/services#pharmacy"
+                  href="/services/health-checkup"
+                  className="px-2 py-1 rounded hover:text-emerald-200 hover:bg-emerald-900/20 transition-colors text-white"
+                  aria-label="Emergency services"
+                >
+                  OGH Health Checkup Services
+                </a>
+                <a
+                  href="/services/lab-yatharth"
                   className="px-2 py-1 rounded hover:text-emerald-200 hover:bg-emerald-900/20 transition-colors text-white"
                   aria-label="Pharmacy"
                 >
-                  Pharmacy
-                </a>
-                <a
-                  href="/services#radiology"
-                  className="px-2 py-1 rounded hover:text-emerald-200 hover:bg-emerald-900/20 transition-colors text-white"
-                  aria-label="Radiology"
-                >
-                  Radiology
+                  Yatharth – Pathology & Diagnostics
                 </a>
               </nav>
             </div>
