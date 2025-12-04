@@ -108,7 +108,7 @@ const Header = () => {
                 />
               </div>
               <div>
-                <h1 className="ml-3 text-1xl font-bold text-emerald-800">OmGaganGiri Hospital</h1>
+                <h1 className="ml-3 text-1xl font-bold text-emerald-800">Om Gagangiri Hospital</h1>
                 <p className="ml-3 text-sm text-gray-500 font-bold">& Occupational Health Services</p>
               </div>
             </div>

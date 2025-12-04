@@ -27,7 +27,7 @@ const HospitalKoparkhairne = () => {
             
             {/* Main Heading */}
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-              OmGagangiri Hospital
+              Om Gagangiri Hospital
             </h1>
             
             <div className="text-lg md:text-xl lg:text-2xl text-green-100 mb-4 font-medium">

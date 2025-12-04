@@ -44,7 +44,7 @@ const CarouselBanner = () => {
     {
       image: ulwebanner,
       title: 'Comprehensive Health Services in Ulwe',
-      subtitle: 'Delivering precision, care, and reliability, our Ulwe branch brings Omgagangiri Hospital and & Occupational Health Services\' recognized medical standards to the community, ensuring accessible and expert healthcare every day.',
+      subtitle: 'Delivering precision, care, and reliability, our Ulwe branch brings Om Gagangiri Hospital & Occupational Health Services\' recognized medical standards to the community, ensuring accessible and expert healthcare every day.',
       cta: 'Know More',
       link: '/services/ulwe-centre'
     }
@@ -114,15 +114,17 @@ const CarouselBanner = () => {
                     </div>
                   </div>
                   
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight text-white drop-shadow-2xl">
-                    {slide.title.split(' ').map((word, i) => (
-                      <span key={i} className={i < 2 ? 'text-green-400 drop-shadow-2xl' : 'drop-shadow-2xl'}>{word} </span>
-                    ))}
-                  </h1>
-                  
-                  <p className="text-sm sm:text-lg md:text-xl lg:text-2xl font-light leading-relaxed mb-6 sm:mb-8 text-white drop-shadow-xl bg-black/30 backdrop-blur-sm rounded-lg p-4">
-                    {slide.subtitle}
-                  </p>
+                  <div className="mb-6 bg-black/30 backdrop-blur-sm rounded-lg p-5 inline-block max-w-full">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white mb-3">
+                      {slide.title.split(' ').map((word, i) => (
+                        <span key={i} className={i < 2 ? 'text-green-400' : ''}>{word} </span>
+                      ))}
+                    </h1>
++
+                    <p className="text-sm sm:text-lg md:text-xl lg:text-2xl font-light leading-relaxed text-white drop-shadow-xl">
+                      {slide.subtitle}
+                    </p>
+                  </div>
                   
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <button 

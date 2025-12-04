@@ -44,7 +44,7 @@ const DepartmentDetail = () => {
     3: {
       title: "Paediatrics",
       subtitle: "Nurturing Health, One Child at a Time",
-      description: "The Paediatrics Department at OmGagangiri Hospital and & Occupational Health Services provides specialized care for newborns, infants, and children. Our paediatricians focus on preventive health, early diagnosis, and holistic treatment in a child-friendly environment.",
+      description: "The Paediatrics Department at Om Gagangiri Hospital & Occupational Health Services provides specialized care for newborns, infants, and children. Our paediatricians focus on preventive health, early diagnosis, and holistic treatment in a child-friendly environment.",
       expertise: [
         "Newborn and neonatal care",
         "Immunizations and growth tracking",
@@ -60,7 +60,7 @@ const DepartmentDetail = () => {
     4: {
       title: "General Medicine",
       subtitle: "Comprehensive Medical Care for Everyday Health",
-      description: "The Department of General Medicine forms the backbone of OmGagangiri Hospital and & Occupational Health Services, offering preventive, diagnostic, and therapeutic services for a wide range of health conditions. Our physicians manage everything from acute illnesses to long-term chronic diseases.",
+      description: "The Department of General Medicine forms the backbone of Om Gagangiri Hospital & Occupational Health Services, offering preventive, diagnostic, and therapeutic services for a wide range of health conditions. Our physicians manage everything from acute illnesses to long-term chronic diseases.",
       expertise: [
         "Lifestyle and metabolic disorders (diabetes, hypertension, thyroid)",
         "Infectious diseases and fevers",
@@ -108,7 +108,7 @@ const DepartmentDetail = () => {
     7: {
       title: "Plastic & Reconstructive Surgery",
       subtitle: "Restoring Form, Function, and Confidence",
-      description: "The Department of Plastic & Reconstructive Surgery at OmGagangiri Hospital and & Occupational Health Services combines art with science, offering procedures that heal, restore, and enhance. We handle trauma cases, post-surgical reconstructions, and aesthetic improvements with utmost precision.",
+      description: "The Department of Plastic & Reconstructive Surgery at Om Gagangiri Hospital & Occupational Health Services combines art with science, offering procedures that heal, restore, and enhance. We handle trauma cases, post-surgical reconstructions, and aesthetic improvements with utmost precision.",
       expertise: [
         "Burn and post-trauma reconstruction",
         "Scar revision and wound management",
@@ -152,7 +152,7 @@ const DepartmentDetail = () => {
     10: {
       title: "Pathology",
       subtitle: "Precision in Every Diagnosis",
-      description: "Lab Yatharth, the dedicated pathology division of OmGagangiri Hospital and & Occupational Health Services, offers reliable, fast, and accurate diagnostic testing. With advanced lab technology and skilled technicians, we deliver dependable results that support all clinical departments.",
+      description: "Lab Yatharth, the dedicated pathology division of Om Gagangiri Hospital & Occupational Health Services, offers reliable, fast, and accurate diagnostic testing. With advanced lab technology and skilled technicians, we deliver dependable results that support all clinical departments.",
       expertise: [
         "Haematology, biochemistry, and microbiology",
         "Histopathology and cytology",
