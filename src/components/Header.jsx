@@ -44,7 +44,7 @@ const Header = () => {
           </div>
           <div className="flex items-center space-x-2 hover:text-emerald-200 transition-colors">
             <Phone className="w-4 h-4" />
-            <span className="font-medium">Call Now: +91 9833571031</span>
+            <span className="font-medium">Call Now: +91 9833 5710 31 / +91 7666 6711 11</span>
           </div>
         </div>
       </div>
