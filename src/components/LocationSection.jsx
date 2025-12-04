@@ -33,6 +33,7 @@ const LocationsSection = () => {
       phone: "+91 7666 6711 11",
       coordinates: { lat: 19.1009, lng: 73.0080 },
       googleMapsUrl: "https://maps.app.goo.gl/29UgHtm617PTsD5j7",
+      googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4668.470000216144!2d73.0036525!3d19.1023521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0d74a19ed0d%3A0x312e6327aa3ca230!2sOm%20Gagangiri%20Hospital%20%26%20Occupational%20Health%20Services!5e1!3m2!1sen!2sin!4v1764870295655!5m2!1sen!2sin",
       description: "Our flagship hospital featuring state-of-the-art facilities with 200+ beds, advanced ICU, emergency services, and specialized departments including cardiology, neurology, and orthopedics.",
       services: ["24/7 - 365 days Emergency", "ICU", "Surgery", "Diagnostics"],
       hours: "24/7 - 365 days Available",
@@ -46,9 +47,10 @@ const LocationsSection = () => {
       image: ogh,
       title: "OGH Health Services, Ulwe",
       address: "Sector 20, Ulwe, Navi Mumbai - 410206",
-      phone: "+91 9876 5432 10",
+      phone: "+91 7666 6711 11",
       coordinates: { lat: 19.0330, lng: 73.0297 },
       googleMapsUrl: "https://maps.app.goo.gl/GhMdTNn5HtwQ2Yia8",
+      googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4672.080425434498!2d73.0328133!3d18.973992799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3004b4fd4cd%3A0xd65e82b6d0ee4ae7!2sOGH%20HEALTH%20SSERVICES!5e1!3m2!1sen!2sin!4v1764870962945!5m2!1sen!2sin",
       description: "A modern healthcare facility specializing in preventive care, health checkups, pathology services, and outpatient consultations for the growing Ulwe community.",
       services: ["Health Checkups", "Pathology", "OPD"],
       hours: "Mon-Sat: 8AM-8PM",
@@ -114,7 +116,7 @@ const LocationsSection = () => {
             <div className="mb-6">
               <div className="bg-gray-100 rounded-lg overflow-hidden">
                 <iframe
-                  src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8974!2d${selectedLocation.coordinates.lng}!3d${selectedLocation.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA2JzAzLjMiTiA3M8KwMDEnNTIuOCJF!5e0!3m2!1sen!2sin!4v1629870000000!5m2!1sen!2sin`}
+                  src={selectedLocation.googleMapsEmbedUrl}
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
@@ -122,20 +124,12 @@ const LocationsSection = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title={`Map of ${selectedLocation.title}`}
-                ></iframe>
+                />
               </div>
             </div>
 
             {/* Action Buttons */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {/* <button
-                onClick={() => openDirectionsToLocation(selectedLocation)}
-                className="flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
-              >
-                <Navigation className="w-5 h-5 mr-2" />
-                Get Directions
-              </button> */}
-              
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <button
                 onClick={() => openInGoogleMaps(selectedLocation)}
                 className="flex items-center justify-center border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200"
