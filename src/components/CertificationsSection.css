@@ -1,0 +1,110 @@
+.certifications-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.certifications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certifications-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.certifications-container p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.certifications-slider {
+  overflow: hidden;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.certifications-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.certifications-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.certifications-track::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.certifications-track::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.certifications-track::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.certification-card {
+  min-width: 200px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.certification-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.certification-card h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@layer components {
+  .animate-infinite-scroll {
+    animation: infinite-scroll 20s linear infinite;
+  }
+  
+  /* Hide scrollbar for all browsers */
+  .overflow-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .overflow-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

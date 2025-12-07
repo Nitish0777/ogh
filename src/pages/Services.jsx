@@ -60,6 +60,22 @@ const Services = () => {
       route: "/services/ulwe-centre",
       icon: "🏢",
       color: "from-green-500 to-green-600"
+    },
+    {
+      id: 5,
+      title: "Hi-Tech Mobile Health Checkup Buses",
+      subtitle: "Onsite Occupational Health Services for Industrial & Corporate Sites",
+      description: "OGH's Mobile Health Checkup Buses bring certified diagnostic services directly to industrial and corporate sites. Designed to minimize workforce downtime and ensure health compliance, these units are equipped for early detection of occupational health risks such as pneumoconiosis, noise-induced hearing loss, and work-related hazards.",
+      highlights: [
+        "DISH, DG Shipping, and OSHA-aligned accreditations",
+        "Digital employee record system & lead-shielded X-Ray room",
+        "Sound-proof audiometry chamber with hydraulic stabilization",
+        "5,00,000+ successful occupational health checkups across Maharashtra",
+        "Coverage for manufacturing, ports, pharma, corporate, and food handling industries"
+      ],
+      route: "/services/mobile-health-checkup",
+      icon: "🚐",
+      color: "from-green-500 to-green-600"
     }
   ];
 
