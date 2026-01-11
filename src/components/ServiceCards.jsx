@@ -34,8 +34,8 @@ const ServiceCards = () => {
       title: 'Working Hours',
       subtitle: 'Timing Schedule',
       schedules: [
-        { days: 'Monday - Friday', time: 'Available 24/7 - 365 days' },
-        { days: 'Saturday - Sunday', time: 'Available 24/7 - 365 days' },
+        { days: 'All Days', time: 'Available 24/7 - 365 days' },
+        { days: 'All Days', time: 'Available 24/7 - 365 days' },
         { days: 'Emergency Services', time: 'Round the Clock' }
       ],
       backgroundColor: 'bg-gradient-to-br from-green-50 to-green-50'
