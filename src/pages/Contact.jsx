@@ -15,9 +15,9 @@ const Contact = () => {
 
   const locations = [
     {
-      title: "Om Gagangiri Hospital & Occupational Health Services",
+      title: "Om Gagangiri Hospital & Occupational Health Services LLP",
       address: "Plot no. 77, Shubham CHS Ltd, near Bharat bank, Sector 18, KoparKhairane, Navi Mumbai, Maharashtra 400709",
-      phone: "+91 7666 6711 11",
+      phone: "+91 98335 71031 / +91 76666 71111",
       coordinates: { lat: 19.1009, lng: 73.0080 },
       googleMapsUrl: "https://maps.app.goo.gl/29UgHtm617PTsD5j7",
       googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4668.470000216144!2d73.0036525!3d19.1023521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0d74a19ed0d%3A0x312e6327aa3ca230!2sOm%20Gagangiri%20Hospital%20%26%20Occupational%20Health%20Services!5e1!3m2!1sen!2sin!4v1764870295655!5m2!1sen!2sin",
@@ -28,7 +28,7 @@ const Contact = () => {
     {
       title: "OGH Health Services, Ulwe",
       address: "Sector 20, Ulwe, Navi Mumbai - 410206",
-      phone: "+91 7666 6711 11",
+      phone: "+91 98335 71031 / +91 76666 71111",
       coordinates: { lat: 19.0330, lng: 73.0297 },
       googleMapsUrl: "https://maps.app.goo.gl/GhMdTNn5HtwQ2Yia8",
       googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4672.080425434498!2d73.0328133!3d18.973992799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3004b4fd4cd%3A0xd65e82b6d0ee4ae7!2sOGH%20HEALTH%20SSERVICES!5e1!3m2!1sen!2sin!4v1764870962945!5m2!1sen!2sin",
@@ -74,8 +74,8 @@ const Contact = () => {
           {/* Modal Header */}
           <div className="bg-green-600 text-white p-6 flex justify-between items-center">
             <div>
-              <h3 className="text-xl font-bold">Get Directions</h3>
-              <p className="text-green-100 mt-1">{selectedLocation.title}</p>
+              <h3 className="text-xl font-extrabold drop-shadow-lg">Get Directions</h3>
+              <p className="text-green-100 mt-1 font-semibold">{selectedLocation.title}</p>
             </div>
             <button 
               onClick={() => setShowDirectionsModal(false)}
@@ -95,7 +95,7 @@ const Contact = () => {
               </div>
               <div className="flex items-center mb-4">
                 <Phone className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
-                <a href={`tel:${selectedLocation.phone}`} className="text-green-600 font-semibold hover:underline">
+                <a href={`tel:${selectedLocation.phone.split('/')[0].replace(/\s/g,'')}`} className="text-green-600 font-semibold hover:underline">
                   {selectedLocation.phone}
                 </a>
               </div>
@@ -179,7 +179,7 @@ const Contact = () => {
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Call Us</h3>
                 <div className="text-3xl mb-2">📞</div>
-                <p className="text-green-600 font-semibold">+91 9833 5710 31 / +91 7666 6711 11</p>
+                <p className="text-green-600 font-semibold">+91 98335 71031 / +91 76666 71111</p>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Email Us</h3>

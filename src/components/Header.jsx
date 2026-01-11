@@ -45,7 +45,7 @@ const Header = () => {
           </div>
           <div className="flex items-center space-x-2 hover:text-emerald-200 transition-colors">
             <Phone className="w-4 h-4" />
-            <span className="font-medium">Call Now: +91 9833 5710 31 / +91 7666 6711 11</span>
+            <span className="font-medium">+91 98335 71031 / +91 76666 71111</span>
           </div>
         </div>
       </div>
@@ -100,7 +100,7 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Enhanced Rectangular Logo */}
-            <div className="flex items-center gap-3 px-4 py-1 bg-white" style={{ border: '3px solid #42739c', borderRadius: '12px' }}>
+            <div className="flex items-center gap-3 px-1 py-1 bg-white" style={{ border: '4px solid #42739c', borderRadius: '12px' }}>
               <div className="h-16 w-auto">
                 <img 
                   src={logo} 

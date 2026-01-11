@@ -16,7 +16,7 @@ const CarouselBanner = () => {
     {
       image: healthcare,
       title: 'Your Trusted Partner in Complete Healthcare',
-      subtitle: 'At Om Gagangiri Hospital & Occupational Health Services, we combine expert care and advanced facilities to deliver reliable, affordable, and patient-focused healthcare.',
+      subtitle: 'At Om Gagangiri Hospital & Occupational Health Services LLP, we combine expert care and advanced facilities to deliver reliable, affordable, and patient-focused healthcare.',
       cta: 'Learn More',
       link: '/about'
     },
@@ -44,7 +44,7 @@ const CarouselBanner = () => {
     {
       image: ulwebanner,
       title: 'Comprehensive Health Services in Ulwe',
-      subtitle: 'Delivering precision, care, and reliability, our Ulwe branch brings Om Gagangiri Hospital & Occupational Health Services\' recognized medical standards to the community, ensuring accessible and expert healthcare every day.',
+      subtitle: 'Delivering precision, care, and reliability, our Ulwe branch brings Om Gagangiri Hospital & Occupational Health Services LLP\'s recognized medical standards to the community, ensuring accessible and expert healthcare every day.',
       cta: 'Know More',
       link: '/services/ulwe-centre'
     }
@@ -114,8 +114,8 @@ const CarouselBanner = () => {
                     </div>
                   </div>
                   
-                  <div className="mb-6 bg-black/30 backdrop-blur-sm rounded-lg p-5 inline-block max-w-full">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white mb-3">
+                  <div className="mb-6 bg-transparent backdrop-blur-sm rounded-lg p-5 inline-block max-w-full">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-extrabold leading-tight text-white mb-3 drop-shadow-lg">
                       {slide.title.split(' ').map((word, i) => (
                         <span key={i} className={i < 2 ? 'text-green-400' : ''}>{word} </span>
                       ))}

@@ -43,13 +43,13 @@ const ServiceCards = () => {
     {
       icon: <Phone className="w-16 h-16 text-green-600" />,
       title: 'Emergency Helpline',
-      subtitle: 'Call: 098335 71031',
+      subtitle: 'Call: +91 98335 71031 / +91 76666 71111',
       description: 'For urgent medical assistance, we offer round-the-clock emergency support with rapid response.',
       highlight: true,
       features: ['24/7 - 365 days Availability', 'Rapid Response', 'Expert Medical Staff'],
       buttonText: 'CALL NOW',
       buttonColor: 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800',
-      link: 'tel:+917666671111'
+      link: 'tel:+919833571031'
     }
   ];
 

@@ -9,7 +9,7 @@ const DepartmentDetail = () => {
     1: {
       title: "General & Laparoscopic Surgery",
       subtitle: "Precise, Safe, and Patient-Centered Surgical Care",
-      description: "The Department of General & Laparoscopic Surgery at Om Gagangiri Hospital provides a complete range of surgical services — from routine procedures to complex interventions. Led by experienced surgeons, we emphasize minimally invasive techniques that ensure precision, safety, and faster recovery.",
+      description: "The Department of General & Laparoscopic Surgery at Om Gagangiri Hospital & Occupational Health Services LLP provides a complete range of surgical services — from routine procedures to complex interventions. Led by experienced surgeons, we emphasize minimally invasive techniques that ensure precision, safety, and faster recovery.",
       expertise: [
         "Laparoscopic gallbladder, appendix, and hernia surgeries",
         "Gastrointestinal and abdominal procedures",
@@ -19,7 +19,7 @@ const DepartmentDetail = () => {
       ],
       approach: "We follow a multidisciplinary approach, combining modern surgical technology with compassionate pre- and post-operative care. Each surgery is preceded by detailed diagnostics and followed by close monitoring, ensuring a seamless healing journey.",
       hours: {
-        opd: "11:00 am – 1:00 pm | 7:00 pm – 9:00 pm",
+        opd: "9:00 am – 1:00 pm",
         ipdIcuOt: "24×7",
         emergency: "Available round the clock"
       }
@@ -37,14 +37,14 @@ const DepartmentDetail = () => {
       ],
       approach: "Our team of experienced gynaecologists offers personalized attention, privacy, and trust. We combine medical expertise with emotional care, making every step of a woman's health journey safe and reassuring.",
       hours: {
-        opd: "11:00 am – 1:00 pm | 7:00 pm – 9:00 pm",
+        opd: "9:00 am – 1:00 pm",
         emergency: "Emergency Maternity Support: 24×7"
       }
     },
     3: {
       title: "Paediatrics",
       subtitle: "Nurturing Health, One Child at a Time",
-      description: "The Paediatrics Department at Om Gagangiri Hospital & Occupational Health Services provides specialized care for newborns, infants, and children. Our paediatricians focus on preventive health, early diagnosis, and holistic treatment in a child-friendly environment.",
+      description: "The Paediatrics Department at Om Gagangiri Hospital & Occupational Health Services LLP provides specialized care for newborns, infants, and children. Our paediatricians focus on preventive health, early diagnosis, and holistic treatment in a child-friendly environment.",
       expertise: [
         "Newborn and neonatal care",
         "Immunizations and growth tracking",
@@ -53,14 +53,14 @@ const DepartmentDetail = () => {
       ],
       approach: "We work closely with parents to ensure every child receives the right care at the right time. Our emphasis is on preventive health and emotional well-being — helping children grow strong, confident, and healthy.",
       hours: {
-        opd: "11:00 am – 1:00 pm | 7:00 pm – 9:00 pm",
+        opd: "9:00 am – 1:00 pm",
         emergency: "Emergency Paediatric Support: 24×7"
       }
     },
     4: {
       title: "General Medicine",
       subtitle: "Comprehensive Medical Care for Everyday Health",
-      description: "The Department of General Medicine forms the backbone of Om Gagangiri Hospital & Occupational Health Services, offering preventive, diagnostic, and therapeutic services for a wide range of health conditions. Our physicians manage everything from acute illnesses to long-term chronic diseases.",
+      description: "The Department of General Medicine forms the backbone of Om Gagangiri Hospital & Occupational Health Services LLP, offering preventive, diagnostic, and therapeutic services for a wide range of health conditions. Our physicians manage everything from acute illnesses to long-term chronic diseases.",
       expertise: [
         "Lifestyle and metabolic disorders (diabetes, hypertension, thyroid)",
         "Infectious diseases and fevers",
@@ -69,7 +69,7 @@ const DepartmentDetail = () => {
       ],
       approach: "We believe in continuous care, treating the illness while focusing on lifestyle modification and preventive health. Every patient receives a tailored plan for recovery and sustained wellness.",
       hours: {
-        opd: "11:00 am – 1:00 pm | 7:00 pm – 9:00 pm",
+        opd: "9:00 am – 1:00 pm",
         emergency: "Emergency Medical Care: 24×7"
       }
     },
@@ -85,7 +85,7 @@ const DepartmentDetail = () => {
       ],
       approach: "We focus on restoring function and movement through comprehensive treatment and physiotherapy support. Every plan is designed to ensure mobility, independence, and confidence.",
       hours: {
-        opd: "11:00 am – 1:00 pm | 7:00 pm – 9:00 pm",
+        opd: "9:00 am – 1:00 pm",
         emergency: "Emergency Ortho Support: 24×7"
       }
     },
@@ -101,14 +101,14 @@ const DepartmentDetail = () => {
       ],
       approach: "We emphasize early diagnosis, discreet consultations, and customized treatment plans. Patient comfort and privacy are our top priorities throughout care.",
       hours: {
-        opd: "11:00 am – 1:00 pm | 7:00 pm – 9:00 pm",
+        opd: "9:00 am – 1:00 pm",
         emergency: "Emergency Urology Support: 24×7"
       }
     },
     7: {
       title: "Plastic & Reconstructive Surgery",
       subtitle: "Restoring Form, Function, and Confidence",
-      description: "The Department of Plastic & Reconstructive Surgery at Om Gagangiri Hospital & Occupational Health Services combines art with science, offering procedures that heal, restore, and enhance. We handle trauma cases, post-surgical reconstructions, and aesthetic improvements with utmost precision.",
+      description: "The Department of Plastic & Reconstructive Surgery at Om Gagangiri Hospital & Occupational Health Services LLP combines art with science, offering procedures that heal, restore, and enhance. We handle trauma cases, post-surgical reconstructions, and aesthetic improvements with utmost precision.",
       expertise: [
         "Burn and post-trauma reconstruction",
         "Scar revision and wound management",
@@ -131,7 +131,7 @@ const DepartmentDetail = () => {
       ],
       approach: "We focus on early intervention and comprehensive management to preserve kidney function and improve quality of life through personalized treatment plans.",
       hours: {
-        opd: "11:00 am – 1:00 pm | 7:00 pm – 9:00 pm",
+        opd: "9:00 am – 1:00 pm",
         emergency: "Emergency Nephrology Support: 24×7"
       }
     },
@@ -146,13 +146,13 @@ const DepartmentDetail = () => {
       ],
       approach: "We maintain complete confidentiality and empathy. Each treatment plan blends therapy, medication, and mindfulness-based interventions to promote long-term well-being.",
       hours: {
-        opd: "11:00 am – 1:00 pm | 7:00 pm – 9:00 pm"
+        opd: "9:00 am – 1:00 pm"
       }
     },
     10: {
       title: "Pathology",
       subtitle: "Precision in Every Diagnosis",
-      description: "Lab Yatharth, the dedicated pathology division of Om Gagangiri Hospital & Occupational Health Services, offers reliable, fast, and accurate diagnostic testing. With advanced lab technology and skilled technicians, we deliver dependable results that support all clinical departments.",
+      description: "Lab Yatharth, the dedicated pathology division of Om Gagangiri Hospital & Occupational Health Services LLP, offers reliable, fast, and accurate diagnostic testing. With advanced lab technology and skilled technicians, we deliver dependable results that support all clinical departments.",
       expertise: [
         "Haematology, biochemistry, and microbiology",
         "Histopathology and cytology",

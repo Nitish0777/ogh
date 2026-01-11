@@ -40,7 +40,7 @@ const HospitalKoparkhairne = () => {
             
             {/* Main Heading */}
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Om Gagangiri Hospital
+              Om Gagangiri Hospital & Occupational Health Services LLP
               <span className="block text-3xl md:text-5xl text-green-200 mt-2">
                 Koparkhairne
               </span>

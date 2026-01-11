@@ -40,7 +40,7 @@ export default function Footer() {
             {/* Logo & About */}
             <div className="lg:col-span-1">
               <h3 className="text-2xl font-bold mb-6 relative">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Om Gagangiri Hospital & Occupational Health Services</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">Om Gagangiri Hospital & Occupational Health Services LLP</span>
                 <div className="absolute -bottom-2 left-0 w-16 h-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full"></div>
               </h3>
 
@@ -179,7 +179,7 @@ export default function Footer() {
                     </div>
                     <div>
                       <p className="text-sm text-green-100 mb-1">Emergency Helpline</p>
-                      <p className="font-bold text-white text-lg">+91 7666 6711 11</p>
+                      <p className="font-bold text-white text-lg">+91 7666 6711 11 <br /> +91 9833 571 031</p>
                     </div>
                   </div>
                 </div>
@@ -204,7 +204,7 @@ export default function Footer() {
                     </div>
                     <div>
                       <p className="text-sm text-green-100 mb-1">Location</p>
-                      <p className="font-semibold text-white">Om Gagangiri Hospital & Occupational Health Services</p>
+                      <p className="font-semibold text-white">Om Gagangiri Hospital & Occupational Health Services LLP</p>
                       {/* <hr className="my-2 border-green-100" /> */}
                       <p className="text-sm text-green-100 mt-2">Koparkhairane, Navi Mumbai</p>
                       <hr className="my-2 border-green-100" />
@@ -225,7 +225,7 @@ export default function Footer() {
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
               <div className="text-center lg:text-left">
                 <p className="text-green-100">
-                  © 2025 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 font-semibold">Om Gagangiri Hospital</span>. All rights reserved.
+                  © 2025 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 font-semibold">Om Gagangiri Hospital & Occupational Health Services LLP</span>. All rights reserved.
                 </p>
                 <p className="text-sm text-green-200 mt-1">
                   Providing quality healthcare with compassion and excellence.
