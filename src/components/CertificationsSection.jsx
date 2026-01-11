@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./CertificationsSection.css";
 import certifi1 from "../assets/certifi_1.jpeg";
 import certifi2 from "../assets/certifi_2.jpeg";
@@ -15,6 +15,19 @@ import certifi12 from "../assets/certifi_12.jpeg";
 import certifi13 from "../assets/certifi_13.jpeg";
 
 function CertificationsSection() {
+  const [selectedCert, setSelectedCert] = useState(null);
+
+  useEffect(() => {
+    if (selectedCert) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedCert]);
+
   const certifications = [
     {
       id: 1,
@@ -84,6 +97,7 @@ function CertificationsSection() {
   ];
 
   return (
+    <>
     <section className="py-16 px-5 bg-gradient-to-r from-green-100 to-emerald-100">
       <div className="w-full max-w-full mx-auto px-0">
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-2">
@@ -98,7 +112,8 @@ function CertificationsSection() {
             {certifications.map((cert) => (
               <div
                 key={cert.id}
-                className="min-w-max flex-shrink-0 p-5 bg-gray-50 rounded-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                className="min-w-max flex-shrink-0 p-5 bg-gray-50 rounded-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+                onClick={() => setSelectedCert(cert)}
               >
                 <img
                   src={cert.image}
@@ -113,7 +128,8 @@ function CertificationsSection() {
             {certifications.map((cert) => (
               <div
                 key={`${cert.id}-duplicate`}
-                className="min-w-max flex-shrink-0 p-5 bg-gray-50 rounded-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                className="min-w-max flex-shrink-0 p-5 bg-gray-50 rounded-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
+                onClick={() => setSelectedCert(cert)}
               >
                 <img
                   src={cert.image}
@@ -129,6 +145,35 @@ function CertificationsSection() {
         </div>
       </div>
     </section>
+
+    {/* Modal for enlarged certification view */}
+    {selectedCert && (
+      <div 
+        className="fixed inset-0 backdrop-blur-md  bg-opacity-30 flex items-center justify-center z-50 p-4"
+        onClick={() => setSelectedCert(null)}
+      >
+        <div 
+          className="relative max-w-4xl max-h-[90vh] bg-white rounded-lg p-2"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button
+            onClick={() => setSelectedCert(null)}
+            className="absolute -top-4 -right-4 bg-red-500 text-white rounded-full w-9 h-9 flex items-center justify-center hover:bg-red-600 text-2xl font-bold shadow-lg "
+          >
+            &times;
+          </button>
+          <img
+            src={selectedCert.image}
+            alt={selectedCert.title}
+            className="max-w-full max-h-[80vh] object-contain mx-auto"
+          />
+          <h3 className="text-center text-xl font-semibold mt-4 text-gray-800">
+            {selectedCert.title}
+          </h3>
+        </div>
+      </div>
+    )}
+    </>
   );
 }
 
