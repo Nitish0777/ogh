@@ -13,6 +13,7 @@ function Home() {
       <CarouselBanner />
       <ServiceCards />
       <HealthcareOverview />
+      <PartnersSection />
       <CertificationsSection />
       <LocationsSection />
       <TestimonialsSection />

@@ -16,6 +16,7 @@ import HospitalKoparkhairne from "./pages/services/HospitalKoparkhairne";
 import HealthCheckup from "./pages/services/HealthCheckup";
 import LabYatharth from "./pages/services/LabYatharth";
 import UlweCentre from "./pages/services/UlweCentre";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/doctors" element={<Doctors />} />
           <Route path="/doctor/:id" element={<DoctorDetails />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/book-appointment" element={<BookAppointment />} />
         </Routes>
         <Footer />

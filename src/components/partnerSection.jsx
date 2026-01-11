@@ -1,30 +1,30 @@
 import React from 'react';
 
 const PartnersSection = () => {
-  const partners = [
+  const corporateClients = [
     {
-      name: "AAMC",
-      logo: "https://images.pexels.com/photos/48148/document-agreement-documents-sign-48148.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop"
+      name: "Tata Consultancy Services",
+      logo: "https://via.placeholder.com/200x100/003366/FFFFFF?text=TCS"
     },
     {
-      name: "Medical Board",
-      logo: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop"
+      name: "Infosys Limited",
+      logo: "https://via.placeholder.com/200x100/007CC3/FFFFFF?text=Infosys"
     },
     {
-      name: "Authentic",
-      logo: "https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop"
+      name: "Reliance Industries",
+      logo: "https://via.placeholder.com/200x100/0039A6/FFFFFF?text=Reliance"
     },
     {
-      name: "Recognized",
-      logo: "https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop"
+      name: "HDFC Bank",
+      logo: "https://via.placeholder.com/200x100/004C8F/FFFFFF?text=HDFC"
     },
     {
-      name: "Medical Council",
-      logo: "https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop"
+      name: "Wipro Technologies",
+      logo: "https://via.placeholder.com/200x100/9B1C1F/FFFFFF?text=Wipro"
     },
     {
-      name: "Healthcare Alliance",
-      logo: "https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop"
+      name: "Tech Mahindra",
+      logo: "https://via.placeholder.com/200x100/C5003E/FFFFFF?text=Tech+Mahindra"
     }
   ];
 
@@ -34,30 +34,30 @@ const PartnersSection = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-            Partners who support us
+            Our Corporate Clients
           </h2>
           <div className="w-16 h-1 bg-green-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Lets know myriads neque/facilibus dolor sapiente illum possimus sint voluptates incidunt 
-            molestias nostrum laudantium. Maiores porro cumque quaerat.
+            Trusted healthcare partner for leading corporations. We provide comprehensive healthcare services 
+            and wellness programs to employees of top organizations across India.
           </p>
         </div>
 
-        {/* Partners Grid */}
+        {/* Corporate Clients Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-          {partners.map((partner, index) => (
+          {corporateClients.map((client, index) => (
             <div
               key={index}
               className="flex items-center justify-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300 group"
             >
               <div className="text-center">
                 <img
-                  src={partner.logo}
-                  alt={partner.name}
+                  src={client.logo}
+                  alt={client.name}
                   className="w-20 h-12 object-cover rounded mx-auto mb-2 grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
                 <p className="text-sm font-medium text-gray-600 group-hover:text-gray-800">
-                  {partner.name}
+                  {client.name}
                 </p>
               </div>
             </div>
@@ -67,7 +67,7 @@ const PartnersSection = () => {
         {/* Additional info */}
         <div className="text-center mt-12">
           <p className="text-gray-500 text-sm">
-            Trusted by leading healthcare organizations and medical institutions worldwide
+            Providing quality healthcare services to over 50+ corporate clients and their employees
           </p>
         </div>
       </div>
