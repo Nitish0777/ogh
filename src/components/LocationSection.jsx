@@ -36,7 +36,8 @@ const LocationsSection = () => {
       googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4668.470000216144!2d73.0036525!3d19.1023521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0d74a19ed0d%3A0x312e6327aa3ca230!2sOm%20Gagangiri%20Hospital%20%26%20Occupational%20Health%20Services!5e1!3m2!1sen!2sin!4v1764870295655!5m2!1sen!2sin",
       description: "Our flagship hospital featuring state-of-the-art facilities with 200+ beds, advanced ICU, emergency services, and specialized departments including cardiology, neurology, and orthopedics.",
       services: ["24/7 - 365 days Emergency", "ICU", "Surgery", "Diagnostics"],
-      hours: "24/7 - 365 days Available",
+      services: ["Emergency Services Round the clock", "ICU", "Surgery", "Diagnostics"],
+      hours: "Available 24/7 – 365 days a year",
       features: [
         { icon: <Ambulance className="w-4 h-4" />, text: "Emergency Services" },
         { icon: <Car className="w-4 h-4" />, text: "Free Parking" },
@@ -46,14 +47,14 @@ const LocationsSection = () => {
     {
       image: ogh,
       title: "OGH Health Services, Ulwe",
-      address: "Sector 20, Ulwe, Navi Mumbai - 410206",
-      phone: "+91 98335 71031 / +91 76666 71111",
+      address: "Shop no. 2, 3 & 4, plot no. 198 B, Shree Krishna Aura, Sector-23, Ulwe, Wahal, Raigarh, Maharashtra 410206",
+      phone: "+91 62627 90079 / +91 93200 93276",
       coordinates: { lat: 19.0330, lng: 73.0297 },
       googleMapsUrl: "https://maps.app.goo.gl/GhMdTNn5HtwQ2Yia8",
       googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4672.080425434498!2d73.0328133!3d18.973992799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3004b4fd4cd%3A0xd65e82b6d0ee4ae7!2sOGH%20HEALTH%20SSERVICES!5e1!3m2!1sen!2sin!4v1764870962945!5m2!1sen!2sin",
-      description: "A modern healthcare facility specializing in preventive care, health checkups, pathology services, and outpatient consultations for the growing Ulwe community.",
+      description: "OGH Health Services located in Sector-23, Ulwe offering outpatient consultations, health checkups, and pathology services for the local community.",
       services: ["Health Checkups", "Pathology", "OPD"],
-      hours: "Mon-Sat: 8AM-8PM",
+      hours: "9:00 AM - 6:00 PM",
       features: [
         { icon: <Users className="w-4 h-4" />, text: "Corporate Packages" },
         { icon: <Stethoscope className="w-4 h-4" />, text: "Specialist Consultations" },
