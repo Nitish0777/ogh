@@ -100,17 +100,18 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Enhanced Rectangular Logo */}
-            <div className="flex items-center">
-              <div className="h-12 w-auto max-w-48 rounded-lg overflow-hidden shadow-md ring-2 ring-emerald-50 bg-white">
+            <div className="flex items-center gap-3 px-4 py-1 bg-white" style={{ border: '3px solid #42739c', borderRadius: '12px' }}>
+              <div className="h-16 w-auto">
                 <img 
                   src={logo} 
                   alt="Gagan Giri Hospital Logo" 
-                  className="h-full w-full object-contain hover:scale-105 transition-transform duration-300"
+                  className="h-full w-auto object-contain"
                 />
               </div>
-              <div>
-                <h1 className="ml-3 text-1xl font-bold text-emerald-800">Om Gagangiri Hospital</h1>
-                <p className="ml-3 text-sm text-gray-500 font-bold">& Occupational Health Services</p>
+              <div className="flex flex-col">
+                <h1 className="text-xl font-bold uppercase" style={{ color: '#00A651' }}>Om Gagangiri Hospital</h1>
+                <p className="text-sm font-semibold uppercase" style={{ color: '#00A651' }}>Occupational Health Services LLP</p>
+                <p className="text-xs mt-0.5" style={{ color: 'black' }}>An ISO 9001:2015 & 45001: 2018 Certified</p>
               </div>
             </div>
 
