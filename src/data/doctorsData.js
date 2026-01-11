@@ -11,6 +11,7 @@ import doctor8 from '../assets/sachin_kale.jpeg';
 import doctor9 from '../assets/shonib aggrawal.jpeg';
 import doctor10 from '../assets/amit_bhoir.jpeg';
 import doctor11 from '../assets/jitendra_khandge.jpeg';
+import rajpal from '../assets/rajpal_usnale.jpeg';
 
 export const doctors = [
   {
@@ -363,7 +364,7 @@ export const doctors = [
     name: 'Dr. Rajpal Usnale',
     specialization: 'Ophthalmologist',
     department: 'ophthalmology',
-    image: null,
+    image: rajpal,
     experience: '22+ Years',
     education: 'MBBS, DOMS',
     description: 'Eye specialist focusing on vision problems, eye surgeries, and comprehensive eye care.',

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import prakash from '../../assets/prakash.jpeg'
 import rekha from '../../assets/rekha_kaushal.jpeg'
 import shirish from '../../assets/shri.avif'
+import rajpal from '../../assets/rajpal_usnale.jpeg'
 
 const Specialists = () => {
   const navigate = useNavigate();
@@ -26,6 +27,12 @@ const Specialists = () => {
       description: "Highly experienced oncologist specializing in cancer care, including surgery, chemotherapy, and treatment planning.",
       image: shirish
     }
+    ,{
+      name: "Dr. Rajpal Usnale",
+      specialty: "Ophthalmologist",
+      description: "Eye specialist focusing on vision problems, cataract surgery and comprehensive eye care.",
+      image: rajpal
+    }
   ];
 
   return (
@@ -39,11 +46,11 @@ const Specialists = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {specialists.map((doctor, index) => (
             <div key={index} className="bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="h-64 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
+              <div className="relative h-72 sm:h-80 md:h-80 lg:h-96 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden">
                 <img 
                   src={doctor.image} 
                   alt={doctor.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="p-6">

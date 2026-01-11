@@ -51,7 +51,7 @@ const Doctors = () => {
               onClick={() => handleDoctorClick(doctor)}
             >
               {/* Doctor Image */}
-              <div className="relative h-64 overflow-hidden bg-gray-100 flex items-center justify-center">
+              <div className="relative h-72 sm:h-80 md:h-80 lg:h-96 overflow-hidden bg-gray-100 flex items-center justify-center">
                 {doctor.image ? (
                   <img 
                     src={doctor.image} 
