@@ -36,14 +36,7 @@ const DepartmentCard = ({ title, description, keyProcedures, departmentId }) => 
           </ul>
         </div>
         
-        <div className="mt-auto">
-          <button
-            onClick={handleLearnMore}
-            className="w-full bg-green-600 hover:bg-green-700 text-white py-2 sm:py-3 px-4 rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-          >
-            Learn More
-          </button>
-        </div>
+        
       </div>
     </div>
   );
