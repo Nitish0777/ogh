@@ -1,37 +1,85 @@
 import React from "react";
 import "./CertificationsSection.css";
+import certifi1 from "../assets/certifi_1.jpeg";
+import certifi2 from "../assets/certifi_2.jpeg";
+import certifi3 from "../assets/certifi_3.jpeg";
+import certifi4 from "../assets/certifi_4.jpeg";
+import certifi5 from "../assets/certifi_5.jpeg";
+import certifi6 from "../assets/certifi_6.jpeg";
+import certifi7 from "../assets/certifi_7.jpeg";
+import certifi8 from "../assets/certifi_8.jpeg";
+import certifi9 from "../assets/certifi_9.jpeg";
+import certifi10 from "../assets/certifi_10.jpeg";
+import certifi11 from "../assets/certifi_11.jpeg";
+import certifi12 from "../assets/certifi_12.jpeg";
+import certifi13 from "../assets/certifi_13.jpeg";
 
 function CertificationsSection() {
   const certifications = [
     {
       id: 1,
-      title: "ISO 9001:2015",
-      image: "https://via.placeholder.com/200x250?text=ISO+9001",
+      title: "Certification 1",
+      image: certifi1,
     },
     {
       id: 2,
-      title: "Joint Commission",
-      image: "https://via.placeholder.com/200x250?text=Joint+Commission",
+      title: "Certification 2",
+      image: certifi2,
     },
     {
       id: 3,
-      title: "NABH Accreditation",
-      image: "https://via.placeholder.com/200x250?text=NABH",
+      title: "Certification 3",
+      image: certifi3,
     },
     {
       id: 4,
-      title: "AABB Certified",
-      image: "https://via.placeholder.com/200x250?text=AABB",
+      title: "Certification 4",
+      image: certifi4,
     },
     {
       id: 5,
-      title: "CAP Accredited",
-      image: "https://via.placeholder.com/200x250?text=CAP",
+      title: "Certification 5",
+      image: certifi5,
     },
     {
       id: 6,
-      title: "ISO 27001:2013",
-      image: "https://via.placeholder.com/200x250?text=ISO+27001",
+      title: "Certification 6",
+      image: certifi6,
+    },
+    {
+      id: 7,
+      title: "Certification 7",
+      image: certifi7,
+    },
+    {
+      id: 8,
+      title: "Certification 8",
+      image: certifi8,
+    },
+    {
+      id: 9,
+      title: "Certification 9",
+      image: certifi9,
+    },
+    {
+      id: 10,
+      title: "Certification 10",
+      image: certifi10,
+    },
+    {
+      id: 11,
+      title: "Certification 11",
+      image: certifi11,
+    },
+    {
+      id: 12,
+      title: "Certification 12",
+      image: certifi12,
+    },
+    {
+      id: 13,
+      title: "Certification 13",
+      image: certifi13,
     },
   ];
 
