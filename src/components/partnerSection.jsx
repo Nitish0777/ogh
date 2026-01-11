@@ -3,28 +3,84 @@ import React from 'react';
 const PartnersSection = () => {
   const corporateClients = [
     {
-      name: "Tata Consultancy Services",
-      logo: "https://via.placeholder.com/200x100/003366/FFFFFF?text=TCS"
+      name: "Tata Steel",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Tata_Steel_Logo.svg"
     },
     {
-      name: "Infosys Limited",
-      logo: "https://via.placeholder.com/200x100/007CC3/FFFFFF?text=Infosys"
+      name: "Tata Chemicals",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Tata_Chemicals_Logo.svg"
     },
     {
-      name: "Reliance Industries",
-      logo: "https://via.placeholder.com/200x100/0039A6/FFFFFF?text=Reliance"
+      name: "Adani Power",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Adani_Group_logo.svg"
     },
     {
-      name: "HDFC Bank",
-      logo: "https://via.placeholder.com/200x100/004C8F/FFFFFF?text=HDFC"
+      name: "IndianOil Adani Ventures",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Indian_Oil_Logo.svg"
     },
     {
-      name: "Wipro Technologies",
-      logo: "https://via.placeholder.com/200x100/9B1C1F/FFFFFF?text=Wipro"
+      name: "Rashtriya Chemicals and Fertilizers",
+      logo: "https://upload.wikimedia.org/wikipedia/en/9/98/Rashtriya_Chemicals_and_Fertilizers_Logo.png"
     },
     {
-      name: "Tech Mahindra",
-      logo: "https://via.placeholder.com/200x100/C5003E/FFFFFF?text=Tech+Mahindra"
+      name: "JSW Paints",
+      logo: "https://www.jswpaints.in/sites/default/files/jsw-paints-logo.png"
+    },
+    {
+      name: "Gateway Terminals India",
+      logo: "https://www.gatewayterminals.com/assets/images/logo.png"
+    },
+    {
+      name: "D'Decor Exports",
+      logo: "https://www.ddecor.com/wp-content/uploads/2021/09/ddecor-logo.png"
+    },
+    {
+      name: "Viraj Profiles",
+      logo: "https://www.viraj.com/images/logo.png"
+    },
+    {
+      name: "Mazda Colours",
+      logo: "https://www.mazdacolours.com/images/logo.png"
+    },
+    {
+      name: "Technova Imaging Systems",
+      logo: "https://www.technovaworld.com/images/technova-logo.png"
+    },
+    {
+      name: "BDH Industries",
+      logo: "https://www.bdhltd.com/images/logo.png"
+    },
+    {
+      name: "Shreechem Pharmaceuticals",
+      logo: "https://www.shreechem.in/images/logo.png"
+    },
+    {
+      name: "Praveen Industries",
+      logo: "https://www.praveenindustries.com/images/logo.png"
+    },
+    {
+      name: "Aarti Industries",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Aarti_Industries_Logo.svg"
+    },
+    {
+      name: "Hindustan Platinum",
+      logo: "https://www.hindustanplatinum.com/images/logo.png"
+    },
+    {
+      name: "NOCIL",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/NOCIL_Logo.svg"
+    },
+    {
+      name: "Supreme Petrochem",
+      logo: "https://www.supremepetrochem.com/images/logo.png"
+    },
+    {
+      name: "Deepak Fertilisers",
+      logo: "https://www.dfpcl.com/images/logo.png"
+    },
+    {
+      name: "Pidilite Industries",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/3/3b/Pidilite_Logo.svg"
     }
   ];
 
@@ -54,7 +110,10 @@ const PartnersSection = () => {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="w-20 h-12 object-cover rounded mx-auto mb-2 grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className="w-24 h-16 object-contain mx-auto mb-2 grayscale group-hover:grayscale-0 transition-all duration-300"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
                 />
                 <p className="text-sm font-medium text-gray-600 group-hover:text-gray-800">
                   {client.name}
