@@ -1,27 +1,25 @@
 import React from "react";
 import { useParams, useLocation, Navigate } from "react-router-dom";
-// Import Dr. Prakash's image
-import doctor1 from '../assets/prakash.jpeg';
+import { doctors } from "../data/doctorsData";
 
 const DoctorDetails = () => {
   const { id } = useParams();
   const location = useLocation();
   
-  // Only allow access to Dr. Prakash Shendge (id: 1)
-  if (id !== '1') {
+  // Get doctor data from location state or find by ID
+  const doctorFromState = location.state?.doctor;
+  const doctorFromData = doctors.find(doc => doc.id === parseInt(id));
+  const doctor = doctorFromState || doctorFromData;
+
+  // If doctor not found, redirect to doctors page
+  if (!doctor) {
     return <Navigate to="/doctors" replace />;
   }
 
-  // Get doctor data from location state or use default data for Dr. Prakash
-  const doctor = location.state?.doctor || {
-    id: 1,
-    name: 'Dr. Prakash Shendge',
-    specialization: 'General & Laparoscopic Surgeon',
-    image: doctor1,
-    experience: '26+ Years',
-    education: 'MBBS, MS (General Surgery)',
-    availability: 'Mon - Fri: 11:00 AM - 1:00 PM & 7 PM to 9 PM'
-  };
+  // If doctor doesn't have full details, redirect to doctors page
+  if (!doctor.introduction) {
+    return <Navigate to="/doctors" replace />;
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
@@ -43,19 +41,11 @@ const DoctorDetails = () => {
             </div>
             <div className="md:w-2/3 p-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Introducing Myself</h2>
-              <p className="text-gray-600 leading-relaxed">
-                I bring over 26 years of medical experience, including 18 years as a surgical specialist, 
-                with a focus on laparoscopic and trauma surgery. My journey began with an MBBS followed by 
-                M.S. (General Surgery) from L.T.M.C. Sion, Mumbai University. Over the years, I have 
-                successfully handled complex surgical cases, emergency trauma care, and advanced minimally 
-                invasive procedures.
-              </p>
-              <p className="text-gray-600 leading-relaxed mt-4">
-                I was actively involved in treating victims of the June 2003 Mulund bomb blasts, where my 
-                work in trauma surgery was recognized and appreciated by the then Chief Minister of 
-                Maharashtra, Mr. Sushil Kumar Shinde. My commitment is to provide safe, ethical, and 
-                effective surgical solutions to every patient.
-              </p>
+              {doctor.introduction && doctor.introduction.split('\n\n').map((paragraph, index) => (
+                <p key={index} className="text-gray-600 leading-relaxed mb-4">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
         </div>
@@ -67,22 +57,12 @@ const DoctorDetails = () => {
               My Educational Qualifications
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">MBBS – Mumbai University</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">MS – General Surgery – L.T.M.C. Sion, Mumbai University</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">FCPS – General Surgery – College of Physicians & Surgeons, Mumbai</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">DNB – General Surgery – National Board of Examinations, New Delhi</span>
-              </li>
+              {doctor.qualifications && doctor.qualifications.map((qualification, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-green-600 mr-2">•</span>
+                  <span className="text-gray-700">{qualification}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -92,26 +72,12 @@ const DoctorDetails = () => {
               My Skills
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">Advanced laparoscopic surgery</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">Trauma & emergency surgical care</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">Complex general surgeries</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">Post-operative recovery & patient care</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">Surgical counseling & preventive health</span>
-              </li>
+              {doctor.skills && doctor.skills.map((skill, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-green-600 mr-2">•</span>
+                  <span className="text-gray-700">{skill}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -121,26 +87,12 @@ const DoctorDetails = () => {
               Expertise Areas
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">Minimally invasive laparoscopic procedures</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">Hernia, appendix & gallbladder surgeries</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">Trauma and critical care surgery</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">Gastrointestinal & abdominal surgeries</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-2">•</span>
-                <span className="text-gray-700">Preventive and corporate surgical health checkups</span>
-              </li>
+              {doctor.expertise && doctor.expertise.map((area, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-green-600 mr-2">•</span>
+                  <span className="text-gray-700">{area}</span>
+                </li>
+              ))}
             </ul>
           </div>
 

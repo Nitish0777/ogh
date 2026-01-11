@@ -7,7 +7,8 @@ const Doctors = () => {
   const navigate = useNavigate();
 
   const handleDoctorClick = (doctor) => {
-    if (doctor.id === 1) {
+    // Only navigate if doctor has full details (introduction field)
+    if (doctor.introduction) {
       navigate(`/doctor/${doctor.id}`, { state: { doctor } });
     }
   };
@@ -45,7 +46,7 @@ const Doctors = () => {
             <div 
               key={doctor.id} 
               className={`bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 ${
-                doctor.id === 1 ? 'cursor-pointer' : 'cursor-default'
+                doctor.introduction ? 'cursor-pointer' : 'cursor-default'
               }`}
               onClick={() => handleDoctorClick(doctor)}
             >
