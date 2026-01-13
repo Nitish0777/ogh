@@ -13,12 +13,17 @@ import certifi10 from "../assets/certifi_10.jpeg";
 import certifi11 from "../assets/certifi_11.jpeg";
 import certifi12 from "../assets/certifi_12.jpeg";
 import certifi13 from "../assets/certifi_13.jpeg";
+import award1 from "../assets/award_1.mp4";
+import award2 from "../assets/award_2.jpeg";
+import award3 from "../assets/award_3.jpeg";
+import award4 from "../assets/award_4.mp4";
 
 const Gallery = () => {
   const [selectedCert, setSelectedCert] = useState(null);
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   useEffect(() => {
-    if (selectedCert) {
+    if (selectedCert || selectedVideo) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -26,7 +31,7 @@ const Gallery = () => {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [selectedCert]);
+  }, [selectedCert, selectedVideo]);
 
   // Real certification images from CertificationsSection
   const certifications = [
@@ -40,14 +45,12 @@ const Gallery = () => {
     { id: 13, title: '', url: certifi13 },
   ];
 
-  // Dummy awards images
+  // Real awards images and videos
   const awards = [
-    { id: 1, title: 'Best Hospital Award 2025', url: 'https://via.placeholder.com/400x300/f59e0b/ffffff?text=Best+Hospital+2025' },
-    { id: 2, title: 'Healthcare Excellence Award', url: 'https://via.placeholder.com/400x300/d97706/ffffff?text=Excellence+Award' },
-    { id: 3, title: 'Patient Care Award', url: 'https://via.placeholder.com/400x300/b45309/ffffff?text=Patient+Care+Award' },
-    { id: 4, title: 'Community Service Award', url: 'https://via.placeholder.com/400x300/92400e/ffffff?text=Community+Service' },
-    { id: 5, title: 'Medical Innovation Award', url: 'https://via.placeholder.com/400x300/f59e0b/ffffff?text=Innovation+Award' },
-    { id: 6, title: 'Top Healthcare Provider 2024', url: 'https://via.placeholder.com/400x300/d97706/ffffff?text=Top+Provider+2024' },
+    { id: 1, title: 'Healthcare Excellence Award', url: award2 },
+    { id: 2, title: 'Medical Innovation Recognition', url: award3 },
+    { id: 3, title: 'Award Ceremony Video', url: award1, isVideo: true },
+    { id: 4, title: 'Recognition Event', url: award4, isVideo: true },
   ];
 
   // Dummy images
@@ -86,19 +89,39 @@ const Gallery = () => {
           <p className="text-gray-600 max-w-2xl mx-auto">{description}</p>
         )}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 ${
+        title === 'Videos' ? '' : 'lg:grid-cols-3'
+      }`}>
         {images.map((image) => (
           <div 
             key={image.id} 
-            className={`group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white ${title === 'Certifications' ? 'cursor-pointer' : ''}`}
-            onClick={title === 'Certifications' ? () => setSelectedCert(image) : undefined}
+            className={`group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white ${
+              title === 'Certifications' || title === 'Videos' || image.isVideo ? 'cursor-pointer' : ''
+            }`}
+            onClick={
+              title === 'Certifications' ? () => setSelectedCert(image) : 
+              title === 'Videos' || image.isVideo ? () => setSelectedVideo(image) : 
+              undefined
+            }
           >
-            <div className="aspect-video overflow-hidden">
+            <div className={`overflow-hidden ${
+              title === 'Certifications' ? 'aspect-[3/4]' : 'aspect-video'
+            }`}>
               <img 
                 src={image.url} 
                 alt={image.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                className={`w-full h-full group-hover:scale-110 transition-transform duration-500 ${
+                  title === 'Certifications' ? 'object-contain bg-gray-50' : 'object-cover'
+                }`}
               />
+              {/* Video Play Button Overlay */}
+              {(title === 'Videos' || image.isVideo) && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-40 transition-all duration-300">
+                  <div className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="w-0 h-0 border-l-[16px] border-l-emerald-600 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent ml-1"></div>
+                  </div>
+                </div>
+              )}
             </div>
             {image.isVideo && (
               <div className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
@@ -210,6 +233,34 @@ const Gallery = () => {
               alt={selectedCert.title}
               className="max-w-full max-h-[80vh] object-contain mx-auto"
             />
+          </div>
+        </div>
+      )}
+
+      {/* Modal for video view */}
+      {selectedVideo && (
+        <div 
+          className="fixed inset-0 backdrop-blur-md bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedVideo(null)}
+        >
+          <div 
+            className="relative max-w-5xl max-h-[90vh] bg-black rounded-lg overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedVideo(null)}
+              className="absolute -top-4 -right-4 bg-red-500 text-white rounded-full w-9 h-9 flex items-center justify-center hover:bg-red-600 text-2xl font-bold shadow-lg z-10"
+            >
+              &times;
+            </button>
+            <video
+              src={selectedVideo.url}
+              controls
+              autoPlay
+              className="max-w-full max-h-[80vh] mx-auto"
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       )}
