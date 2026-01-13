@@ -35,7 +35,6 @@ const LocationsSection = () => {
       googleMapsUrl: "https://maps.app.goo.gl/29UgHtm617PTsD5j7",
       googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4668.470000216144!2d73.0036525!3d19.1023521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0d74a19ed0d%3A0x312e6327aa3ca230!2sOm%20Gagangiri%20Hospital%20%26%20Occupational%20Health%20Services!5e1!3m2!1sen!2sin!4v1764870295655!5m2!1sen!2sin",
       description: "Our flagship hospital featuring state-of-the-art facilities with 200+ beds, advanced ICU, emergency services, and specialized departments including cardiology, neurology, and orthopedics.",
-      services: ["24/7 - 365 days Emergency", "ICU", "Surgery", "Diagnostics"],
       services: ["Emergency Services Round the clock", "ICU", "Surgery", "Diagnostics"],
       hours: "Available 24/7 – 365 days a year",
       features: [
