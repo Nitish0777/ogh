@@ -17,13 +17,20 @@ import award1 from "../assets/award_1.mp4";
 import award2 from "../assets/award_2.jpeg";
 import award3 from "../assets/award_3.jpeg";
 import award4 from "../assets/award_4.mp4";
+import ogh1 from "../assets/ogh.jpg";
+import ogh2 from "../assets/ogh_cm.jpg";
+import ogh3 from "../assets/ogh_waiting.JPG";
+import ogh4 from "../assets/ogh_intro.JPG";
+import ogh5 from "../assets/ogh_cabin.JPG";
+import ogh6 from "../assets/ogh_bloodcollection.JPG";
 
 const Gallery = () => {
   const [selectedCert, setSelectedCert] = useState(null);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
-    if (selectedCert || selectedVideo) {
+    if (selectedCert || selectedVideo || selectedImage) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -31,7 +38,7 @@ const Gallery = () => {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [selectedCert, selectedVideo]);
+  }, [selectedCert, selectedVideo, selectedImage]);
 
   // Real certification images from CertificationsSection
   const certifications = [
@@ -53,17 +60,14 @@ const Gallery = () => {
     { id: 4, title: 'Recognition Event', url: award4, isVideo: true },
   ];
 
-  // Dummy images
+  // Real hospital images
   const images = [
-    { id: 1, title: 'Hospital Exterior View', url: 'https://via.placeholder.com/400x300/3b82f6/ffffff?text=Hospital+Exterior' },
-    { id: 2, title: 'Modern Reception Area', url: 'https://via.placeholder.com/400x300/2563eb/ffffff?text=Reception+Area' },
-    { id: 3, title: 'Advanced Medical Equipment', url: 'https://via.placeholder.com/400x300/1d4ed8/ffffff?text=Medical+Equipment' },
-    { id: 4, title: 'Patient Care Facilities', url: 'https://via.placeholder.com/400x300/1e40af/ffffff?text=Patient+Care' },
-    { id: 5, title: 'Surgery Theater', url: 'https://via.placeholder.com/400x300/3b82f6/ffffff?text=Surgery+Theater' },
-    { id: 6, title: 'Diagnostic Laboratory', url: 'https://via.placeholder.com/400x300/2563eb/ffffff?text=Laboratory' },
-    { id: 7, title: 'Consultation Rooms', url: 'https://via.placeholder.com/400x300/1d4ed8/ffffff?text=Consultation+Rooms' },
-    { id: 8, title: 'Emergency Department', url: 'https://via.placeholder.com/400x300/1e40af/ffffff?text=Emergency+Dept' },
-    { id: 9, title: 'ICU Facilities', url: 'https://via.placeholder.com/400x300/3b82f6/ffffff?text=ICU+Facilities' },
+    { id: 1, title: '', url: ogh1 },
+    { id: 2, title: '', url: ogh2 },
+    { id: 3, title: '', url: ogh3 },
+    { id: 4, title: '', url: ogh4 },
+    { id: 5, title: '', url: ogh5 },
+    { id: 6, title: '', url: ogh6 },
   ];
 
   // Dummy videos
@@ -96,11 +100,12 @@ const Gallery = () => {
           <div 
             key={image.id} 
             className={`group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white ${
-              title === 'Certifications' || title === 'Videos' || image.isVideo ? 'cursor-pointer' : ''
+              title === 'Certifications' || title === 'Videos' || title === 'Images' || image.isVideo ? 'cursor-pointer' : ''
             }`}
             onClick={
               title === 'Certifications' ? () => setSelectedCert(image) : 
               title === 'Videos' || image.isVideo ? () => setSelectedVideo(image) : 
+              title === 'Images' ? () => setSelectedImage(image) :
               undefined
             }
           >
@@ -182,7 +187,6 @@ const Gallery = () => {
           title="Images"
           images={images}
           icon={ImageIcon}
-          description="A visual journey through our state-of-the-art facilities and healthcare services"
         />
       </div>
 
@@ -261,6 +265,34 @@ const Gallery = () => {
             >
               Your browser does not support the video tag.
             </video>
+          </div>
+        </div>
+      )}
+
+      {/* Modal for enlarged image view */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 backdrop-blur-md bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div 
+            className="relative max-w-4xl max-h-[90vh] bg-white rounded-lg p-2"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-4 -right-4 bg-red-500 text-white rounded-full w-9 h-9 flex items-center justify-center hover:bg-red-600 text-2xl font-bold shadow-lg"
+            >
+              &times;
+            </button>
+            <img
+              src={selectedImage.url}
+              alt={selectedImage.title}
+              className="max-w-full max-h-[80vh] object-contain mx-auto"
+            />
+            <div className="text-center mt-4 px-4">
+              <h3 className="text-xl font-semibold text-gray-800">{selectedImage.title}</h3>
+            </div>
           </div>
         </div>
       )}
