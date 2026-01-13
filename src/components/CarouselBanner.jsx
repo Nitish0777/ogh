@@ -107,20 +107,19 @@ const CarouselBanner = () => {
             {/* Content */}
             <div className="relative z-10 h-full flex items-center">
               <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-16">
-                <div className="max-w-3xl">
+                <div className="max-w-3xl ml-12 sm:ml-16 md:ml-20">
                   <div className="mb-4 sm:mb-6">
                     <div className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-green-600/90 backdrop-blur-sm rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4 text-white shadow-lg">
                       Healthcare Excellence
                     </div>
                   </div>
                   
-                  <div className="mb-6 bg-transparent backdrop-blur-sm rounded-lg p-5 inline-block max-w-full">
+                  <div className="mb-6 bg-black/5 backdrop-blur-md rounded-lg p-6 inline-block max-w-full shadow-xl">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-extrabold leading-tight text-white mb-3 drop-shadow-lg">
                       {slide.title.split(' ').map((word, i) => (
                         <span key={i} className={i < 2 ? 'text-green-400' : ''}>{word} </span>
                       ))}
                     </h1>
-+
                     <p className="text-sm sm:text-lg md:text-xl lg:text-2xl font-light leading-relaxed text-white drop-shadow-xl">
                       {slide.subtitle}
                     </p>
