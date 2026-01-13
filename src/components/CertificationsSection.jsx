@@ -7,7 +7,7 @@ import certifi4 from "../assets/certifi_4.jpeg";
 import certifi5 from "../assets/certifi_5.jpeg";
 import certifi6 from "../assets/certifi_6.jpeg";
 import certifi7 from "../assets/certifi_7.jpeg";
-import certifi8 from "../assets/certifi_8.jpeg";
+import certifi8 from "../assets/certtficate.jpg";
 import certifi9 from "../assets/certifi_9.jpeg";
 import certifi10 from "../assets/certifi_10.jpeg";
 import certifi11 from "../assets/certifi_11.jpeg";
@@ -29,26 +29,7 @@ function CertificationsSection() {
   }, [selectedCert]);
 
   const certifications = [
-    {
-      id: 1,
-      title: "Certification 1",
-      image: certifi1,
-    },
-    {
-      id: 2,
-      title: "Certification 2",
-      image: certifi2,
-    },
-    {
-      id: 3,
-      title: "Certification 3",
-      image: certifi3,
-    },
-    {
-      id: 4,
-      title: "Certification 4",
-      image: certifi4,
-    },
+    
     {
       id: 5,
       title: "Certification 5",
@@ -78,11 +59,6 @@ function CertificationsSection() {
       id: 10,
       title: "Certification 10",
       image: certifi10,
-    },
-    {
-      id: 11,
-      title: "Certification 11",
-      image: certifi11,
     },
     {
       id: 12,
