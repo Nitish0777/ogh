@@ -34,8 +34,7 @@ const ServiceCards = () => {
       title: 'Working Hours',
       subtitle: 'Timing Schedule',
       schedules: [
-        { days: 'All Days', time: 'Available 24/7 - 365 days' },
-        { days: 'All Days', time: 'Available 24/7 - 365 days' },
+        { days: '', time: 'Available 24/7 - 365 days' },
         { days: 'Emergency Services', time: 'Round the Clock' }
       ],
       backgroundColor: 'bg-gradient-to-br from-green-50 to-green-50'
@@ -126,8 +125,10 @@ const ServiceCards = () => {
                     <div className="space-y-4 mb-8 w-full">
                       {service.schedules.map((schedule, idx) => (
                         <div key={idx} className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                          <div className="flex justify-between items-center">
-                            <span className="text-gray-700 font-medium">{schedule.days}</span>
+                          <div className={`flex items-center ${schedule.days ? 'justify-between' : 'justify-center'}`}>
+                            {schedule.days && (
+                              <span className="text-gray-700 font-medium">{schedule.days}</span>
+                            )}
                             <span className="text-green-600 font-bold text-sm bg-green-50 px-3 py-1 rounded-full">
                               {schedule.time}
                             </span>

@@ -32,42 +32,42 @@ function CertificationsSection() {
     
     {
       id: 5,
-      title: "Certification 5",
+      title: "Healthcare Quality Accreditation",
       image: certifi5,
     },
     {
       id: 6,
-      title: "Certification 6",
+      title: "Medical Safety Certification",
       image: certifi6,
     },
     {
       id: 7,
-      title: "Certification 7",
+      title: "ISO Healthcare Standards",
       image: certifi7,
     },
     {
       id: 8,
-      title: "Certification 8",
+      title: "Professional Excellence Award",
       image: certifi8,
     },
     {
       id: 9,
-      title: "Certification 9",
+      title: "Patient Care Certification",
       image: certifi9,
     },
     {
       id: 10,
-      title: "Certification 10",
+      title: "Medical Equipment Standards",
       image: certifi10,
     },
     {
       id: 12,
-      title: "Certification 12",
+      title: "Healthcare Innovation Recognition",
       image: certifi12,
     },
     {
       id: 13,
-      title: "Certification 13",
+      title: "Quality Management System",
       image: certifi13,
     },
   ];
@@ -76,12 +76,15 @@ function CertificationsSection() {
     <>
     <section className="py-16 px-5 bg-gradient-to-r from-green-100 to-emerald-100">
       <div className="w-full max-w-full mx-auto px-0">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-2">
-          Our Certifications
-        </h2>
-        <p className="text-center text-gray-600 text-lg mb-12">
-          Accredited and Recognized Globally
-        </p>
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            Our Certifications & Accreditations
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            We are proud to hold various prestigious certifications and accreditations that demonstrate our commitment to providing the highest quality healthcare services and maintaining international standards of excellence.
+          </p>
+        </div>
 
         <div className="overflow-hidden bg-white rounded-lg shadow-lg p-5 mx-5">
           <div className="flex gap-6 animate-infinite-scroll">
@@ -94,11 +97,8 @@ function CertificationsSection() {
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-48 h-56 object-cover rounded-md mb-4"
+                  className="w-48 h-56 object-cover rounded-md"
                 />
-                <h3 className="text-center text-gray-800 font-semibold">
-                  {cert.title}
-                </h3>
               </div>
             ))}
             {certifications.map((cert) => (
@@ -110,11 +110,8 @@ function CertificationsSection() {
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-48 h-56 object-cover rounded-md mb-4"
+                  className="w-48 h-56 object-cover rounded-md"
                 />
-                <h3 className="text-center text-gray-800 font-semibold">
-                  {cert.title}
-                </h3>
               </div>
             ))}
           </div>
@@ -143,9 +140,6 @@ function CertificationsSection() {
             alt={selectedCert.title}
             className="max-w-full max-h-[80vh] object-contain mx-auto"
           />
-          <h3 className="text-center text-xl font-semibold mt-4 text-gray-800">
-            {selectedCert.title}
-          </h3>
         </div>
       </div>
     )}

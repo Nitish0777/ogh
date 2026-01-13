@@ -1,15 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Award, Trophy, Image as ImageIcon, Video } from 'lucide-react';
+import certifi1 from "../assets/certifi_1.jpeg";
+import certifi2 from "../assets/certifi_2.jpeg";
+import certifi3 from "../assets/certifi_3.jpeg";
+import certifi4 from "../assets/certifi_4.jpeg";
+import certifi5 from "../assets/certifi_5.jpeg";
+import certifi6 from "../assets/certifi_6.jpeg";
+import certifi7 from "../assets/certifi_7.jpeg";
+import certifi8 from "../assets/certtficate.jpg";
+import certifi9 from "../assets/certifi_9.jpeg";
+import certifi10 from "../assets/certifi_10.jpeg";
+import certifi11 from "../assets/certifi_11.jpeg";
+import certifi12 from "../assets/certifi_12.jpeg";
+import certifi13 from "../assets/certifi_13.jpeg";
 
 const Gallery = () => {
-  // Dummy certification images
+  const [selectedCert, setSelectedCert] = useState(null);
+
+  useEffect(() => {
+    if (selectedCert) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedCert]);
+
+  // Real certification images from CertificationsSection
   const certifications = [
-    { id: 1, title: 'ISO 9001:2015 Certification', url: 'https://via.placeholder.com/400x300/10b981/ffffff?text=ISO+9001+Certification' },
-    { id: 2, title: 'Medical Council Accreditation', url: 'https://via.placeholder.com/400x300/059669/ffffff?text=Medical+Council' },
-    { id: 3, title: 'NABH Accreditation', url: 'https://via.placeholder.com/400x300/047857/ffffff?text=NABH+Accreditation' },
-    { id: 4, title: 'Quality Management Certificate', url: 'https://via.placeholder.com/400x300/065f46/ffffff?text=Quality+Management' },
-    { id: 5, title: 'Patient Safety Certification', url: 'https://via.placeholder.com/400x300/10b981/ffffff?text=Patient+Safety' },
-    { id: 6, title: 'Healthcare Standards Certificate', url: 'https://via.placeholder.com/400x300/059669/ffffff?text=Healthcare+Standards' },
+    { id: 5, title: '', url: certifi5 },
+    { id: 6, title: '', url: certifi6 },
+    { id: 7, title: '', url: certifi7 },
+    { id: 8, title: '', url: certifi8 },
+    { id: 9, title: '', url: certifi9 },
+    { id: 10, title: '', url: certifi10 },
+    { id: 12, title: '', url: certifi12 },
+    { id: 13, title: '', url: certifi13 },
   ];
 
   // Dummy awards images
@@ -62,7 +90,8 @@ const Gallery = () => {
         {images.map((image) => (
           <div 
             key={image.id} 
-            className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white"
+            className={`group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 bg-white ${title === 'Certifications' ? 'cursor-pointer' : ''}`}
+            onClick={title === 'Certifications' ? () => setSelectedCert(image) : undefined}
           >
             <div className="aspect-video overflow-hidden">
               <img 
@@ -159,6 +188,31 @@ const Gallery = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal for enlarged certification view */}
+      {selectedCert && (
+        <div 
+          className="fixed inset-0 backdrop-blur-md bg-opacity-30 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedCert(null)}
+        >
+          <div 
+            className="relative max-w-4xl max-h-[90vh] bg-white rounded-lg p-2"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedCert(null)}
+              className="absolute -top-4 -right-4 bg-red-500 text-white rounded-full w-9 h-9 flex items-center justify-center hover:bg-red-600 text-2xl font-bold shadow-lg"
+            >
+              &times;
+            </button>
+            <img
+              src={selectedCert.url}
+              alt={selectedCert.title}
+              className="max-w-full max-h-[80vh] object-contain mx-auto"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
